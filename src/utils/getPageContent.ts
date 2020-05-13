@@ -1,5 +1,7 @@
 import path from 'path';
 import { readFileSync } from 'fs';
+import * as matter from 'gray-matter';
+import { PostContent, TermContent } from '@/types';
 
 export const getTermContent = ({
   lang,
@@ -7,7 +9,7 @@ export const getTermContent = ({
 }: {
   lang: string;
   term: string;
-}) => {
+}): TermContent | null => {
   const fileName = `index.${lang}.md`;
   const filePath = path.resolve(
     __filename,
@@ -21,10 +23,14 @@ export const getTermContent = ({
 
   try {
     const data = readFileSync(path.join('.', filePath), 'utf8');
-    return data;
+    const { content, data: attributes } = matter(data);
+    return {
+      content,
+      attributes,
+    };
   } catch (err) {
     console.warn('Error while getting term page content', err);
-    return '';
+    return null;
   }
 };
 
@@ -34,7 +40,7 @@ export const getPostContent = ({
 }: {
   lang: string;
   post: string;
-}) => {
+}): PostContent | null => {
   const fileName = `index.${lang}.md`;
   const filePath = path.resolve(
     __filename,
@@ -48,9 +54,13 @@ export const getPostContent = ({
 
   try {
     const data = readFileSync(path.join('.', filePath), 'utf8');
-    return data;
+    const { content, data: attributes } = matter(data);
+    return {
+      content,
+      attributes,
+    };
   } catch (err) {
     console.warn('Error while getting post page content', err);
-    return '';
+    return null;
   }
 };

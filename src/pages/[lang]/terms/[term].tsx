@@ -2,13 +2,18 @@ import React, { FC } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getTermPaths } from '../../../utils/getPagePaths';
 import { getTermContent } from '../../../utils/getPageContent';
+import { Markdown } from '@/components/Markdown';
 
-const Term: FC = (props) => {
-  return <h1>Term</h1>;
+const Term: FC<{ content: any }> = (props) => {
+  return (
+    <div>
+      <h1>Term</h1>
+      <Markdown content={props.content.content} />
+    </div>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  console.log(getTermPaths());
   return {
     paths: getTermPaths(),
     fallback: false,

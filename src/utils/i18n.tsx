@@ -43,7 +43,6 @@ const i18n = (languages: Language[]) => {
 
   const I18nProvider: FC<I18nProviderProps> = ({ phrases, children }) => {
     const router = useRouter();
-    console.log(router);
 
     const value = useMemo(
       () => ({
@@ -63,7 +62,6 @@ const i18n = (languages: Language[]) => {
 
   const useT = () => {
     const { lang, phrases } = useI18n();
-    console.log(lang, phrases);
     return getTranslator(phrases[lang]);
   };
 
