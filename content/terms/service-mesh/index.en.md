@@ -1,3 +1,11 @@
+---
+slug: 'service-mesh'
+title: 'Service mesh'
+description: ''
+keywords: ['service mesh']
+published: true
+---
+
 Let's imagine two groups of friends organizing a birthday party for a friend, Lisa. They all play a role in organizing this party (buying balloons, cooking the cake, bringing candles, etc.).
 
 The first group of friends is made of people which are very different from each other and like to work in different ways. John texts Melissa for news while Jane prefers to call Martin to prepare their trip to the supermarket, and Bob likes to talk in real life. At any given time, it's really hard for all of them to know what's going on and to know if everything is gonna be ready for the party.

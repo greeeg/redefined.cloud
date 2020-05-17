@@ -1,3 +1,11 @@
+---
+slug: 'monolith-architecture'
+title: 'Monolith architecture'
+description: ''
+keywords: ['monolith architecture', 'monolith']
+published: true
+---
+
 A monolith architecture is like a single tool we would use to do everything, like a Thermomix to cook a chocolate cake.
 
 We generally oppose this architecture to a microservices architecture, which would consist of using very specific different tools to achieve the same result.

@@ -1,15 +1,17 @@
 import React, { FC } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { getTermPaths } from '../../../utils/getPagePaths';
-import { getTermContent } from '../../../utils/getPageContent';
+
+import { Layout } from '@/components/Layout';
+import { getTermPaths } from '../../utils/getPagePaths';
+import { getTermContent } from '../../utils/getPageContent';
 import { Markdown } from '@/components/Markdown';
 
 const Term: FC<{ content: any }> = (props) => {
   return (
-    <div>
+    <Layout>
       <h1>Term</h1>
       <Markdown content={props.content.content} />
-    </div>
+    </Layout>
   );
 };
 

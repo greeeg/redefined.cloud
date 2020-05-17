@@ -1,3 +1,12 @@
+---
+slug: 'content-delivery-network'
+title: 'Content delivery network'
+shortTitle: 'CDN'
+description: ''
+keywords: ['cdn', 'content delivery network', 'cloudflare']
+published: true
+---
+
 CDN, which stands for Content Delivery Network, is a mechanism of distributing content to users in a highly available and fast way. CDNs are like fast food restaurant chains. Instead of having one restaurant which serves all burgers to all customers in the world, they rely on a high number of identical restaurants which are distributed across the globe to better serve customers.
 
 ## The story of Jane and the unique restaurant

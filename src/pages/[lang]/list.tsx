@@ -1,23 +1,37 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import styled from 'styled-components';
+import Link from 'next/link';
 
 import { Layout } from '@/components/Layout';
 import i18n, { Language } from '@/utils/i18n';
 import { getTerms } from '@/utils/terms';
 import { Head } from '@/components/Head';
 import { Heading } from '@/components/primitives';
+import { TermAttributes } from '@/types';
 
-const Index: NextPage<{ terms: string[] }> = ({ terms }) => {
-  const t = i18n.useT();
+interface ListProps {
+  terms: TermAttributes[];
+}
+
+const List: NextPage<ListProps> = ({ terms }) => {
+  const { lang } = i18n.useI18n();
 
   return (
     <Layout>
       <Head title="Home" />
-      <Heading as="h1">Hello</Heading>
-      <p>This is a test {t('hello')}</p>
+      <Heading as="h1">List</Heading>
 
-      <code>{JSON.stringify(terms)}</code>
+      {terms.map((term) => {
+        return (
+          <Link
+            href="/[lang]/[term]"
+            as={`/${lang}/${term.slug}`}
+            key={term.slug}
+          >
+            <Heading as="h2">{term.title}</Heading>
+          </Link>
+        );
+      })}
     </Layout>
   );
 };
@@ -41,4 +55,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default Index;
+export default List;

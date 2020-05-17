@@ -1,3 +1,11 @@
+---
+slug: 'microservice-architecture'
+title: 'Microservice architecture'
+description: ''
+keywords: ['microservice architecture', 'microservice']
+published: true
+---
+
 Let's imagine you want to cook a chocolate cake. Having a microservice architecture would mean to use different tools (a bowl, a cooking paddle, a cake pan, etc) which all have a single responsibility and are not linked in the way they work (you don't need a bowl to use a cake pan).
 
 We generally oppose this architecture to a monolith architecture, which would consist of using a single tool to do it all in our example, like a thermomix.

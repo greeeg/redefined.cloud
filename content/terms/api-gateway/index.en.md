@@ -1,3 +1,11 @@
+---
+slug: 'api-gateway'
+title: 'API Gateway'
+description: 'Routing requests to the right service'
+keywords: ['api', 'gateway', 'proxy', 'api gateway']
+published: true
+---
+
 API Gateway is like a front desk employee that would be responsible for answering customers requests and getting their orders in the back of the store.
 
 Let's say you're building a store which sells furnitures. Given your business is still quite small and you only sell sofas, it's really easy for you to welcome your customers at the front door, find the sofa they're looking for and sell it to them. They all come for the same thing and you only have one ressource, sofas.

@@ -13,10 +13,16 @@ export type PostContent = {
   };
 };
 
-export type TermContent = {
+export type TermAttributes = {
+  slug: string;
+  title: string;
+  shortTitle?: string;
+  description: string;
+  keywords: string[];
+  published: boolean;
+};
+
+export type TermPage = {
+  attributes: TermAttributes;
   content: string;
-  attributes: {
-    title: string;
-    slug: string;
-  };
 };

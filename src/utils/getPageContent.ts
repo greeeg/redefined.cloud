@@ -1,7 +1,7 @@
 import path from 'path';
 import { readFileSync } from 'fs';
 import * as matter from 'gray-matter';
-import { PostContent, TermContent } from '@/types';
+import { PostContent, TermPage } from '@/types';
 
 export const getTermContent = ({
   lang,
@@ -9,7 +9,7 @@ export const getTermContent = ({
 }: {
   lang: string;
   term: string;
-}): TermContent | null => {
+}): TermPage | null => {
   const fileName = `index.${lang}.md`;
   const filePath = path.resolve(
     __filename,

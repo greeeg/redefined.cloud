@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
+
+import { Layout } from '@/components/Layout';
 import { getPostPaths } from '../../../utils/getPagePaths';
 import { getPostContent } from '../../../utils/getPageContent';
 
 const Post: FC = (props) => {
-  return <h1>Post</h1>;
+  return <Layout>Post</Layout>;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

@@ -1,3 +1,11 @@
+---
+slug: 'load-balancer'
+title: 'Load balancer'
+description: ''
+keywords: ['elb', 'load balancer', 'proxy', 'reverse proxy']
+published: true
+---
+
 A load balancer is like a traffic cop that would be responsible for handling a spike of traffic at the entrance of a tunnel. Instead of having one lane (server) by which all cars pass through without any limitation, you can have a police officer (load balancer), in front of the tunnel, which decides which lanes (servers) next cars should pass through.
 
 Using a load balancer, you can dynamically add or remove servers behind it to improve the availability and speed of your application.
