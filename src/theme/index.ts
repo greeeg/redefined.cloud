@@ -73,8 +73,8 @@ export const theme = {
     white400: '#D1D2D6',
   },
   fonts: {
-    font100: '"Neue Haas Grotesk Display Pro", Helvetica, Arial, sans-serif',
-    font200: '"Elena Basic", Georgia, Cambria, "Times New Roman", Times, serif',
+    font100: '"Inter UI", Helvetica, Arial, sans-serif',
+    font200: '"Lora", Georgia, Cambria, "Times New Roman", Times, serif',
   },
   lineHeights: {
     lineHeight80: 0.9,

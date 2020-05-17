@@ -32,8 +32,6 @@ export const getTermPaths = () => {
       pages.push(localizedTerm);
     });
 
-  console.log(pages);
-
   return i18n.getI18nStaticPaths(pages);
 };
 
