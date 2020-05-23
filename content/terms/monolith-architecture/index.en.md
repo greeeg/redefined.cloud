@@ -1,9 +1,7 @@
 ---
-slug: 'monolith-architecture'
-title: 'Monolith architecture'
-description: ''
+name: 'Monolith architecture'
+summary: ''
 keywords: ['monolith architecture', 'monolith']
-published: true
 ---
 
 A monolith architecture is like a single tool we would use to do everything, like a Thermomix to cook a chocolate cake.

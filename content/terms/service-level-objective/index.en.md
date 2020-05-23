@@ -1,8 +1,10 @@
 ---
-slug: 'service-level-objective'
-title: 'Service level objective'
-shortTitle: 'SLO'
-description: ''
+name: 'Service level objective'
+shortName: 'SLO'
+summary: ''
 keywords: ['service level objective', 'slo']
-published: true
 ---
+
+SLO stands for service level objective. These objectives make a huge part of Service Level Agreements (SLA) between cloud providers and their customers. They are usually metrics like availability, response time or latency.
+
+For example, one SLO of a cloud computing service might be that over a month, 99.9% of object storage PUT requests will complete in less than a second.

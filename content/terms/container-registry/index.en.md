@@ -1,7 +1,5 @@
 ---
-slug: 'container-registry'
-title: 'Container registry'
-description: ''
+name: 'Container registry'
+summary: ''
 keywords: ['container', 'registry', 'docker hub']
-published: true
 ---

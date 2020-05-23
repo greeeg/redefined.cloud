@@ -1,9 +1,7 @@
 ---
-slug: 'microservice-architecture'
-title: 'Microservice architecture'
-description: ''
+name: 'Microservice architecture'
+summary: ''
 keywords: ['microservice architecture', 'microservice']
-published: true
 ---
 
 Let's imagine you want to cook a chocolate cake. Having a microservice architecture would mean to use different tools (a bowl, a cooking paddle, a cake pan, etc) which all have a single responsibility and are not linked in the way they work (you don't need a bowl to use a cake pan).

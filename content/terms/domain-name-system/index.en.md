@@ -1,10 +1,8 @@
 ---
-slug: 'domain-name-system'
-title: 'Domain name system'
-shortTitle: 'DNS'
-description: ''
+name: 'Domain name system'
+shortName: 'DNS'
+summary: ''
 keywords: ['dns', 'domain name system']
-published: true
 ---
 
 DNS, which stands for Domain name system, is like a map you would use to associate cities with their geographical positions.

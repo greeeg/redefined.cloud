@@ -1,9 +1,7 @@
 ---
-slug: 'api-gateway'
-title: 'API Gateway'
-description: 'Routing requests to the right service'
-keywords: ['api', 'gateway', 'proxy', 'api gateway']
-published: true
+name: 'API Gateway'
+summary: 'Routing requests to the right service'
+keywords: ['api', 'gateway', 'proxy', 'api gateway', 'server proxy']
 ---
 
 API Gateway is like a front desk employee that would be responsible for answering customers requests and getting their orders in the back of the store.

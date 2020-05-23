@@ -1,7 +1,5 @@
 ---
-slug: 'memory-database'
-title: 'Memory database'
-description: ''
+name: 'Memory database'
+summary: ''
 keywords: ['memory database', 'database']
-published: true
 ---

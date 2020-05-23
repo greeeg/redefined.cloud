@@ -1,9 +1,7 @@
 ---
-slug: 'service-mesh'
-title: 'Service mesh'
-description: ''
+name: 'Service mesh'
+summary: ''
 keywords: ['service mesh']
-published: true
 ---
 
 Let's imagine two groups of friends organizing a birthday party for a friend, Lisa. They all play a role in organizing this party (buying balloons, cooking the cake, bringing candles, etc.).
