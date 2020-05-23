@@ -18,32 +18,32 @@ export const Button = styled(RawButton)<ButtonProps>`
   font-size: ${(p) => p.theme.fontSizes.size80}px;
   background-color: ${(p) => {
     if (p.disabled) {
-      return p.theme.colors.white300;
+      return p.theme.colors.gray300;
     }
 
     return p.variation === 'primary'
-      ? p.theme.colors.blue100
-      : p.theme.colors.white100;
+      ? p.theme.colors.yellow200
+      : p.theme.colors.gray100;
   }};
   color: ${(p) => {
     if (p.disabled) {
-      return p.theme.colors.black300;
+      return p.theme.colors.gray500;
     }
 
     return p.variation === 'primary'
-      ? p.theme.colors.white100
-      : p.theme.colors.black100;
+      ? p.theme.colors.gray100
+      : p.theme.colors.gray600;
   }};
   border: 1px solid;
   border-radius: ${(p) => p.theme.radii.borderRadius100}px;
   border-color: ${(p) => {
     if (p.disabled) {
-      return p.theme.colors.white300;
+      return p.theme.colors.gray300;
     }
 
     return p.variation === 'primary'
-      ? p.theme.colors.blue100
-      : p.theme.colors.white400;
+      ? p.theme.colors.yellow200
+      : p.theme.colors.gray400;
   }};
   cursor: ${(p) => {
     if (p.loading) {
@@ -61,19 +61,19 @@ export const Button = styled(RawButton)<ButtonProps>`
   &:hover {
     background-color: ${(p) => {
       if (p.disabled) {
-        return p.theme.colors.white300;
+        return p.theme.colors.gray300;
       }
       return p.variation === 'primary'
-        ? p.theme.colors.blue200
-        : p.theme.colors.white100;
+        ? p.theme.colors.yellow100
+        : p.theme.colors.gray100;
     }};
     border-color: ${(p) => {
       if (p.disabled) {
-        return p.theme.colors.white300;
+        return p.theme.colors.gray300;
       }
       return p.variation === 'primary'
-        ? p.theme.colors.blue200
-        : p.theme.colors.white400;
+        ? p.theme.colors.yellow100
+        : p.theme.colors.gray400;
     }};
     box-shadow: ${(p) => p.theme.shadows.boxShadow200};
   }
@@ -81,29 +81,29 @@ export const Button = styled(RawButton)<ButtonProps>`
   &:focus {
     background-color: ${(p) => {
       if (p.disabled) {
-        return p.theme.colors.white300;
+        return p.theme.colors.gray300;
       }
       return p.variation === 'primary'
-        ? p.theme.colors.blue200
-        : p.theme.colors.white200;
+        ? p.theme.colors.yellow100
+        : p.theme.colors.gray200;
     }};
     border-color: ${(p) => {
       if (p.disabled) {
-        return p.theme.colors.white300;
+        return p.theme.colors.gray300;
       }
       return p.variation === 'primary'
-        ? p.theme.colors.blue200
-        : p.theme.colors.white200;
+        ? p.theme.colors.yellow100
+        : p.theme.colors.gray200;
     }};
-    box-shadow: 0 0 0 3px ${(p) => p.theme.colors.white100},
+    box-shadow: 0 0 0 3px ${(p) => p.theme.colors.gray100},
       0 0 0 4px
         ${(p) => {
           if (p.disabled) {
-            return p.theme.colors.white300;
+            return p.theme.colors.gray300;
           }
           return p.variation === 'primary'
-            ? p.theme.colors.blue100
-            : p.theme.colors.white400;
+            ? p.theme.colors.yellow200
+            : p.theme.colors.gray400;
         }};
     outline: none;
   }

@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
   time, mark, audio, video {
     font-family: ${(p) => p.theme.fonts.font200};
     font-size: ${(p) => p.theme.fontSizes.size100}px;
-    color: ${(p) => p.theme.colors.black200};
+    color: ${(p) => p.theme.colors.gray600};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,14 +28,14 @@ export const GlobalStyles = createGlobalStyle`
 
   /* WebKit/Blink Browsers */
   ::selection {
-    background: ${(p) => p.theme.colors.blue200}; 
-    color: ${(p) => p.theme.colors.white100};
+    background: ${(p) => p.theme.colors.yellow200}; 
+    color: ${(p) => p.theme.colors.white};
   }
 
   /* Gecko Browsers */
   ::-moz-selection {
-    background: ${(p) => p.theme.colors.blue200};
-    color: ${(p) => p.theme.colors.white100};
+    background: ${(p) => p.theme.colors.yellow200};
+    color: ${(p) => p.theme.colors.white};
   }
 `;
 
@@ -51,10 +51,11 @@ export const theme = {
     spacing400: 40,
     spacing500: 48,
     spacing600: 64,
+    spacing700: 96,
   },
   fontSizes: {
-    size80: 16,
-    size100: 18,
+    size80: 15,
+    size100: 17,
     size200: 21,
     size300: 28,
     size400: 38,
@@ -62,22 +63,23 @@ export const theme = {
     size600: 68,
   },
   colors: {
-    blue100: '#031DC7',
-    blue200: '#0425FB',
-    black100: '#1A1A1E',
-    black200: '#353740',
-    black300: '#8A8C99',
-    white100: '#FFFFFF',
-    white200: '#F2F3F7',
-    white300: '#E6E6EB',
-    white400: '#D1D2D6',
+    white: '#fff',
+    black: '#000',
+    gray100: '#F2F3F7',
+    gray200: '#E6E6EB',
+    gray300: '#D1D2D6',
+    gray400: '#8A8C99',
+    gray500: '#444650`',
+    gray600: '#1A1A1E',
+    yellow200: '#4AB5AB',
+    yellow100: '#178C85',
   },
   fonts: {
     font100: '"Inter UI", Helvetica, Arial, sans-serif',
     font200: '"Lora", Georgia, Cambria, "Times New Roman", Times, serif',
   },
   lineHeights: {
-    lineHeight80: 0.9,
+    lineHeight80: 1,
     lineHeight100: 1.2,
     lineHeight200: 1.58,
   },
@@ -95,4 +97,8 @@ export const theme = {
   },
 };
 
-export type Theme = typeof theme;
+export type BaseTheme = typeof theme;
+
+export type Theme = BaseTheme & {
+  space: typeof theme.space & { '0 auto': string };
+};

@@ -1,7 +1,7 @@
-import { Theme } from '@/theme';
+import { BaseTheme } from '@/theme';
 
 declare module 'styled-components' {
-  interface DefaultTheme extends Theme {}
+  interface DefaultTheme extends BaseTheme {}
 }
 
 export type PostContent = {
