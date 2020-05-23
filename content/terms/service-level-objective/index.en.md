@@ -1,8 +1,11 @@
 ---
+title: 'What is Service Level Objective or SLO?'
+description: ''
 name: 'Service level objective'
 shortName: 'SLO'
 summary: ''
 keywords: ['service level objective', 'slo']
+relatedTerms: ['service-level-agreement', 'monitoring', 'observability']
 ---
 
 SLO stands for service level objective. These objectives make a huge part of Service Level Agreements (SLA) between cloud providers and their customers. They are usually metrics like availability, response time or latency.

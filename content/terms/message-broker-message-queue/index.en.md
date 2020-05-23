@@ -1,7 +1,10 @@
 ---
+title: 'What is a Message Broker or Message Queue?'
+description: ''
 name: 'Message broker'
 summary: ''
 keywords: ['message broker', 'message queue']
+relatedTerms: ['cron-job', 'webhook', 'pub-sub']
 ---
 
 Message queuing is like a todo list: tasks are added to a list and removed once processed throughout the day.

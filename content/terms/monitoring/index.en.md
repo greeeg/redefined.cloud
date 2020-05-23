@@ -1,7 +1,10 @@
 ---
+title: 'What is Monitoring?'
+description: ''
 name: 'Monitoring'
 summary: ''
 keywords: ['monitoring', 'logging']
+relatedTerms: ['logging', 'tracing', 'observability', 'profiling']
 ---
 
 Monitoring is the act of collecting, aggregating and analyzing metrics to understand how a system works. If you ever took a ECG using a smart watch, you monitored during few minutes your heat beat rate.

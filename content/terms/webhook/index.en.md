@@ -1,7 +1,10 @@
 ---
+title: 'What is a Webhook?'
+description: ''
 name: 'Webhook'
 summary: ''
 keywords: ['webhook']
+relatedTerms: ['message-broker-message-queue', 'pub-sub', 'cron-job']
 ---
 
 Webhook are an automated way for your application or third-party applications to notify you when events happen, like your bank when an online purchase is made with your credit card.

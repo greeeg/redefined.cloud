@@ -1,8 +1,11 @@
 ---
+title: 'What is Service Level Agreement or SLA?'
+description: ''
 name: 'Service level agreement'
 shortName: 'SLA'
 summary: ''
 keywords: ['service level agreement', 'sla']
+relatedTerms: ['service-level-objective', 'monitoring', 'observability']
 ---
 
 SLA stands for Service Level Agreement. It is a legal document that defines a commitment a company makes to its customers. This type of contracts may contain several SLO. If they are not met, the contract is broken and the company might have to give back money to its customers.

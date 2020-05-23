@@ -1,7 +1,10 @@
 ---
+title: 'What is a Baremetal Server?'
+description: ''
 name: 'Baremetal server'
 summary: ''
 keywords: ['baremetal server', 'server', 'compute']
+relatedTerms: ['virtual-machine', 'load-balancer', 'provisioning']
 ---
 
 Baremetal servers are physical machines dedicated to one company/team of engineers, compared to virtual machines which share the underlying physical hardware between several customers.

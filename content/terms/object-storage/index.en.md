@@ -1,7 +1,10 @@
 ---
+title: 'What is Object Storage?'
+description: ''
 name: 'Object storage'
 summary: ''
 keywords: ['object storage', 'storage']
+relatedTerms: ['content-delivery-network', 'load-balancer']
 ---
 
 If you're building a web service or any other internet-related product, there's no doubt you're gonna have to deal with data, lots of it. And when there's data, there has to be storage where we can safely put it in order to access it at any given time.

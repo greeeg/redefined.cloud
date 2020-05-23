@@ -1,8 +1,10 @@
 ---
+title: 'What is Continuous Integration or CI?'
 name: 'Continuous integration'
 shortName: 'CI'
 summary: ''
 keywords: ['continuous integration', 'ci/cd', 'ci']
+relatedTerms: ['continuous-delivery', 'logging', 'service-level-objective']
 ---
 
 Let's imagine that you and your friends want to build a car. You each agree to focus on building one part of the car, and then you'll come together once everyone's done and slap the whole thing together.

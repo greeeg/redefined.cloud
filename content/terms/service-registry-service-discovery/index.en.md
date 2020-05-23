@@ -1,7 +1,15 @@
 ---
+title: 'What is Service Registry and Service Discovery?'
+description: ''
 name: 'Service registry/discovery'
 summary: ''
 keywords: ['service registry', 'service discovery']
+relatedTerms:
+  [
+    'container-orchestration-and-kubernetes',
+    'service-mesh',
+    'containers-and-docker',
+  ]
 ---
 
 Let's imagine a pizza truck which is available every day in a town. However, each day, the pizza truck is at a different location. Indeed, the pizza truck owner want to make sure every person in this town to know about his pizzas. But because you love pizza, you want to eat one from this specific truck every day. How would you know where to go to get it ?

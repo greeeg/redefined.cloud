@@ -1,6 +1,9 @@
 ---
+title: 'What is an API Gateway?'
+description: ''
 name: 'API Gateway'
 summary: 'Routing requests to the right service'
+relatedTerms: ['microservice-architecture', 'serverless', 'service-mesh']
 keywords: ['api', 'gateway', 'proxy', 'api gateway', 'server proxy']
 ---
 

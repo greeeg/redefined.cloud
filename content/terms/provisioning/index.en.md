@@ -1,7 +1,10 @@
 ---
+title: 'What is Provisioning?'
+description: ''
 name: 'Provisioning'
 summary: ''
 keywords: ['provisioning', 'server']
+relatedTerms: ['baremetal-server', 'virtual-machine']
 ---
 
 Provisioning is the process of setting up infrastructure in order for it to be ready to use (installation, connection, security, etc.).

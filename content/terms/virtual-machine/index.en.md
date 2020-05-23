@@ -1,8 +1,11 @@
 ---
+title: 'What is a VM or Virtual Machine?'
+description: ''
 name: 'Virtual machine'
 shortName: 'VM'
 summary: ''
 keywords: ['virtual machine', 'vm', 'compute', 'server']
+relatedTerms: ['containers-and-docker', 'baremetal-server', 'load-balancer']
 ---
 
 Virtual machine is like a school bus. Instead of having every parent use their car (physical server) once a day paying for extra gas, they put their kids into a school bus, which costs less gas and is easier to use.

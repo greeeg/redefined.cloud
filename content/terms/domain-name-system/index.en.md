@@ -1,8 +1,11 @@
 ---
+title: 'What is DNS or Domain Name System?'
+description: ''
 name: 'Domain name system'
 shortName: 'DNS'
 summary: ''
 keywords: ['dns', 'domain name system']
+relatedTerms: ['service-proxy', 'service-mesh', 'load-balancer']
 ---
 
 DNS, which stands for Domain name system, is like a map you would use to associate cities with their geographical positions.

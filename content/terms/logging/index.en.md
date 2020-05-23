@@ -1,7 +1,10 @@
 ---
+title: 'What is Logging?'
+description: ''
 name: 'Logging'
 summary: ''
 keywords: ['logs', 'logging']
+relatedTerms: ['observability', 'tracing', 'profiling', 'monitoring']
 ---
 
 Logging is like writing down in a notebook each time you complete a task in your day. In the end, you have a log file, your notebook, which you can then come back to if you need to clarify something (a task you forgot or didn't complete entirely) or create statistics (on average, how many tasks do you complete each day).

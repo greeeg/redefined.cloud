@@ -1,8 +1,10 @@
 ---
+title: 'What is a Non-relational Database or NoSQL Database?'
 name: 'Non relational database'
 shortName: 'NoSQL DB'
 summary: ''
 keywords: ['non relational database', 'nosql', 'database']
+relatedTerms: ['memory-database', 'relational-database']
 ---
 
 A non-relational database (or NoSQL database) as opposed to relational databases, is a type of database where data and relationships are represented in documents, key-value pairs or graphs.

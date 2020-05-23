@@ -1,7 +1,10 @@
 ---
+title: 'What is a Monolith Architecture?'
+description: ''
 name: 'Monolith architecture'
 summary: ''
 keywords: ['monolith architecture', 'monolith']
+relatedTerms: ['microservice-architecture', 'baremetal-server', 'load-balancer']
 ---
 
 A monolith architecture is like a single tool we would use to do everything, like a Thermomix to cook a chocolate cake.

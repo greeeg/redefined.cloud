@@ -1,7 +1,16 @@
 ---
+title: 'What is a Service Mesh?'
+description: ''
 name: 'Service mesh'
 summary: ''
 keywords: ['service mesh']
+relatedTerms:
+  [
+    'service-proxy',
+    'observability',
+    'containers-and-docker',
+    'container-orchestration-and-kubernetes',
+  ]
 ---
 
 Let's imagine two groups of friends organizing a birthday party for a friend, Lisa. They all play a role in organizing this party (buying balloons, cooking the cake, bringing candles, etc.).

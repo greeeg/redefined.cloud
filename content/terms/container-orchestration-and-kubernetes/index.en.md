@@ -1,8 +1,12 @@
 ---
+title: 'What are Container Orchestration and Kubernetes?'
+description: ''
 name: 'Container Orchestration and Kubernetes'
 shortName: 'Kubernetes'
 summary: ''
 keywords: ['container', 'orchestration', 'kubernetes', 'docker']
+relatedTerms:
+  ['containers-and-docker', 'container-registry', 'microservice-architecture']
 ---
 
 Container orchestration is like a conductor during a classical music concert: coordinating how instruments play nicely together.

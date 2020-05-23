@@ -1,7 +1,15 @@
 ---
+title: 'What is Serverless?'
+description: ''
 name: 'Serverless'
 summary: ''
 keywords: ['serverless']
+relatedTerms:
+  [
+    'serverless-function',
+    'api-gateway-server-proxy',
+    'microservice-architecture',
+  ]
 ---
 
 Serverless is like renting coworking space instead of renting a building. In both cases, you're still renting office space (compute power), the only difference is that with a coworking space, you don't have to manage desks, floors, buying new buildings, etc, you just rent as much space as needed depending on how many employees you have.

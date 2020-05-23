@@ -1,7 +1,10 @@
 ---
+title: 'What is Pub/Sub or the Publish/Subscribe Pattern?'
+description: ''
 name: 'Pub Sub'
 summary: ''
 keywords: ['pub sub', 'pubsub']
+relatedTerms: ['message-broker-message-queue', 'webhook']
 ---
 
 The Pub/Sub or Publish/Subscribe messaging pattern is like a stock market: publishers are investors selling stocks at a certain price and subscribers are people looking at ask prices and their evolution throughout time.

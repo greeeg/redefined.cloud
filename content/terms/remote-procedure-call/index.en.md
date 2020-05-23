@@ -1,8 +1,11 @@
 ---
+title: 'What is Remote Procedure Call or RPC?'
+description: ''
 name: 'Remote procedure call'
 shortName: 'RPC'
 summary: ''
 keywords: ['Remote procedure call', 'rpc', 'communication']
+relatedTerms: ['service-proxy', 'microservice-architecture']
 ---
 
 Remote procedure call, also known as RPC, is like organizing a dinner and calling your bakery for some bread: you're asking for the result (some bread) of a request performed by a remote service (the bakery) for your dinner (application) to work as expected.

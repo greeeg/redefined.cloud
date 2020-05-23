@@ -1,8 +1,11 @@
 ---
+title: 'What is a CRON job or task?'
+description: ''
 name: 'CRON job'
 shortName: 'CRON'
 summary: ''
 keywords: ['cron job', 'cron']
+relatedTerms: ['webhook', 'logging', 'message-broker-message-queue']
 ---
 
 Cron jobs are a way to schedule code to run automatically at predetermined intervals. It helps automate repetitive work to be done at specific times.

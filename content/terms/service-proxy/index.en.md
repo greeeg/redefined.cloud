@@ -1,7 +1,15 @@
 ---
+title: 'What is a Service Proxy?'
+description: ''
 name: 'Service proxy'
 summary: ''
 keywords: ['service proxy', 'microservices']
+relatedTerms:
+  [
+    'container-orchestration-and-kubernetes',
+    'load-balancer',
+    'microservice-architecture',
+  ]
 ---
 
 A service proxy is like a gatekeeper between a service and incoming requests. Instead of directly receiving requests from the outside, services receive request from their proxy.

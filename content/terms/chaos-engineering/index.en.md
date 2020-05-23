@@ -1,7 +1,10 @@
 ---
+title: 'What is Chaos Engineering?'
+description: ''
 name: 'Chaos engineering'
 summary: ''
 keywords: ['chaos engineering']
+relatedTerms: ['observability', 'monitoring', 'containers-and-docker']
 ---
 
 Chaos engineering is like car crash tests where you break things intentionally in order to see how resilient your system is to those situations.

@@ -1,8 +1,12 @@
 ---
+title: 'What are Containers and Docker?'
+description: ''
 name: 'Containers & Docker'
 shortName: 'Container'
 summary: ''
 keywords: ['container', 'docker']
+relatedTerms:
+  ['microservice-architecture', 'virtual-machine', 'container-registry']
 ---
 
 A container is like a box containing everything needed to run an application in the cloud: from code, dependencies to system tools and settings.

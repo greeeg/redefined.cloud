@@ -1,7 +1,10 @@
 ---
+title: 'What is Observability?'
+description: ''
 name: 'Observability'
 summary: ''
 keywords: ['observability', 'monitoring']
+relatedTerms: ['monitoring', 'logging', 'tracing', 'profiling']
 ---
 
 Monitoring is the activity of observing the state of a system over time. Monitoring provides automated checks that you can execute against a distributed system to make sure that none of the things you predicted signify any trouble. you are only looking for known issues.

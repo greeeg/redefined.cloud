@@ -1,8 +1,16 @@
 ---
+title: 'What is Continuous Delivery or CD?'
+description: ''
 name: 'Continuous delivery'
 shortName: 'CD'
 summary: ''
 keywords: ['continuous delivery', 'ci/cd', 'cd']
+relatedTerms:
+  [
+    'continuous-integration',
+    'service-level-agreement',
+    'service-level-objective',
+  ]
 ---
 
 Continuous delivery is an engineering practise in which you want to reduce the time between writing the first line of code and deploying it live to customers in a safe and reliable way.

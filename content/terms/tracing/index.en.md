@@ -1,7 +1,10 @@
 ---
+title: 'What is Tracing?'
+description: ''
 name: 'Tracing'
 summary: ''
 keywords: ['tracing', 'logging', 'monitoring']
+relatedTerms: ['observability', 'logging', 'monitoring', 'profiling']
 ---
 
 Where logging could be compared to a flight manifest, tracing would be the black box used to understand how things went during a crash, to discover the chain of events that led to a problem.
