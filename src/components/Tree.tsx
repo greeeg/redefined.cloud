@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { md } from '@/theme';
 
 type Node = {
   label: string;
@@ -47,88 +49,100 @@ const TreeMaster: FC<TreeMasterProps> = ({ tree, className, onSelect }) => {
 
 // Inspired by https://codepen.io/philippkuehn/pen/QbrOaN
 export const Tree = styled(TreeMaster)`
-  ul {
-    position: relative;
-    padding: 1em 0;
-    white-space: nowrap;
-    margin: 0 auto;
-    text-align: center;
-
-    &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-
-    ul::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      border-left: 1px solid #ccc;
-      width: 0;
-      height: 1em;
-    }
-  }
-
-  li {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    list-style-type: none;
-    position: relative;
-    padding: 1em 0.5em 0 0.5em;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 50%;
-      border-top: 1px solid #ccc;
-      width: 50%;
-      height: 1em;
-    }
-
-    &::after {
-      right: auto;
-      left: 50%;
-      border-left: 1px solid #ccc;
-    }
-
-    &:only-child::after,
-    &:only-child::before {
-      display: none;
-    }
-
-    &:only-child {
-      padding-top: 0;
-    }
-
-    &:first-child::before,
-    &:last-child::after {
-      border: 0 none;
-    }
-
-    &:last-child::before {
-      border-right: 1px solid #ccc;
-      border-radius: 0 5px 0 0;
-    }
-
-    &:first-child::after {
-      border-radius: 5px 0 0 0;
-    }
-
-    button {
-      cursor: pointer;
-      border: 1px solid #ccc;
-      padding: 0.5em 0.75em;
-      text-decoration: none;
-      display: inline-block;
-      border-radius: 5px;
-      color: #333;
+  ${(p) => css`
+    ul {
       position: relative;
-      font-size: 18px;
+      padding: 1em 0;
+      white-space: nowrap;
+      margin: 0 auto;
+      text-align: center;
+
+      &::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+      ul::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 2px solid ${p.theme.colors.yellow200};
+        width: 0;
+        height: 1em;
+      }
     }
-  }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 1em 0.5em 0 0.5em;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 2px solid ${p.theme.colors.yellow200};
+        width: 50%;
+        height: 1em;
+      }
+
+      &::after {
+        right: auto;
+        left: 50%;
+        border-left: 2px solid ${p.theme.colors.yellow200};
+      }
+
+      &:only-child::after,
+      &:only-child::before {
+        display: none;
+      }
+
+      &:only-child {
+        padding-top: 0;
+      }
+
+      &:first-child::before,
+      &:last-child::after {
+        border: 0 none;
+      }
+
+      &:last-child::before {
+        border-right: 2px solid ${p.theme.colors.yellow200};
+        border-radius: 0 5px 0 0;
+      }
+
+      &:first-child::after {
+        border-radius: 5px 0 0 0;
+      }
+
+      button {
+        position: relative;
+        display: inline-block;
+        padding: 0.5em 0.75em;
+        background-color: transparent;
+        color: ${p.theme.colors.white};
+        font-size: ${p.theme.fontSizes.size100}px;
+        text-decoration: none;
+        border: 1px solid ${p.theme.colors.white};
+        border-radius: ${p.theme.radii.borderRadius100}px;
+        transition: all ${p.theme.transitions.transition100};
+        cursor: pointer;
+
+        &:hover {
+          border-color: ${p.theme.colors.yellow200};
+        }
+
+        ${md(css`
+          font-size: ${p.theme.fontSizes.size200}px;
+        `)}
+      }
+    }
+  `}
 `;

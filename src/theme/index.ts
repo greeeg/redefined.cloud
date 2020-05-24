@@ -1,10 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import reset from 'styled-reset';
 import { fonts } from './fonts';
 
 export const GlobalStyles = createGlobalStyle`
   ${reset}
   ${fonts}
+
+  * {
+    box-sizing: border-box;
+  }
 
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
@@ -18,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
   time, mark, audio, video {
     font-family: ${(p) => p.theme.fonts.font200};
     font-size: ${(p) => p.theme.fontSizes.size100}px;
-    color: ${(p) => p.theme.colors.gray600};
+    color: ${(p) => p.theme.colors.gray900};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -26,16 +30,30 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: bold;
   }
 
-  /* WebKit/Blink Browsers */
   ::selection {
     background: ${(p) => p.theme.colors.yellow200}; 
     color: ${(p) => p.theme.colors.white};
   }
 
-  /* Gecko Browsers */
   ::-moz-selection {
     background: ${(p) => p.theme.colors.yellow200};
     color: ${(p) => p.theme.colors.white};
+  }
+
+  a.focus-visible:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px ${(p) => p.theme.colors.yellow200};
+  }
+
+  button.focus-visible:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px ${(p) => p.theme.colors.yellow200};
+  }
+
+  .js-focus-visible {
+    * {
+      outline: none;
+    }
   }
 `;
 
@@ -52,6 +70,8 @@ export const theme = {
     spacing500: 48,
     spacing600: 64,
     spacing700: 96,
+    spacing800: 120,
+    spacing900: 144,
   },
   fontSizes: {
     size80: 15,
@@ -62,26 +82,34 @@ export const theme = {
     size500: 50,
     size600: 68,
   },
+  sizes: {
+    size80: 704,
+    size100: 1184,
+    size200: 1424,
+  },
   colors: {
     white: '#fff',
     black: '#000',
-    gray100: '#F2F3F7',
-    gray200: '#E6E6EB',
-    gray300: '#D1D2D6',
-    gray400: '#8A8C99',
-    gray500: '#444650`',
-    gray600: '#1A1A1E',
+    gray100: '#f6f8fa',
+    gray200: '#e1e4e8',
+    gray300: '#d1d5da',
+    gray400: '#959da5',
+    gray500: '#6a737d',
+    gray600: '#586069',
+    gray700: '#444d56',
+    gray800: '#2f363d',
+    gray900: '#24292e',
     yellow200: '#4AB5AB',
     yellow100: '#178C85',
   },
   fonts: {
     font100: '"Inter UI", Helvetica, Arial, sans-serif',
-    font200: '"Lora", Georgia, Cambria, "Times New Roman", Times, serif',
+    font200: '"Elena Basic", Georgia, Cambria, "Times New Roman", Times, serif',
   },
   lineHeights: {
     lineHeight80: 1,
     lineHeight100: 1.2,
-    lineHeight200: 1.58,
+    lineHeight200: 1.52,
   },
   radii: {
     borderRadius100: 2,
@@ -95,6 +123,7 @@ export const theme = {
   transitions: {
     transition100: '0.2s ease-in-out',
   },
+  breakpoints: ['40em', '52em', '64em'],
 };
 
 export type BaseTheme = typeof theme;
@@ -102,3 +131,15 @@ export type BaseTheme = typeof theme;
 export type Theme = BaseTheme & {
   space: typeof theme.space & { '0 auto': string };
 };
+
+export const md = (inner: any) => css`
+  @media (min-width: ${theme.breakpoints[0]}) {
+    ${inner};
+  }
+`;
+
+export const lg = (inner: any) => css`
+  @media (min-width: ${theme.breakpoints[1]}) {
+    ${inner};
+  }
+`;

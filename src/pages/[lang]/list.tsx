@@ -6,7 +6,7 @@ import { Layout } from '@/components/Layout';
 import i18n, { Language } from '@/utils/i18n';
 import { getTerms } from '@/utils/terms';
 import { Head } from '@/components/Head';
-import { Heading } from '@/components/primitives';
+import { Box, Heading, Stack } from '@/components/primitives';
 import { TermAttributes } from '@/types';
 
 interface ListProps {
@@ -19,19 +19,35 @@ const List: NextPage<ListProps> = ({ terms }) => {
   return (
     <Layout>
       <Head title="Home" />
-      <Heading as="h1">List</Heading>
 
-      {terms.map((term) => {
-        return (
-          <Link
-            href="/[lang]/[term]"
-            as={`/${lang}/${term.slug}`}
-            key={term.slug}
-          >
-            <Heading as="h2">{term.title}</Heading>
-          </Link>
-        );
-      })}
+      <Box as="section" paddingY={['spacing600', 'spacing700']}>
+        <Box
+          margin="0 auto"
+          width="100%"
+          maxWidth="size200"
+          paddingX={['spacing200', 'spacing400', 'spacing600']}
+        >
+          <Heading as="h1" size={['size400', 'size500', 'size600']}>
+            List
+          </Heading>
+
+          <Stack vertical spacing="spacing200">
+            {terms.map((term) => {
+              return (
+                <Link
+                  href="/[lang]/[term]"
+                  as={`/${lang}/${term.slug}`}
+                  key={term.slug}
+                >
+                  <Heading as="h2" size="size300">
+                    {term.title}
+                  </Heading>
+                </Link>
+              );
+            })}
+          </Stack>
+        </Box>
+      </Box>
     </Layout>
   );
 };
@@ -41,7 +57,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: i18n.getI18nStaticPaths([
       {
         en: {},
-        fr: {},
       },
     ]),
     fallback: false,

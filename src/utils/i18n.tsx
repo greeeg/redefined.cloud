@@ -1,7 +1,7 @@
 import React, { FC, createContext, useContext, useMemo } from 'react';
 import { useRouter } from 'next/router';
 
-export type Language = 'en' | 'fr';
+export type Language = 'en';
 export type Phrases = Record<string, string>;
 
 interface I18nProviderProps {
@@ -73,4 +73,4 @@ const i18n = (languages: Language[]) => {
   };
 };
 
-export default i18n(['en', 'fr']);
+export default i18n(['en']);

@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import i18n, { Language } from '@/utils/i18n';
 import { Head } from '@/components/Head';
-import { Heading } from '@/components/primitives';
+import { Box, Heading } from '@/components/primitives';
 import { Layout } from '@/components/Layout';
 import { getAbout } from '@/utils/about';
 import { Markdown } from '@/components/Markdown';
@@ -18,7 +18,20 @@ const About: NextPage<AboutProps> = ({ content }) => {
   return (
     <Layout>
       <Head title="Home" />
-      <Heading as="h1">About</Heading>
+
+      <Box as="section" paddingY={['spacing600', 'spacing700']}>
+        <Box
+          margin="0 auto"
+          width="100%"
+          maxWidth="size200"
+          paddingX={['spacing200', 'spacing400', 'spacing600']}
+        >
+          <Heading as="h1" size={['size400', 'size500', 'size600']}>
+            About the project
+          </Heading>
+        </Box>
+      </Box>
+
       <Markdown content={content} />
     </Layout>
   );
@@ -29,7 +42,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: i18n.getI18nStaticPaths([
       {
         en: {},
-        fr: {},
       },
     ]),
     fallback: false,

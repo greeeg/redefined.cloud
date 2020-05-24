@@ -1,4 +1,4 @@
-import React, { FC, createElement } from 'react';
+import { FC, createElement } from 'react';
 import styled from 'styled-components';
 import {
   color,
@@ -10,10 +10,12 @@ import {
   SpaceProps,
   boxShadow,
   BoxShadowProps,
-  borderRadius,
-  BorderRadiusProps,
+  border,
+  BorderProps,
   flexbox,
   FlexboxProps,
+  position,
+  PositionProps,
 } from 'styled-system';
 
 import { Theme } from '@/theme';
@@ -22,8 +24,9 @@ interface BoxProps
   extends ColorProps<Theme>,
     SpaceProps<Theme>,
     BoxShadowProps<Theme>,
-    BorderRadiusProps<Theme>,
+    BorderProps<Theme>,
     FlexboxProps<Theme>,
+    PositionProps<Theme>,
     LayoutProps<Theme> {
   className?: string;
   as?: keyof JSX.IntrinsicElements;
@@ -34,5 +37,5 @@ const RawBox: FC<BoxProps> = ({ as = 'div', children, className }) => {
 };
 
 export const Box = styled(RawBox)<BoxProps>`
-  ${compose(color, flexbox, layout, space, boxShadow, borderRadius)}
+  ${compose(color, flexbox, layout, space, boxShadow, border, position)}
 `;

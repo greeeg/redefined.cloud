@@ -37,7 +37,10 @@ export const getTerms = (language: Language): TermAttributes[] => {
             );
             const data = readFileSync(path.join('.', filePath), 'utf8');
             const { data: attributes } = matter(data);
-            terms.push(attributes);
+            terms.push({
+              ...attributes,
+              slug: directory.name,
+            });
           }
         }
       );
