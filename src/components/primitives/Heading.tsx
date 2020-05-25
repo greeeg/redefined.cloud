@@ -12,6 +12,8 @@ import {
   FlexboxProps,
   textAlign,
   TextAlignProps,
+  lineHeight,
+  LineHeightProps,
   variant,
 } from 'styled-system';
 
@@ -22,8 +24,9 @@ interface HeadingProps
     SpaceProps<Theme>,
     MaxWidthProps<Theme>,
     FlexboxProps<Theme>,
+    LineHeightProps<Theme>,
     TextAlignProps<Theme> {
-  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   size: keyof Theme['fontSizes'] | Array<keyof Theme['fontSizes']>;
   variation?: 'primary' | 'secondary';
   className?: string;
@@ -69,5 +72,5 @@ export const Heading = styled(RawHeading)<HeadingProps>`
     },
   })}
 
-  ${compose(color, space, maxWidth, textAlign, flexbox)}
+  ${compose(color, space, maxWidth, lineHeight, textAlign, flexbox)}
 `;

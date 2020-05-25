@@ -28,7 +28,7 @@ Content delivery networks are made possible thanks to 3 different parts:
 
 By using CDNs, you're reducing the time to access your assets for your users, reducing the load on your main server which doesn't have to server static assets anymore.
 
-### Use cases for CDN
+## Use cases for CDN
 
 - Assets uploaded by users (pictures, videos)
 - Static assets of your app (HTML, CSS, JS, images, videos)

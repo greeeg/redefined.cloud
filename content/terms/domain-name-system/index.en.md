@@ -20,7 +20,7 @@ Well, DNS is one of the most important part of how Internet works. So important 
 
 ## It all starts with a domain name
 
-Wether you're using a domain name for an ecommerce website, a serverless function or a database, you now understand the magic going on behind the curtain which makes everything possible. Because DNS servers are the first piece of how your users interact with your cloud architecture, they're really important. Indeed, if no one is able to route your traffic to the proper server, you basically disappear from the map. This is exactly what happened to Cloudflare on July, 2nd 2019, when [all websites using their DNS servers were not accessible for several hours](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/).
+Wether you're using a domain name for an ecommerce website, a serverless function or a database, you now understand the magic going on behind the curtain which makes everything possible. Because DNS servers are the first piece of how your users interact with your cloud architecture, they're really important. Indeed, if no one is able to route your traffic to the proper server, you basically disappear from the map. This is exactly what happened to Cloudflare on July, 2nd 2019, when [all websites using their DNS servers were not accessible for several hours](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/ 'Test').
 
 ## Making sure you're using the right DNS servers for your domain name
 

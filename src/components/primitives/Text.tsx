@@ -25,7 +25,7 @@ interface TextProps
     TextAlignProps<Theme>,
     FlexboxProps<Theme>,
     MaxWidthProps<Theme> {
-  as?: 'p' | 'span';
+  as?: 'p' | 'span' | 'li';
   className?: string;
 }
 

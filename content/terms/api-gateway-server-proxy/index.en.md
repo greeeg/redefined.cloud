@@ -1,6 +1,6 @@
 ---
 title: 'What is an API Gateway?'
-description: ''
+description: 'API Gateway is like a front desk employee that would be responsible for answering customers requests and getting their orders in the back of the store.'
 name: 'API Gateway'
 summary: 'Routing requests to the right service'
 relatedTerms: ['microservice-architecture', 'serverless', 'service-mesh']

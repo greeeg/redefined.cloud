@@ -27,7 +27,7 @@
               },
               {
                 "label": "API gateway",
-                "value": "api-gateway",
+                "value": "api-gateway-server-proxy",
                 "children": [
                   {
                     "label": "Load balancer",

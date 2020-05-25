@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import Router from 'next/router';
-import { Menu, MenuList, MenuButton, MenuItem } from '@reach/menu-button';
 
 import i18n from '@/utils/i18n';
 import { Heading, Box, Stack } from '@/components/primitives';
@@ -26,9 +25,9 @@ export const TreeSection: FC = () => {
           paddingY={['spacing600', 'spacing600']}
           borderRadius="borderRadius100"
         >
-          <Stack vertical spacing="spacing200">
+          <Stack direction="column" spacing="spacing200">
             <Box paddingX={['spacing200', 'spacing400', 'spacing600']}>
-              <Stack vertical spacing="spacing40">
+              <Stack direction="column" spacing="spacing40">
                 <Heading
                   as="p"
                   size={['size100', 'size300']}

@@ -40,6 +40,10 @@ export const GlobalStyles = createGlobalStyle`
     color: ${(p) => p.theme.colors.white};
   }
 
+  a {
+    text-decoration: none;
+  }
+
   a.focus-visible:focus {
     outline: none;
     box-shadow: 0px 0px 0px 3px ${(p) => p.theme.colors.yellow200};
@@ -76,7 +80,7 @@ export const theme = {
   fontSizes: {
     size80: 15,
     size100: 17,
-    size200: 21,
+    size200: 22,
     size300: 28,
     size400: 38,
     size500: 50,

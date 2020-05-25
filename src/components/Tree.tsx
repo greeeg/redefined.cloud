@@ -22,7 +22,10 @@ interface TreeNodeProps {
 
 const TreeNode: FC<TreeNodeProps> = ({ node, onSelect }) => (
   <li>
-    <button onClick={() => onSelect(node.value)}>{node.label}</button>
+    <button aria-label={node.label} onClick={() => onSelect(node.value)}>
+      {node.label}
+    </button>
+
     {node.children && node.children.length > 0 && (
       <ul>
         {node.children.map((child, index) => (

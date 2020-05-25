@@ -62,6 +62,7 @@ export const Header: FC = () => {
           paddingX={['spacing200', 'spacing400', 'spacing600']}
         >
           <Stack
+            direction="row"
             alignItems="center"
             justifyContent="flex-start"
             spacing="spacing600"
@@ -75,7 +76,7 @@ export const Header: FC = () => {
             </Link>
 
             <Box as="nav">
-              <Stack as="ul" spacing="spacing60">
+              <Stack as="ul" direction="row" spacing="spacing60">
                 <NavItem>
                   <Link href="/[lang]/list" as={`/${lang}/list`}>
                     <a title="List">List</a>
@@ -95,7 +96,12 @@ export const Header: FC = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Stack as="span" spacing="spacing60" alignItems="center">
+                    <Stack
+                      as="span"
+                      direction="row"
+                      spacing="spacing60"
+                      alignItems="center"
+                    >
                       <svg
                         width="20"
                         height="20"

@@ -10,7 +10,7 @@ export const HeroSection: FC = () => {
       margin="0 auto"
       as="section"
     >
-      <Stack vertical spacing="spacing200" alignItems="center">
+      <Stack direction="column" spacing="spacing200" alignItems="center">
         <Heading
           as="h1"
           textAlign="center"

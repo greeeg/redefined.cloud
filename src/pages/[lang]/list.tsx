@@ -31,7 +31,7 @@ const List: NextPage<ListProps> = ({ terms }) => {
             List
           </Heading>
 
-          <Stack vertical spacing="spacing200">
+          <Stack direction="column" spacing="spacing200">
             {terms.map((term) => {
               return (
                 <Link

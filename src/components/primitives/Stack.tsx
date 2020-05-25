@@ -1,6 +1,7 @@
-import React, { FC, createElement } from 'react';
+import { FC, createElement } from 'react';
 import styled from 'styled-components';
 import {
+  variant,
   compose,
   alignItems,
   AlignItemsProps,
@@ -16,33 +17,51 @@ import {
 
 import { Theme } from '@/theme';
 
+type Direction = 'row' | 'column';
+type Track = string | null;
+
 interface StackProps
   extends AlignItemsProps<Theme>,
     AlignContentProps<Theme>,
     JustifyContentProps<Theme>,
     JustifySelfProps<Theme>,
     AlignSelfProps<Theme> {
-  vertical?: boolean;
-  spacing?: keyof Theme['space'];
+  direction: Direction | Direction[];
+  rows?: Track | Track[];
+  columns?: Track | Track[];
+  spacing?: keyof Theme['space'] | Array<keyof Theme['space']>;
   className?: string;
   as?: keyof JSX.IntrinsicElements;
 }
 
 const RawStack: FC<StackProps> = ({
   as = 'div',
-  vertical,
+  direction,
   children,
   className,
 }) => {
-  return createElement(as, { className, vertical, children });
+  return createElement(as, { className, direction, children });
 };
 
 export const Stack = styled(RawStack)<StackProps>`
   display: grid;
-  grid-auto-flow: ${(p) => (p.vertical ? 'row' : 'column')};
-  grid-row-gap: ${(p) =>
-    p.spacing && p.vertical ? p.theme.space[p.spacing] : 0}px;
-  grid-column-gap: ${(p) =>
-    p.spacing && !p.vertical ? p.theme.space[p.spacing] : 0}px;
+
+  ${(p) =>
+    variant({
+      prop: 'direction',
+      variants: {
+        row: {
+          gridAutoFlow: 'column',
+          gridColumnGap: p.spacing,
+          gridTemplateColumns: p.rows,
+        },
+        column: {
+          gridAutoFlow: 'row',
+          gridRowGap: p.spacing,
+          gridTemplateRows: p.columns,
+        },
+      },
+    })}
+
   ${compose(alignItems, alignContent, justifyContent, justifySelf, alignSelf)}
 `;
