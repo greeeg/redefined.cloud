@@ -13,6 +13,8 @@ import {
   JustifySelfProps,
   alignSelf,
   AlignSelfProps,
+  width,
+  WidthProps,
 } from 'styled-system';
 
 import { Theme } from '@/theme';
@@ -25,6 +27,7 @@ interface StackProps
     AlignContentProps<Theme>,
     JustifyContentProps<Theme>,
     JustifySelfProps<Theme>,
+    WidthProps<Theme>,
     AlignSelfProps<Theme> {
   direction: Direction | Direction[];
   rows?: Track | Track[];
@@ -63,5 +66,12 @@ export const Stack = styled(RawStack)<StackProps>`
       },
     })}
 
-  ${compose(alignItems, alignContent, justifyContent, justifySelf, alignSelf)}
+  ${compose(
+    alignItems,
+    alignContent,
+    justifyContent,
+    justifySelf,
+    alignSelf,
+    width
+  )}
 `;

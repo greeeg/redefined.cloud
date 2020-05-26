@@ -1,22 +1,23 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { Layout } from '@/components/Layout';
+import { PostAttributes } from '@/types';
 import i18n, { Language } from '@/utils/i18n';
-import { getTerms } from '@/utils/terms';
+import { getPosts } from '@/utils/posts';
+import { Layout } from '@/components/Layout';
 import { Head } from '@/components/Head';
 import { TreeSection } from '@/components/pages/index/TreeSection';
 import { HeroSection } from '@/components/pages/index/HeroSection';
 import { BlogSection } from '@/components/pages/index/BlogSection';
 
-const Index: NextPage<{ terms: string[] }> = () => {
+const Index: NextPage<{ posts: PostAttributes[] }> = ({ posts }) => {
   return (
     <Layout>
       <Head title="Home" />
 
       <HeroSection />
       <TreeSection />
-      <BlogSection />
+      <BlogSection posts={posts} />
     </Layout>
   );
 };
@@ -33,9 +34,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const terms = getTerms(params.lang as Language);
+  const posts = getPosts(params.lang as Language);
+
   return {
-    props: { ...params, terms },
+    props: { ...params, posts },
   };
 };
 

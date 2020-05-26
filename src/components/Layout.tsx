@@ -1,19 +1,16 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
 
 import { Header, HEADER_HEIGHT } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-
-const Main = styled.main`
-  padding-top: ${HEADER_HEIGHT}px;
-`;
+import { Box } from '@/components/primitives';
 
 export const Layout: FC = ({ children }) => {
   return (
-    <Main>
+    // @ts-ignore
+    <Box as="div" paddingTop={HEADER_HEIGHT}>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
-    </Main>
+    </Box>
   );
 };

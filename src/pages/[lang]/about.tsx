@@ -2,10 +2,10 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import i18n, { Language } from '@/utils/i18n';
+import { getAboutPage } from '@/utils/about';
 import { Head } from '@/components/Head';
 import { Box, Heading } from '@/components/primitives';
 import { Layout } from '@/components/Layout';
-import { getAbout } from '@/utils/about';
 import { Markdown } from '@/components/Markdown';
 
 interface AboutProps {
@@ -23,16 +23,21 @@ const About: NextPage<AboutProps> = ({ content }) => {
         <Box
           margin="0 auto"
           width="100%"
-          maxWidth="size200"
+          maxWidth="size100"
           paddingX={['spacing200', 'spacing400', 'spacing600']}
         >
-          <Heading as="h1" size={['size400', 'size500', 'size600']}>
+          <Heading
+            as="h1"
+            fontSize={['size400', 'size500', 'size600']}
+            textAlign="center"
+            paddingBottom="spacing700"
+          >
             About the project
           </Heading>
+
+          <Markdown content={content} />
         </Box>
       </Box>
-
-      <Markdown content={content} />
     </Layout>
   );
 };
@@ -56,7 +61,7 @@ export const getStaticProps: GetStaticProps<any, { lang: Language }> = async (
   } = context;
 
   return {
-    props: { content: getAbout(lang) },
+    props: { content: getAboutPage(lang) },
   };
 };
 

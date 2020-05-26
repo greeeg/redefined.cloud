@@ -14,6 +14,8 @@ import {
   TextAlignProps,
   lineHeight,
   LineHeightProps,
+  fontWeight,
+  FontWeightProps,
   variant,
 } from 'styled-system';
 
@@ -24,11 +26,11 @@ interface HeadingProps
     SpaceProps<Theme>,
     MaxWidthProps<Theme>,
     FlexboxProps<Theme>,
+    FontWeightProps<Theme>,
     LineHeightProps<Theme>,
     TextAlignProps<Theme> {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  size: keyof Theme['fontSizes'] | Array<keyof Theme['fontSizes']>;
-  variation?: 'primary' | 'secondary';
+  fontSize: keyof Theme['fontSizes'] | Array<keyof Theme['fontSizes']>;
   className?: string;
 }
 
@@ -41,10 +43,10 @@ export const Heading = styled(RawHeading)<HeadingProps>`
   line-height: ${(p) => p.theme.lineHeights.lineHeight80};
   color: ${(p) => p.theme.colors.gray900};
   font-family: ${(p) => p.theme.fonts.font100};
-  font-weight: ${(p) => (p.variation === 'secondary' ? 'normal' : 'bold')};
+  font-weight: 500;
 
   ${variant({
-    prop: 'size',
+    prop: 'fontSize',
     variants: {
       size600: {
         fontSize: 'size600',
@@ -72,5 +74,5 @@ export const Heading = styled(RawHeading)<HeadingProps>`
     },
   })}
 
-  ${compose(color, space, maxWidth, lineHeight, textAlign, flexbox)}
+  ${compose(color, space, maxWidth, lineHeight, textAlign, fontWeight, flexbox)}
 `;

@@ -14,7 +14,7 @@ export const HeroSection: FC = () => {
         <Heading
           as="h1"
           textAlign="center"
-          size={['size400', 'size500', 'size600']}
+          fontSize={['size400', 'size500', 'size600']}
         >
           Redefining the Cloud to better understand how it works.
         </Heading>

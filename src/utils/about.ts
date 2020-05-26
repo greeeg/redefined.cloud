@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import path from 'path';
 import { Language } from './i18n';
 
-export const getAbout = (language: Language) => {
+export const getAboutPage = (language: Language): string => {
   const file = `index.${language}.md`;
   const filePath = path.resolve(
     __filename,

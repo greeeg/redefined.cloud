@@ -3,31 +3,31 @@ import path from 'path';
 import * as matter from 'gray-matter';
 
 import i18n, { Language } from '@/utils/i18n';
-import { TermAttributes, TermPage } from '@/types';
+import { PostAttributes, PostPage } from '@/types';
 
-export const getTermPaths = () => {
-  const termsDirectory = path.resolve(
+export const getPostPaths = () => {
+  const postsDirectory = path.resolve(
     __filename,
     '..',
     '..',
     'content',
-    'terms'
+    'posts'
   );
 
   const pages = [];
 
-  readdirSync(path.join('.', termsDirectory), {
+  readdirSync(path.join('.', postsDirectory), {
     withFileTypes: true,
   })
     .filter((element) => element.isDirectory())
     .map((directory) => {
       const localizedTerm = {};
-      readdirSync(path.join('.', termsDirectory, directory.name)).forEach(
+      readdirSync(path.join('.', postsDirectory, directory.name)).forEach(
         (file) => {
           const regex = /index.([a-z-]+).md/g;
           const [_, lang] = regex.exec(file);
           localizedTerm[lang] = {
-            term: directory.name,
+            post: directory.name,
           };
         }
       );
@@ -38,23 +38,23 @@ export const getTermPaths = () => {
   return i18n.getI18nStaticPaths(pages);
 };
 
-export const getTerms = (language: Language): TermAttributes[] => {
-  const termsDirectory = path.resolve(
+export const getPosts = (language: Language): PostAttributes[] => {
+  const postsDirectory = path.resolve(
     __filename,
     '..',
     '..',
     'content',
-    'terms'
+    'posts'
   );
 
-  const terms = [];
+  const posts = [];
 
-  readdirSync(path.join('.', termsDirectory), {
+  readdirSync(path.join('.', postsDirectory), {
     withFileTypes: true,
   })
     .filter((element) => element.isDirectory())
     .map((directory) => {
-      readdirSync(path.join('.', termsDirectory, directory.name)).forEach(
+      readdirSync(path.join('.', postsDirectory, directory.name)).forEach(
         (file) => {
           const regex = /index.([a-z-]+).md/g;
           const [_, lang] = regex.exec(file);
@@ -65,13 +65,13 @@ export const getTerms = (language: Language): TermAttributes[] => {
               '..',
               '..',
               'content',
-              'terms',
+              'posts',
               directory.name,
               file
             );
             const data = readFileSync(path.join('.', filePath), 'utf8');
             const { data: attributes } = matter(data);
-            terms.push({
+            posts.push({
               ...attributes,
               slug: directory.name,
             });
@@ -80,48 +80,24 @@ export const getTerms = (language: Language): TermAttributes[] => {
       );
     });
 
-  return terms;
+  return posts;
 };
 
-export const getTerm = ({
+export const getPostPage = ({
   lang,
-  term,
+  post,
 }: {
   lang: string;
-  term: string;
-}): TermAttributes | null => {
-  const filePath = path.resolve(
-    __filename,
-    '..',
-    '..',
-    'content',
-    'terms',
-    term,
-    `index.${lang}.md`
-  );
-  const data = readFileSync(path.join('.', filePath), 'utf8');
-  const { data: attributes } = matter(data);
-  return {
-    ...attributes,
-    slug: term,
-  };
-};
-
-export const getTermPage = ({
-  lang,
-  term,
-}: {
-  lang: string;
-  term: string;
-}): TermPage | null => {
+  post: string;
+}): PostPage | null => {
   const fileName = `index.${lang}.md`;
   const filePath = path.resolve(
     __filename,
     '..',
     '..',
     'content',
-    'terms',
-    term,
+    'posts',
+    post,
     fileName
   );
 
@@ -133,7 +109,7 @@ export const getTermPage = ({
       attributes,
     };
   } catch (err) {
-    console.warn('Error while getting term page content', err);
+    console.warn('Error while getting post page content', err);
     return null;
   }
 };

@@ -30,9 +30,9 @@ export const TreeSection: FC = () => {
               <Stack direction="column" spacing="spacing40">
                 <Heading
                   as="p"
-                  size={['size100', 'size300']}
+                  fontSize={['size100', 'size300']}
                   color="white"
-                  variation="secondary"
+                  fontWeight="size80"
                 >
                   Let&apos;s figure out
                 </Heading>

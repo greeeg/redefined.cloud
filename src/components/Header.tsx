@@ -5,7 +5,7 @@ import i18n from '@/utils/i18n';
 import { Box, Stack } from '@/components/primitives';
 import { Logo } from '@/components/Logo';
 import styled, { css } from 'styled-components';
-import { theme } from '@/theme';
+import { theme, md } from '@/theme';
 
 const NavItem = styled.li`
   ${({ theme }) => css`
@@ -19,8 +19,13 @@ const NavItem = styled.li`
       border-radius: ${(p) => p.theme.radii.borderRadius100}px;
       transition: all ${(p) => p.theme.transitions.transition100};
       ${(p) => css`
-        padding: ${p.theme.space.spacing80}px ${p.theme.space.spacing100}px;
+        padding: ${p.theme.space.spacing80}px ${p.theme.space.spacing40}px;
       `};
+
+      ${(p) =>
+        md(css`
+          padding: ${p.theme.space.spacing80}px ${p.theme.space.spacing100}px;
+        `)}
 
       :hover {
         background-color: ${(p) => p.theme.colors.gray100};
@@ -33,10 +38,29 @@ const NavItem = styled.li`
       text-decoration: none;
       color: ${theme.colors.gray800};
     }
+
+    .github {
+      transform: translateY(-2px);
+      span > span {
+        display: none;
+
+        ${md(css`
+          display: inline;
+        `)}
+      }
+    }
+
+    .about span:last-child {
+      display: none;
+
+      ${md(css`
+        display: inline;
+      `)}
+    }
   `}
 `;
 
-export const HEADER_HEIGHT = 90;
+export const HEADER_HEIGHT = [70, 90];
 
 export const Header: FC = () => {
   const { lang } = i18n.useI18n();
@@ -62,10 +86,11 @@ export const Header: FC = () => {
           paddingX={['spacing200', 'spacing400', 'spacing600']}
         >
           <Stack
+            width="100%"
             direction="row"
             alignItems="center"
-            justifyContent="flex-start"
-            spacing="spacing600"
+            justifyContent={['space-between', 'flex-start']}
+            spacing={['spacing200', 'spacing600']}
           >
             <Link href="/[lang]" as={`/${lang}`}>
               <a title="Redefined.cloud">
@@ -79,13 +104,18 @@ export const Header: FC = () => {
               <Stack as="ul" direction="row" spacing="spacing60">
                 <NavItem>
                   <Link href="/[lang]/list" as={`/${lang}/list`}>
-                    <a title="List">List</a>
+                    <a title="List" className="list">
+                      List
+                    </a>
                   </Link>
                 </NavItem>
 
                 <NavItem>
                   <Link href="/[lang]/about" as={`/${lang}/about`}>
-                    <a title="About the project">About the project</a>
+                    <a title="About the project" className="about">
+                      <span>About</span>
+                      <span> the project</span>
+                    </a>
                   </Link>
                 </NavItem>
 
@@ -95,6 +125,7 @@ export const Header: FC = () => {
                     href="https://github.com/greeeg/redefined.cloud"
                     target="_blank"
                     rel="noreferrer"
+                    className="github"
                   >
                     <Stack
                       as="span"

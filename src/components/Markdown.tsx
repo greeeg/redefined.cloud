@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 
 const H2: FC = ({ children }) => (
-  <Heading as="h2" size="size300" paddingTop="spacing600">
+  <Heading as="h2" fontSize="size300" paddingTop="spacing600">
     {children}
   </Heading>
 );

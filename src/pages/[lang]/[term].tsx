@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import i18n from '@/utils/i18n';
 import { Layout } from '@/components/Layout';
 import { Head } from '@/components/Head';
-import { getTermPaths } from '../../utils/getPagePaths';
-import { getTermContent } from '../../utils/getPageContent';
+import { getTermPaths, getTermPage, getTerm } from '@/utils/terms';
 import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
+import { TermPage, TermAttributes } from '@/types';
 
 const BlogLink = styled.a`
   &:hover {
@@ -17,21 +18,26 @@ const BlogLink = styled.a`
   }
 `;
 
-const Term: FC<{ content: any }> = (props) => {
+const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
+  content,
+  relatedTerms,
+}) => {
+  const { lang } = i18n.useI18n();
+
   return (
     <Layout>
-      <Head title={props.content.attributes.title} />
+      <Head title={content.attributes.title} />
 
       <Box as="section" paddingTop={['spacing500']} paddingBottom="spacing900">
         <Box margin="0 auto" width="100%" maxWidth="size100">
           <Box paddingX={['spacing200', 'spacing400', 'spacing600']}>
             <Box maxWidth={700} paddingBottom="spacing200">
               <Stack direction="column" spacing="spacing60">
-                <Heading as="p" color="yellow200" size="size100">
+                <Heading as="p" color="yellow200" fontSize="size100">
                   TERM
                 </Heading>
-                <Heading as="h1" size={['size400', 'size500', 'size600']}>
-                  {props.content.attributes.title}
+                <Heading as="h1" fontSize={['size400', 'size500', 'size600']}>
+                  {content.attributes.title}
                 </Heading>
               </Stack>
             </Box>
@@ -39,11 +45,11 @@ const Term: FC<{ content: any }> = (props) => {
             <Box maxWidth={720} paddingBottom="spacing500">
               <Heading
                 as="p"
-                size="size300"
+                fontSize="size300"
                 lineHeight="lineHeight100"
-                variation="secondary"
+                fontWeight="size80"
               >
-                {props.content.attributes.description}
+                {content.attributes.description}
               </Heading>
             </Box>
 
@@ -52,25 +58,39 @@ const Term: FC<{ content: any }> = (props) => {
               rows="70% 30%"
               spacing="spacing900"
             >
-              <Markdown content={props.content.content} />
+              <Markdown content={content.content} />
 
-              <Box>
+              <Box as="aside">
                 <Box maxWidth={224}>
                   <Stack direction="column" spacing="spacing100">
-                    <Heading as="h3" color="yellow200" size="size200">
+                    <Heading as="h3" color="yellow200" fontSize="size200">
                       Related terms
                     </Heading>
 
                     <Box borderBottom="1px solid" borderColor="gray300" />
 
-                    <Link href="/">
-                      <BlogLink title="Load balancer">
-                        <Heading as="span" size="size100">
-                          Load balancer
-                        </Heading>
-                      </BlogLink>
-                    </Link>
-                    <Box borderBottom="1px solid" borderColor="gray300" />
+                    <Stack as="ul" direction="column" spacing="spacing80">
+                      {relatedTerms.map((relatedTerm) => (
+                        <Stack
+                          as="li"
+                          key={relatedTerm.slug}
+                          direction="column"
+                          spacing="spacing80"
+                        >
+                          <Link
+                            href="/[lang]/[term]"
+                            as={`/${lang}/${relatedTerm.slug}`}
+                          >
+                            <BlogLink title={relatedTerm.title}>
+                              <Heading as="span" fontSize="size100">
+                                {relatedTerm.name}
+                              </Heading>
+                            </BlogLink>
+                          </Link>
+                          <Box borderBottom="1px solid" borderColor="gray300" />
+                        </Stack>
+                      ))}
+                    </Stack>
                   </Stack>
                 </Box>
               </Box>
@@ -96,7 +116,12 @@ export const getStaticProps: GetStaticProps<
   const {
     params: { lang, term },
   } = context;
-  return { props: { content: getTermContent({ lang, term }) } };
+  const termPage = getTermPage({ lang, term });
+  const relatedTerms = termPage.attributes.relatedTerms.map((slug) =>
+    getTerm({ term: slug, lang })
+  );
+
+  return { props: { content: termPage, relatedTerms } };
 };
 
 export default Term;

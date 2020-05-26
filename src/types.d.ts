@@ -4,15 +4,6 @@ declare module 'styled-components' {
   interface DefaultTheme extends BaseTheme {}
 }
 
-export type PostContent = {
-  content: string;
-  attributes: {
-    date: string;
-    title: string;
-    slug: string;
-  };
-};
-
 export type TermAttributes = {
   slug: string;
   title: string;
@@ -26,5 +17,17 @@ export type TermAttributes = {
 
 export type TermPage = {
   attributes: TermAttributes;
+  content: string;
+};
+
+export type PostAttributes = {
+  slug: string;
+  title: string;
+  description: string;
+  tag: string;
+};
+
+export type PostPage = {
+  attributes: PostAttributes;
   content: string;
 };

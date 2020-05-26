@@ -12,7 +12,7 @@ export const fonts = css`
     font-family: 'Inter UI';
     src: url(${InterBoldWoff2}) format('woff2'),
       url(${InterBoldWoff}) format('woff');
-    font-weight: bold;
+    font-weight: 500;
     font-style: normal;
   }
 

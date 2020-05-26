@@ -86,6 +86,10 @@ export const theme = {
     size500: 50,
     size600: 68,
   },
+  fontWeights: {
+    size80: 400,
+    size100: 500,
+  },
   sizes: {
     size80: 704,
     size100: 1184,
@@ -103,7 +107,7 @@ export const theme = {
     gray700: '#444d56',
     gray800: '#2f363d',
     gray900: '#24292e',
-    yellow200: '#4AB5AB',
+    yellow200: '#03C7BB',
     yellow100: '#178C85',
   },
   fonts: {
