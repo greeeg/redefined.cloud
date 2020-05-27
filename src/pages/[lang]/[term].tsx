@@ -49,7 +49,11 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
 
   return (
     <Layout>
-      <Head title={content.attributes.title} />
+      <Head
+        title={content.attributes.title}
+        description={content.attributes.description}
+        canonical={`/${lang}/${content.attributes.slug}`}
+      />
 
       <Box as="section" paddingTop={['spacing500']} paddingBottom="spacing900">
         <Box margin="0 auto" width="100%" maxWidth="size100">

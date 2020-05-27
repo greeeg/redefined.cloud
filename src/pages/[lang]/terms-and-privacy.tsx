@@ -14,10 +14,15 @@ interface TermsPage {
 
 const Terms: NextPage<TermsPage> = ({ content }) => {
   const t = i18n.useT();
+  const { lang } = i18n.useI18n();
 
   return (
     <Layout>
-      <Head title="Home" />
+      <Head
+        title="Terms & Privacy"
+        description=""
+        canonical={`/${lang}/terms-and-privacy`}
+      />
 
       <Box as="section" paddingY={['spacing600', 'spacing700']}>
         <Box

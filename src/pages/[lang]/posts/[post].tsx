@@ -1,15 +1,25 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import { getPostPaths, getPostPage } from '@/utils/posts';
 import { PostPage } from '@/types';
+import { getPostPaths, getPostPage } from '@/utils/posts';
 import { Layout } from '@/components/Layout';
 import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
+import { Head } from '@/components/Head';
+import i18n from '@/utils/i18n';
 
 const Post: NextPage<{ content: PostPage }> = ({ content }) => {
+  const { lang } = i18n.useI18n();
+
   return (
     <Layout>
+      <Head
+        title={content.attributes.title}
+        description={content.attributes.description}
+        canonical={`/${lang}/posts/${content.attributes.slug}`}
+      />
+
       <Box as="section" paddingTop={['spacing500']} paddingBottom="spacing900">
         <Box margin="0 auto" width="100%" maxWidth="size100">
           <Box paddingX={['spacing200', 'spacing400', 'spacing600']}>

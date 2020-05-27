@@ -29,7 +29,7 @@ const List: NextPage<ListProps> = ({ terms }) => {
 
   return (
     <Layout>
-      <Head title="Home" />
+      <Head title="All terms" description="" canonical={`/${lang}/list`} />
 
       <Box as="section" paddingY={['spacing600', 'spacing700']}>
         <Box

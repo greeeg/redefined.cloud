@@ -14,10 +14,15 @@ interface AboutProps {
 
 const About: NextPage<AboutProps> = ({ content }) => {
   const t = i18n.useT();
+  const { lang } = i18n.useI18n();
 
   return (
     <Layout>
-      <Head title="Home" />
+      <Head
+        title="About the project"
+        description=""
+        canonical={`/${lang}/about`}
+      />
 
       <Box as="section" paddingY={['spacing600', 'spacing700']}>
         <Box
