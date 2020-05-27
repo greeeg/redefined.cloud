@@ -130,7 +130,10 @@ export const getTermPage = ({
     const { content, data: attributes } = matter(data);
     return {
       content,
-      attributes,
+      attributes: {
+        ...attributes,
+        slug: term,
+      },
     };
   } catch (err) {
     console.warn('Error while getting term page content', err);

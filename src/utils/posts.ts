@@ -106,7 +106,10 @@ export const getPostPage = ({
     const { content, data: attributes } = matter(data);
     return {
       content,
-      attributes,
+      attributes: {
+        ...attributes,
+        slug: post,
+      },
     };
   } catch (err) {
     console.warn('Error while getting post page content', err);

@@ -1,15 +1,16 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import { TermPage, TermAttributes } from '@/types';
+import { getTermPaths, getTermPage, getTerm } from '@/utils/terms';
 import i18n from '@/utils/i18n';
+import { getTermContributeLink } from '@/utils/contribute';
 import { Layout } from '@/components/Layout';
 import { Head } from '@/components/Head';
-import { getTermPaths, getTermPage, getTerm } from '@/utils/terms';
 import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
-import { TermPage, TermAttributes } from '@/types';
 
 const BlogLink = styled.a`
   &:hover {
@@ -45,7 +46,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
             <Box maxWidth={720} paddingBottom="spacing500">
               <Heading
                 as="p"
-                fontSize="size300"
+                fontSize={['size200', 'size300']}
                 lineHeight="lineHeight100"
                 fontWeight="size80"
               >
@@ -54,43 +55,80 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
             </Box>
 
             <Stack
-              direction={['column', 'row']}
+              direction={['column', 'column', 'row']}
               rows="70% 30%"
-              spacing="spacing900"
+              spacing={['spacing600', 'spacing600', 'spacing900']}
             >
               <Markdown content={content.content} />
 
               <Box as="aside">
-                <Box maxWidth={224}>
-                  <Stack direction="column" spacing="spacing100">
-                    <Heading as="h3" color="yellow200" fontSize="size200">
-                      Related terms
-                    </Heading>
+                <Box maxWidth={['100%', 340, 230]}>
+                  <Stack direction="column" spacing="spacing400">
+                    <Stack direction="column" spacing="spacing100">
+                      <Heading as="h3" color="yellow200" fontSize="size200">
+                        Related terms
+                      </Heading>
 
-                    <Box borderBottom="1px solid" borderColor="gray300" />
+                      <Box borderBottom="1px solid" borderColor="gray300" />
 
-                    <Stack as="ul" direction="column" spacing="spacing80">
-                      {relatedTerms.map((relatedTerm) => (
-                        <Stack
-                          as="li"
-                          key={relatedTerm.slug}
-                          direction="column"
-                          spacing="spacing80"
-                        >
-                          <Link
-                            href="/[lang]/[term]"
-                            as={`/${lang}/${relatedTerm.slug}`}
+                      <Stack as="ul" direction="column" spacing="spacing80">
+                        {relatedTerms.map((relatedTerm) => (
+                          <Stack
+                            as="li"
+                            key={relatedTerm.slug}
+                            direction="column"
+                            spacing="spacing80"
                           >
-                            <BlogLink title={relatedTerm.title}>
-                              <Heading as="span" fontSize="size100">
-                                {relatedTerm.name}
-                              </Heading>
-                            </BlogLink>
-                          </Link>
-                          <Box borderBottom="1px solid" borderColor="gray300" />
-                        </Stack>
-                      ))}
+                            <Link
+                              href="/[lang]/[term]"
+                              as={`/${lang}/${relatedTerm.slug}`}
+                            >
+                              <BlogLink title={relatedTerm.title}>
+                                <Heading as="span" fontSize="size100">
+                                  {relatedTerm.name}
+                                </Heading>
+                              </BlogLink>
+                            </Link>
+                            <Box
+                              borderBottom="1px solid"
+                              borderColor="gray300"
+                            />
+                          </Stack>
+                        ))}
+                      </Stack>
                     </Stack>
+
+                    <BlogLink
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Contribute on GitHub to improve this page"
+                      href={getTermContributeLink({
+                        term: content.attributes.slug,
+                        lang,
+                      })}
+                    >
+                      <Box backgroundColor="gray100" padding="spacing200">
+                        <Stack direction="column" spacing="spacing60">
+                          <Heading
+                            as="p"
+                            fontSize="size80"
+                            fontWeight="size80"
+                            lineHeight="lineHeight100"
+                            maxWidth={140}
+                          >
+                            Want to improve this page?
+                          </Heading>
+                          <Heading
+                            as="p"
+                            fontSize="size100"
+                            fontWeight="size100"
+                            lineHeight="lineHeight100"
+                          >
+                            Contribute on GitHub
+                          </Heading>
+                        </Stack>
+                      </Box>
+                    </BlogLink>
                   </Stack>
                 </Box>
               </Box>

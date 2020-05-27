@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
+import styled, { css } from 'styled-components';
 
 import i18n from '@/utils/i18n';
+import { getRepositoryLink } from '@/utils/contribute';
+import { theme, md } from '@/theme';
 import { Box, Stack } from '@/components/primitives';
 import { Logo } from '@/components/Logo';
-import styled, { css } from 'styled-components';
-import { theme, md } from '@/theme';
 
 const NavItem = styled.li`
   ${({ theme }) => css`
@@ -122,7 +123,7 @@ export const Header: FC = () => {
                 <NavItem>
                   <a
                     title="Contribute to the project on GitHub"
-                    href="https://github.com/greeeg/redefined.cloud"
+                    href={getRepositoryLink()}
                     target="_blank"
                     rel="noreferrer"
                     className="github"
