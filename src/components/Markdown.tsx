@@ -54,7 +54,7 @@ const Link: FC<{ href: string; title?: string }> = ({
 
   if (href.startsWith('#')) {
     return (
-      <NextLink href="/[lang]/[term]" as={`/${lang}/${href.substr(0, 1)}`}>
+      <NextLink href="/[lang]/[term]" as={`/${lang}/${href.substr(1)}`}>
         <RawLink title={title}>{children}</RawLink>
       </NextLink>
     );

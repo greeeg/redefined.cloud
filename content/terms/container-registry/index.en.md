@@ -1,6 +1,6 @@
 ---
-title: 'What is a Container Registry?'
-description: ''
+title: 'What is a Container registry?'
+description: 'A Container registry is like a central book of recipes any cook in a restaurant can use when needed.'
 name: 'Container registry'
 summary: ''
 keywords: ['container', 'registry', 'docker hub']

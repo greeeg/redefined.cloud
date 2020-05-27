@@ -25,7 +25,7 @@ export const getTermPaths = () => {
       readdirSync(path.join('.', termsDirectory, directory.name)).forEach(
         (file) => {
           const regex = /index.([a-z-]+).md/g;
-          const [_, lang] = regex.exec(file);
+          const [_, lang] = regex.exec(file) ?? ['', ''];
           localizedTerm[lang] = {
             term: directory.name,
           };
@@ -57,7 +57,7 @@ export const getTerms = (language: Language): TermAttributes[] => {
       readdirSync(path.join('.', termsDirectory, directory.name)).forEach(
         (file) => {
           const regex = /index.([a-z-]+).md/g;
-          const [_, lang] = regex.exec(file);
+          const [_, lang] = regex.exec(file) ?? ['', ''];
 
           if (lang === language) {
             const filePath = path.resolve(

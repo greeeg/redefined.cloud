@@ -1,40 +1,41 @@
 ---
-title: 'What is an API Gateway?'
-description: 'API Gateway is like a front desk employee that would be responsible for answering customers requests and getting their orders in the back of the store.'
-name: 'API Gateway'
+title: 'What is an API gateway?'
+description: 'An API gateway acts as a front desk employee responsible for answering customers requests by asking the relevant underlying services.'
+name: 'API gateway'
 summary: 'Routing requests to the right service'
 relatedTerms: ['microservice-architecture', 'serverless', 'service-mesh']
 keywords: ['api', 'gateway', 'proxy', 'api gateway', 'server proxy']
 ---
 
-API Gateway is like a front desk employee that would be responsible for answering customers requests and getting their orders in the back of the store.
+Let's imagine you are heading to the state office in order to get your brand new driving license. When entering the building, you meet a front desk employee who is responsible for checking your identity, asking you why you're here. You're then assigned a ticket number which is used to call you and guide you to the right employee and get your driving license.
 
-Let's say you're building a store which sells furnitures. Given your business is still quite small and you only sell sofas, it's really easy for you to welcome your customers at the front door, find the sofa they're looking for and sell it to them. They all come for the same thing and you only have one ressource, sofas.
+If no front desk employee was available, you would have to go from desk to desk in order to complete your request. At each step, you would have to introduce yourself (again), prove your identity and explain why you're here.
 
-At some point, you might start to think about selling other things, chairs for example, because your business is expanding and you're getting more and more clients. When they enter into the store, you have to find out if they're here for a sofa or a chair, and then sell it to them.
+The more services there are, the more steps you would have to go through and repeat the same pattern.
 
-It might get even bigger at any given time, and you might hire someone to handle chairs while you handle sofas. But now, if your customer is looking for a sofa and a chair, he has to ask two people and make two requests.
+An API gateway is like a front desk employee. It is responsible for receiving all incoming requests, routing them to the appropriate services and sometimes performs additional tasks (load balancing, rate limiting, authentication/authorization, monitoring).
 
-Imagine you're selling hundreds of items and people come to buy different things. They now have to ask multiple employees to fulfil they request.
+## The single entrypoint for your application
 
-Here is how the API gateway comes into place. The API gateway is like a front desk employee that would be responsible for taking the customer's request, asking the relevant employees what he needs and giving him directly all his items.
+While some applications in [monolith architectures](#monolith-architecture 'What is a monolith architecture?') for example are self-contained, most of them are decoupled in multiple parts, also known as services.
 
-- Request routing, composition, protocol translation
-- Aggregate results
+In a [microservice architecture](#microservice-architecture 'What is a microservice architecture?'), your overall application can be made of dozens of services, handled by different teams with different practices and paces. Some of them might not even be available through standard HTTP calls.
 
-Particularly important in a microservices (or service-oriented) architecture, where several teams handle several parts of thee architectures, while users want to see a unified version of the product.
+While users want to see a unified version of your application, several requests to different services can be necessary to display a page or screen, each of them going through the web (excessive roundtrips).
 
-The granularity of APIs provided by microservices is often different than what a client needs.
+## Benefits of using an API gateway
 
-Services might use a diverse set of protocols, some of which might not be web friendly
+- Request routing and composition
+- One tool to rule them all (authentication, rate limiting, etc.)
+- Protocol translation
+- Monitoring
 
-The number of service instances and their locations (host+port) changes dynamically
+Moreover, in a microservice architecture, services can have their location updated dynamically, or their number of instances increase. With an API gateway, the client does not have to think about it.
 
-You want to protect your APIs from overuse and abuse, so you use an authentication service and rate limiting.
+If you decide to introduce new services or retire some of them, you want requests to be routed to the right place.
 
-Over time you’ll add some new API services and retire others, but your clients will still want to find all your services in the same place.
+## Digging deeper into API gateways
 
-Benefits of using an API gateway
-
-- Performance at scale
-- Easy monitoring
+- Read more about the [API gateway pattern](https://microservices.io/patterns/apigateway.html) on Microservices.io
+- Watch how [Netflix uses API gateways to route traffic to hundreds of microservices](https://youtu.be/CZ3wIuvmHeM?t=1046)
+- Watch [an explanation from NGINX about API gateways](https://www.youtube.com/watch?v=hYgP0cBORVg)

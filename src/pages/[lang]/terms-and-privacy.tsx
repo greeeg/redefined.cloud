@@ -8,11 +8,11 @@ import { Box, Heading } from '@/components/primitives';
 import { Layout } from '@/components/Layout';
 import { Markdown } from '@/components/Markdown';
 
-interface AboutProps {
+interface TermsPage {
   content: string;
 }
 
-const About: NextPage<AboutProps> = ({ content }) => {
+const Terms: NextPage<TermsPage> = ({ content }) => {
   const t = i18n.useT();
 
   return (
@@ -32,7 +32,7 @@ const About: NextPage<AboutProps> = ({ content }) => {
             textAlign="center"
             paddingBottom="spacing700"
           >
-            About the project
+            Terms & Privacy
           </Heading>
 
           <Markdown content={content} />
@@ -61,8 +61,8 @@ export const getStaticProps: GetStaticProps<any, { lang: Language }> = async (
   } = context;
 
   return {
-    props: { content: getPage({ lang, page: 'about' }) },
+    props: { content: getPage({ lang, page: 'terms' }) },
   };
 };
 
-export default About;
+export default Terms;

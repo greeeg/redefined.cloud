@@ -25,7 +25,7 @@ export const getPostPaths = () => {
       readdirSync(path.join('.', postsDirectory, directory.name)).forEach(
         (file) => {
           const regex = /index.([a-z-]+).md/g;
-          const [_, lang] = regex.exec(file);
+          const [_, lang] = regex.exec(file) ?? ['', ''];
           localizedTerm[lang] = {
             post: directory.name,
           };
@@ -57,7 +57,7 @@ export const getPosts = (language: Language): PostAttributes[] => {
       readdirSync(path.join('.', postsDirectory, directory.name)).forEach(
         (file) => {
           const regex = /index.([a-z-]+).md/g;
-          const [_, lang] = regex.exec(file);
+          const [_, lang] = regex.exec(file) ?? ['', ''];
 
           if (lang === language) {
             const filePath = path.resolve(
