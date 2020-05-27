@@ -9,6 +9,8 @@ import { Box, Stack } from '@/components/primitives';
 import { Logo } from '@/components/Logo';
 
 const NavItem = styled.li`
+  display: flex;
+  align-items: center;
   ${({ theme }) => css`
     a {
       position: relative;
@@ -41,7 +43,6 @@ const NavItem = styled.li`
     }
 
     .github {
-      transform: translateY(-2px);
       span > span {
         display: none;
 
