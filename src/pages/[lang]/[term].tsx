@@ -138,7 +138,9 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                       <Box as="ul" display="flex" flexDirection="row">
                         <Box as="li" paddingRight="spacing80">
                           <ShareLink
-                            href={getFacebookShareLink('https://google.com')}
+                            href={getFacebookShareLink(
+                              `/${lang}/${content.attributes.slug}`
+                            )}
                             title="Share it on Facebook"
                             target="_blank"
                             rel="noreferrer nofollow"
@@ -154,7 +156,9 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                         </Box>
                         <Box as="li" paddingRight="spacing80">
                           <ShareLink
-                            href={getTwitterShareLink('https://google.com')}
+                            href={getTwitterShareLink(
+                              `/${lang}/${content.attributes.slug}`
+                            )}
                             title="Share it on Twitter"
                             target="_blank"
                             rel="noreferrer nofollow"
@@ -170,7 +174,9 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                         </Box>
                         <Box as="li">
                           <ShareLink
-                            href={getLinkedinShareLink('https://google.com')}
+                            href={getLinkedinShareLink(
+                              `/${lang}/${content.attributes.slug}`
+                            )}
                             title="Share it on LinkedIn"
                             target="_blank"
                             rel="noreferrer nofollow"

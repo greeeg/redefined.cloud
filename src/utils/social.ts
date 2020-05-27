@@ -1,12 +1,18 @@
-export const getFacebookShareLink = (link: string): string => {
+export const getFacebookShareLink = (path: string): string => {
+  const link = `${process.env.NEXT_PUBLIC_BASE_URL}${path}`;
+
   return `https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
 };
 
-export const getTwitterShareLink = (link: string): string => {
+export const getTwitterShareLink = (path: string): string => {
+  const link = `${process.env.NEXT_PUBLIC_BASE_URL}${path}`;
+
   return `https://twitter.com/intent/tweet/?url=${encodeURIComponent(link)}`;
 };
 
-export const getLinkedinShareLink = (link: string): string => {
+export const getLinkedinShareLink = (path: string): string => {
+  const link = `${process.env.NEXT_PUBLIC_BASE_URL}${path}`;
+
   return `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
     link
   )}
