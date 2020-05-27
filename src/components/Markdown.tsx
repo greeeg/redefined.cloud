@@ -61,7 +61,12 @@ const Link: FC<{ href: string; title?: string }> = ({
   }
 
   return (
-    <RawLink href={href} title={title} target="_blank" rel="noreferrer">
+    <RawLink
+      href={href}
+      title={title}
+      target="_blank"
+      rel="noreferrer nofollow"
+    >
       {children}
     </RawLink>
   );
