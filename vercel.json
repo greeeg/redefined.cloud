@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/en", "permanent": true },
+    {
+      "source": "/wp-admin",
+      "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ]
+}
