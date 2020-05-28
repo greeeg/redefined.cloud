@@ -22,7 +22,11 @@ interface TreeNodeProps {
 
 const TreeNode: FC<TreeNodeProps> = ({ node, onSelect }) => (
   <li>
-    <button aria-label={node.label} onClick={() => onSelect(node.value)}>
+    <button
+      aria-label={node.label}
+      onClick={() => onSelect(node.value)}
+      disabled={node.value === ''}
+    >
       {node.label}
     </button>
 
@@ -55,7 +59,7 @@ export const Tree = styled(TreeMaster)`
   ${(p) => css`
     ul {
       position: relative;
-      padding: 1em 0;
+      padding: 1em 0 0 0;
       white-space: nowrap;
       margin: 0 auto;
       text-align: center;
@@ -83,7 +87,7 @@ export const Tree = styled(TreeMaster)`
       text-align: center;
       list-style-type: none;
       position: relative;
-      padding: 1em 0.5em 0 0.5em;
+      padding: 1em 0em 0 0em;
 
       &::before,
       &::after {
@@ -129,17 +133,22 @@ export const Tree = styled(TreeMaster)`
         position: relative;
         display: inline-block;
         padding: 0.5em 0.75em;
-        background-color: transparent;
+        background-color: ${(p) => p.theme.colors.gray900};
         color: ${p.theme.colors.white};
         font-size: ${p.theme.fontSizes.size100}px;
         text-decoration: none;
         border: 1px solid ${p.theme.colors.white};
         border-radius: ${p.theme.radii.borderRadius100}px;
         transition: all ${p.theme.transitions.transition100};
-        cursor: pointer;
 
-        &:hover {
+        &:hover:not(:disabled) {
+          cursor: pointer;
           border-color: ${p.theme.colors.yellow200};
+        }
+
+        &:disabled {
+          background-color: ${(p) => p.theme.colors.gray800};
+          border-color: ${p.theme.colors.gray800};
         }
 
         ${md(css`

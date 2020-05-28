@@ -1,0 +1,202 @@
+{
+  "containarized": {
+    "label": "ACME.com",
+    "value": "",
+    "children": [
+      {
+        "label": "DNS",
+        "value": "domain-name-system",
+        "children": [
+          {
+            "label": "Load balancer",
+            "value": "load-balancer",
+            "children": [
+              {
+                "label": "API gateway",
+                "value": "api-gateway-server-proxy",
+                "children": [
+                  {
+                    "label": "Container orchestration",
+                    "value": "container-orchestration-and-kubernetes",
+                    "children": [
+                      {
+                        "label": "Service registry",
+                        "value": "service-registry",
+                        "children": [
+                          {
+                            "label": "Service",
+                            "value": "",
+                            "children": [
+                              {
+                                "label": "Container",
+                                "value": "containers-and-docker",
+                                "children": [
+                                  {
+                                    "label": "Virtual machine",
+                                    "value": "virtual-machine",
+                                    "children": [
+                                      {
+                                        "label": "Baremetal server",
+                                        "value": "baremetal-server",
+                                        "children": [
+                                          {
+                                            "label": "Provisioning",
+                                            "value": "provisioning",
+                                            "children": [
+                                              {
+                                                "label": "Continuous delivery",
+                                                "value": "continuous-delivery",
+                                                "children": [
+                                                  {
+                                                    "label": "Container registry",
+                                                    "value": "container-registry",
+                                                    "children": [
+                                                      {
+                                                        "label": "Continuous integration",
+                                                        "value": "continuous-integration",
+                                                        "children": [
+                                                          {
+                                                            "label": "Webhook",
+                                                            "value": "webhook"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "Service mesh",
+                                "value": "service-mesh",
+                                "children": [
+                                  {
+                                    "label": "Service proxy",
+                                    "value": "service-proxy"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "Service communication",
+                            "value": "",
+                            "children": [
+                              {
+                                "label": "Message broker",
+                                "value": "message-broker-message-queue",
+                                "children": [
+                                  {
+                                    "label": "Pub/Sub",
+                                    "value": "pub-sub",
+                                    "children": [
+                                      {
+                                        "label": "RPC",
+                                        "value": "remote-procedure-call",
+                                        "children": [
+                                          {
+                                            "label": "CRON job",
+                                            "value": "cron-job"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "Databases",
+                            "value": "",
+                            "children": [
+                              {
+                                "label": "Relational database",
+                                "value": "relational-database",
+                                "children": [
+                                  {
+                                    "label": "Non-relational database",
+                                    "value": "non-relational-database",
+                                    "children": [
+                                      {
+                                        "label": "Memory database",
+                                        "value": "memory-database"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "CDN",
+            "value": "content-delivery-network",
+            "children": [
+              {
+                "label": "Object storage",
+                "value": "object-storage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "microservices": {
+    "label": "ACME.com",
+    "value": "",
+    "children": [
+      {
+        "label": "Cloud provider",
+        "value": "cloud-provider",
+        "children": [
+          {
+            "label": "DNS",
+            "value": "domain-name-system",
+            "children": [
+              {
+                "label": "CDN",
+                "value": "content-delivery-network",
+                "children": [
+                  {
+                    "label": "Object storage",
+                    "value": "object-storage"
+                  },
+                  {
+                    "label": "Block storage",
+                    "value": "block-storage"
+                  }
+                ]
+              },
+              {
+                "label": "API gateway",
+                "value": "api-gateway-server-proxy",
+                "children": [
+                  {
+                    "label": "Load balancer",
+                    "value": "load-balancer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styled, { css } from 'styled-components';
 import Router from 'next/router';
 
 import i18n from '@/utils/i18n';
 import { Heading, Box, Stack } from '@/components/primitives';
 import { Tree } from '@/components/Tree';
-import threes from '../../../../../content/trees.json';
+import threes from './trees.json';
 import { Select } from './Select';
 
 const TranslatedBox = styled(Box)`
@@ -15,7 +15,19 @@ const TranslatedBox = styled(Box)`
 `;
 
 export const TreeSection: FC = () => {
+  const options = [
+    {
+      label: 'Containarized architecture',
+      value: 'containarized',
+    },
+    {
+      label: 'Microservice architecture',
+      value: 'microservices',
+    },
+  ];
+
   const { lang } = i18n.useI18n();
+  const [selectedTree, setSelectedTree] = useState(options[0].value);
 
   return (
     <Box as="section" backgroundColor="yellow200" marginTop="spacing600">
@@ -40,15 +52,17 @@ export const TreeSection: FC = () => {
                 <Select
                   options={[
                     {
+                      label: 'Containarized architecture',
+                      value: 'containarized',
+                    },
+                    {
                       label: 'Microservice architecture',
                       value: 'microservices',
                     },
-                    {
-                      label: 'Serverless architecture',
-                      value: 'serverless',
-                    },
                   ]}
-                  onSelect={() => {}}
+                  onSelect={(value) => {
+                    setSelectedTree(value);
+                  }}
                 />
               </Stack>
             </Box>
@@ -58,9 +72,11 @@ export const TreeSection: FC = () => {
               maxWidth="100vw"
               overflowX="scroll"
               paddingX={['spacing200', 'spacing400', 'spacing600']}
+              paddingBottom={['spacing100', 'spacing400', 'spacing600']}
+              paddingTop={'spacing100'}
             >
               <Tree
-                tree={threes.microservices}
+                tree={threes[selectedTree]}
                 onSelect={(value) => {
                   if (!value) {
                     // Empty value for non-clickable nodes
