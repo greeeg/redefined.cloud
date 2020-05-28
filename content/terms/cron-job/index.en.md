@@ -1,6 +1,6 @@
 ---
 title: 'What is a CRON job or task?'
-description: ''
+description: 'A CRON job is a way to run code at predetermined intervals for repetitive tasks.'
 name: 'CRON job'
 shortName: 'CRON'
 summary: ''

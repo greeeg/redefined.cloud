@@ -1,6 +1,6 @@
 ---
 title: 'What is a Load Balancer?'
-description: ''
+description: 'A load balancer is like a traffic cop directing traffic at the entrance of a tunnel to multiple lanes.'
 name: 'Load balancer'
 summary: ''
 keywords: ['elb', 'load balancer', 'proxy', 'reverse proxy']
@@ -21,7 +21,7 @@ To do so, load balancers can use different type of algorithm to determine to whi
 
 Load balancers can also decide to stop sending requests to a specific server if it's down: imagine a car accident on a specific lane.
 
-Benefits of using a load balancer:
+## Benefits of using a load balancer
 
 - Reduced downtime
 - Scalability

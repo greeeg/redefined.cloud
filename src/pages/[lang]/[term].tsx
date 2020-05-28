@@ -109,7 +109,10 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                               href="/[lang]/[term]"
                               as={`/${lang}/${relatedTerm.slug}`}
                             >
-                              <BlogLink title={relatedTerm.title}>
+                              <BlogLink
+                                href={`/${lang}/${relatedTerm.slug}`}
+                                title={relatedTerm.title}
+                              >
                                 <Heading as="span" fontSize="size100">
                                   {relatedTerm.name}
                                 </Heading>

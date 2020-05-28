@@ -23,7 +23,7 @@ export const Footer: FC = () => {
           paddingX={['spacing200', 'spacing400', 'spacing600']}
         >
           <Stack direction="column" spacing="spacing200">
-            <Logo size="large" color="gray700" />
+            <Logo size="large" variation="icon" color="gray500" />
             <Stack direction="row" spacing="spacing300">
               <Heading
                 as="p"

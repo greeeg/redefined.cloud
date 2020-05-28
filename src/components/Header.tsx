@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
 
 import i18n from '@/utils/i18n';
@@ -8,10 +9,11 @@ import { theme, md } from '@/theme';
 import { Box, Stack } from '@/components/primitives';
 import { Logo } from '@/components/Logo';
 
-const NavItem = styled.li`
+const NavItem = styled.li<{ active?: boolean }>`
   display: flex;
   align-items: center;
-  ${({ theme }) => css`
+
+  ${({ theme }) => css<{ active?: boolean }>`
     a {
       position: relative;
       display: inline-block;
@@ -21,6 +23,8 @@ const NavItem = styled.li`
       color: ${theme.colors.gray800};
       border-radius: ${(p) => p.theme.radii.borderRadius100}px;
       transition: all ${(p) => p.theme.transitions.transition100};
+      background-color: ${(p) =>
+        p.active ? p.theme.colors.gray100 : p.theme.colors.white};
       ${(p) => css`
         padding: ${p.theme.space.spacing80}px ${p.theme.space.spacing40}px;
       `};
@@ -65,6 +69,7 @@ const NavItem = styled.li`
 export const HEADER_HEIGHT = [70, 90];
 
 export const Header: FC = () => {
+  const { route } = useRouter();
   const { lang } = i18n.useI18n();
 
   return (
@@ -97,14 +102,14 @@ export const Header: FC = () => {
             <Link href="/[lang]" as={`/${lang}`}>
               <a title="Redefined.cloud">
                 <Box as="span" display="inline-block" paddingY="spacing80">
-                  <Logo />
+                  <Logo size="small" />
                 </Box>
               </a>
             </Link>
 
             <Box as="nav">
               <Stack as="ul" direction="row" spacing="spacing60">
-                <NavItem>
+                <NavItem active={route === '/[lang]/list'}>
                   <Link href="/[lang]/list" as={`/${lang}/list`}>
                     <a title="List" className="list">
                       List
@@ -112,7 +117,7 @@ export const Header: FC = () => {
                   </Link>
                 </NavItem>
 
-                <NavItem>
+                <NavItem active={route === '/[lang]/about'}>
                   <Link href="/[lang]/about" as={`/${lang}/about`}>
                     <a title="About the project" className="about">
                       <span>About</span>

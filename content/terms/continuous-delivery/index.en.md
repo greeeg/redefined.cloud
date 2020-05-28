@@ -1,6 +1,6 @@
 ---
-title: 'What is Continuous Delivery or CD?'
-description: ''
+title: 'What is Continuous delivery or CD?'
+description: 'Continuous delivery is like serving meals plate by plate instead of waiting for everything to be ready.'
 name: 'Continuous delivery'
 shortName: 'CD'
 summary: ''
@@ -27,4 +27,9 @@ In this example, Jane is following continuous delivery best practises where Bob 
 
 In an engineering environment, it would mean having automated testing and builds when pushing new code to your source control system, to guarantee everything is ready to be shipped.
 
-With continuous deployment, you can go one step further and automate the way your code is released on your production server, without any human interaction.
+With [continuous deployment](#continuous-deployment 'What is Continuous deployment?'), you can go one step further and automate the way your code is released on your production server, without any human interaction.
+
+## Digging deeper in Continuous delivery
+
+- Learn more about [the difference between Continuous delivery & Continuous integration with Atlassian](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+- Read more about [a commit life in a continuous delivery pipeline at LeBonCoin](https://medium.com/leboncoin-engineering-blog/leboncoin-commits-life-960a86cd35ff)

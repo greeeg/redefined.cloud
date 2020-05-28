@@ -1,6 +1,6 @@
 ---
 title: 'What is a Content Delivery Network or CDN?'
-description: ''
+description: 'A CDN is like owning a restaurant chain instead of one restaurant to sell more of your burgers around the world.'
 name: 'Content delivery network'
 shortName: 'CDN'
 summary: ''
@@ -18,7 +18,7 @@ Let's take the example of Jane, who loves this unique and delicious Burger from 
 
 Now, let's take a look at Bob and this famous burger restaurant chain which you can find almost anywhere across the globe. Bob is used to travel a lot. Whether he's at home or traveling for work, he can always find a place to eat his favorite sandwich nearby. They always taste and smell exactly the same, because they're using the same recipe and the same ingredients. This food chain has its headquarters in the US, where they elaborate new recipes, so that new burgers can then be sold all over the world. If one restaurant has to close because of a fire in the kitchen, you can always go to a different restaurant where they sell the exact same product.
 
-## An efficient way to distribute your content to your users
+## An efficient way to distribute your content to global users
 
 Content delivery networks are made possible thanks to 3 different parts:
 
@@ -28,7 +28,12 @@ Content delivery networks are made possible thanks to 3 different parts:
 
 By using CDNs, you're reducing the time to access your assets for your users, reducing the load on your main server which doesn't have to server static assets anymore.
 
-## Use cases for CDN
+## Benefits of using a CDN
 
-- Assets uploaded by users (pictures, videos)
-- Static assets of your app (HTML, CSS, JS, images, videos)
+- Improved latency & response time for global users
+- Increased availability
+- Decreased load on main application & services
+
+## Digging deeper in CDNs
+
+- Learn [how CDNs work with Cloudflare](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)

@@ -40,7 +40,9 @@ const About: NextPage<AboutProps> = ({ content }) => {
             About the project
           </Heading>
 
-          <Markdown content={content} />
+          <Box maxWidth={624} margin="0 auto">
+            <Markdown content={content} />
+          </Box>
         </Box>
       </Box>
     </Layout>

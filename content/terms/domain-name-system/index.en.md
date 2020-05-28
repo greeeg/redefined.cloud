@@ -1,6 +1,6 @@
 ---
 title: 'What is DNS or Domain Name System?'
-description: ''
+description: 'DNS is like a service you would use to find the location of a restaurant a friend tells you about, just by knowing its name.'
 name: 'Domain name system'
 shortName: 'DNS'
 summary: ''
@@ -22,6 +22,12 @@ Well, DNS is one of the most important part of how Internet works. So important 
 
 Wether you're using a domain name for an ecommerce website, a serverless function or a database, you now understand the magic going on behind the curtain which makes everything possible. Because DNS servers are the first piece of how your users interact with your cloud architecture, they're really important. Indeed, if no one is able to route your traffic to the proper server, you basically disappear from the map. This is exactly what happened to Cloudflare on July, 2nd 2019, when [all websites using their DNS servers were not accessible for several hours](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/ 'Test').
 
-## Making sure you're using the right DNS servers for your domain name
+## Requirements for an optimal DNS solution
 
-Choosing the right DNS service might be more important than you think. Indeed, if you bought your domain name a long time ago and never checked back which DNS servers you're using, now might be the right time. You want to make sure that you're using something like AWS Route 53, Google Cloud DNS, Cloudflare or something similar which is highly distributed & available.
+- Global Performance & Availability
+- Resiliency
+- DDoS protection
+
+## Digging deeper in DNS
+
+- Learn all about [the details that make DNS work](https://cloudacademy.com/blog/how-dns-works/)

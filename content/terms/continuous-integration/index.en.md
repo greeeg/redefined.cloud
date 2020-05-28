@@ -1,6 +1,7 @@
 ---
 title: 'What is Continuous Integration or CI?'
 name: 'Continuous integration'
+description: 'Continuous delivery is like assembling a car piece by piece while making sure there is no issue instead of putting everything together at the end.'
 shortName: 'CI'
 summary: ''
 keywords: ['continuous integration', 'ci/cd', 'ci']
@@ -18,3 +19,8 @@ CI is usually applied to software development but the same idea applies. The pro
 Developers practicing continuous integration merge their changes back to the main branch as often as possible. The developer's changes are validated by creating a build and running automated tests against the build. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
 
 Continuous integration puts a great emphasis on testing automation to check that the application is not broken whenever new commits are integrated into the main branch.
+
+## Digging deeper in Continuous integration
+
+- Read [how Google uses CI at scale](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45880.pdf) by running more than 150 millions tests/day
+- Learn about some [best practises for CI/CD pipelines](https://www.digitalocean.com/community/tutorials/an-introduction-to-ci-cd-best-practices)
