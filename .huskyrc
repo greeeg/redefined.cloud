@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-commit": ["yarn type-check && lint-staged"]
+    "pre-commit": ["yarn scripts:sitemap && yarn type-check && lint-staged"]
   }
 }
