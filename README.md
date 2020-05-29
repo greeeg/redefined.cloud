@@ -16,17 +16,8 @@ Re-defining cloud terms to better understand how it works
 
 Whether you want to translate terms, improve the content, help fix bugs or spread the word, your contribution is more than welcomed. 💪💙
 
-Check out the Contributing Guide for ideas on contributing and setup steps for getting the repository up and running on your local machine.
+Check out the [Contributing Guide](https://github.com/greeeg/redefined.cloud/blob/master/.github/contributing.md) for ideas on contributing and setup steps for getting the repository up and running on your local machine.
 
 ## 📝 License
 
-Licensed under the AGPL-3.0 License.
-
-## 🌍 Related
-
-- [Awesome Cloud Native](https://github.com/rootsongjc/awesome-cloud-native)
-- [Awesome Scalability](https://github.com/binhnguyennus/awesome-scalability)
-- [Awesome Serverless](https://github.com/anaibol/awesome-serverless)
-- [Awesome Kubernetes](https://github.com/ramitsurana/awesome-kubernetes)
-- [Awesome AWS](https://github.com/donnemartin/awesome-aws)
-- [Awesome GCP](https://github.com/GoogleCloudPlatform/awesome-google-cloud)
+Licensed under the [AGPL-3.0 License](https://github.com/greeeg/redefined.cloud/blob/master/LICENSE).
