@@ -88,7 +88,7 @@ export const theme = {
   },
   fontWeights: {
     size80: 400,
-    size100: 500,
+    size100: 600,
   },
   sizes: {
     size80: 704,
@@ -112,7 +112,7 @@ export const theme = {
   },
   fonts: {
     font100: '"Inter UI", Helvetica, Arial, sans-serif',
-    font200: '"Elena Basic", Georgia, Cambria, "Times New Roman", Times, serif',
+    font200: '"Elena Basic", Cambria, "Times New Roman", Times, serif',
   },
   lineHeights: {
     lineHeight80: 1,

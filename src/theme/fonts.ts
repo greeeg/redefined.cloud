@@ -12,8 +12,9 @@ export const fonts = css`
     font-family: 'Inter UI';
     src: url(${InterBoldWoff2}) format('woff2'),
       url(${InterBoldWoff}) format('woff');
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -22,6 +23,7 @@ export const fonts = css`
       url(${InterSemiBoldWoff}) format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
@@ -30,5 +32,6 @@ export const fonts = css`
       url(${ElenaBasicRegularWoff}) format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 `;

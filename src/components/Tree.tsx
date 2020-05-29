@@ -135,7 +135,9 @@ export const Tree = styled(TreeMaster)`
         padding: 0.5em 0.75em;
         background-color: ${(p) => p.theme.colors.gray900};
         color: ${p.theme.colors.white};
+        font-family: ${p.theme.fonts.font100};
         font-size: ${p.theme.fontSizes.size100}px;
+        font-weight: ${p.theme.fontWeights.size80};
         text-decoration: none;
         border: 1px solid ${p.theme.colors.white};
         border-radius: ${p.theme.radii.borderRadius100}px;

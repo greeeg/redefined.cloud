@@ -43,7 +43,7 @@ export const Heading = styled(RawHeading)<HeadingProps>`
   line-height: ${(p) => p.theme.lineHeights.lineHeight80};
   color: ${(p) => p.theme.colors.gray900};
   font-family: ${(p) => p.theme.fonts.font100};
-  font-weight: 500;
+  font-weight: 600;
 
   ${variant({
     prop: 'fontSize',
