@@ -37,10 +37,12 @@ const Terms: NextPage<TermsPage> = ({ content }) => {
             textAlign="center"
             paddingBottom="spacing700"
           >
-            Terms & Privacy
+            {t('privacy:title')}
           </Heading>
 
-          <Markdown content={content} />
+          <Box maxWidth={624} margin="0 auto">
+            <Markdown content={content} />
+          </Box>
         </Box>
       </Box>
     </Layout>
@@ -66,7 +68,7 @@ export const getStaticProps: GetStaticProps<any, { lang: Language }> = async (
   } = context;
 
   return {
-    props: { content: getPage({ lang, page: 'terms' }) },
+    props: { content: getPage({ lang, page: 'privacy' }) },
   };
 };
 
