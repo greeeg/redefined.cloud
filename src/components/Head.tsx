@@ -8,6 +8,8 @@ interface HeadProps {
   titleTemplate?: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
+  twitterImage?: string;
 }
 
 export const Head: FC<HeadProps> = ({
@@ -15,6 +17,8 @@ export const Head: FC<HeadProps> = ({
   titleTemplate = '%s - Redefined.cloud',
   description,
   canonical,
+  ogImage = '/assets/social-facebook.jpg',
+  twitterImage = '/assets/social-twitter.jpg',
 }) => {
   const { lang } = i18n.useI18n();
   const renderedTitle = titleTemplate.replace('%s', title);
@@ -53,7 +57,7 @@ export const Head: FC<HeadProps> = ({
       <meta
         key="twitter:image"
         name="twitter:image"
-        content="https://greeeg-portfolio-cdn.netlify.app/v2/img/greeeg-share-twitter.jpg"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}${twitterImage}`}
       />
       <meta
         key="twitter:url"
@@ -71,7 +75,7 @@ export const Head: FC<HeadProps> = ({
       <meta
         key="og:image"
         property="og:image"
-        content="https://greeeg-portfolio-cdn.netlify.app/v2/img/greeeg-share-facebook.jpg"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}${ogImage}`}
       />
       <meta key="og:image:width" property="og:image:width" content="1450" />
       <meta key="og:image:height" property="og:image:height" content="900" />
