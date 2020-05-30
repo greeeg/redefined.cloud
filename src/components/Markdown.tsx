@@ -3,10 +3,11 @@ import unified from 'unified';
 import parse from 'remark-parse';
 import remark2react from 'remark-react';
 import NextLink from 'next/link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import i18n from '@/utils/i18n';
 import { Heading, Text, Stack } from '@/components/primitives';
+import { md } from '@/theme';
 
 interface MarkdownProps {
   content: string;
@@ -25,9 +26,9 @@ const Container = styled.div`
 const H2: FC = ({ children }) => (
   <Heading
     as="h2"
-    fontSize="size300"
+    fontSize={['size200', 'size300']}
     lineHeight="lineHeight100"
-    paddingTop="spacing600"
+    paddingTop={['spacing400', 'spacing600']}
     maxWidth={['100%', '80%']}
   >
     {children}
@@ -35,13 +36,17 @@ const H2: FC = ({ children }) => (
 );
 
 const Paragraph: FC = ({ children }) => (
-  <Text fontSize="size200" color="gray900" paddingTop="spacing300">
+  <Text
+    fontSize={['size100', 'size200']}
+    color="gray900"
+    paddingTop="spacing300"
+  >
     {children}
   </Text>
 );
 
 const RawLink = styled.a`
-  font-size: ${(p) => p.theme.fontSizes.size200}px;
+  font-size: ${(p) => p.theme.fontSizes.size100}px;
   text-decoration: underline;
   cursor: pointer;
   transition: all ${(p) => p.theme.transitions.transition100};
@@ -49,6 +54,10 @@ const RawLink = styled.a`
   &:hover {
     color: ${(p) => p.theme.colors.yellow200};
   }
+
+  ${md(css`
+    font-size: ${(p) => p.theme.fontSizes.size200}px;
+  `)}
 `;
 
 const Link: FC<{ href: string; title?: string }> = ({
@@ -94,7 +103,7 @@ const DotList: FC = ({ children }) => {
 
 const ListItem: FC = ({ children }) => {
   return (
-    <Text as="li" fontSize="size200" color="gray900">
+    <Text as="li" fontSize={['size100', 'size200']} color="gray900">
       {children}
     </Text>
   );

@@ -26,6 +26,7 @@ const BlogLink = styled.a`
 
 const List: NextPage<ListProps> = ({ terms }) => {
   const { lang } = i18n.useI18n();
+  const t = i18n.useT();
 
   return (
     <Layout>
@@ -42,12 +43,16 @@ const List: NextPage<ListProps> = ({ terms }) => {
             as="h1"
             fontSize={['size400', 'size500', 'size600']}
             textAlign="center"
-            paddingBottom="spacing700"
+            paddingBottom={['spacing600', 'spacing700']}
           >
-            A list, from A to Z
+            {t('list:title')}
           </Heading>
 
-          <Stack direction="column" as="ul" spacing="spacing600">
+          <Stack
+            direction="column"
+            as="ul"
+            spacing={['spacing200', 'spacing400', 'spacing600']}
+          >
             {terms.map((term, index) => {
               return (
                 <Box as="li" key={term.slug}>
@@ -70,7 +75,11 @@ const List: NextPage<ListProps> = ({ terms }) => {
 
                         {index !== terms.length - 1 && (
                           <Box
-                            paddingTop="spacing300"
+                            paddingTop={[
+                              'spacing60',
+                              'spacing200',
+                              'spacing300',
+                            ]}
                             borderBottom="1px solid"
                             borderColor="gray300"
                           />

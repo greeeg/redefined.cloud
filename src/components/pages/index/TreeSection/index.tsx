@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useRef, useLayoutEffect } from 'react';
 import styled, { css } from 'styled-components';
 import Router from 'next/router';
 
@@ -27,7 +27,19 @@ export const TreeSection: FC = () => {
   ];
 
   const { lang } = i18n.useI18n();
+  const t = i18n.useT();
   const [selectedTree, setSelectedTree] = useState(options[0].value);
+  const treeRef = useRef<HTMLDivElement>();
+
+  useLayoutEffect(() => {
+    const containerWidth = treeRef.current.offsetWidth;
+
+    // Center Tree when larger than window
+    treeRef.current.parentElement.scrollTo({
+      left: containerWidth * 0.5 - window.innerWidth * 0.5,
+      top: 0,
+    });
+  }, [selectedTree]);
 
   return (
     <Box as="section" backgroundColor="yellow200" marginTop="spacing600">
@@ -46,7 +58,7 @@ export const TreeSection: FC = () => {
                   color="white"
                   fontWeight="size80"
                 >
-                  Let&apos;s figure out
+                  {t('home:tree:subtitle')}
                 </Heading>
 
                 <Select
@@ -70,22 +82,27 @@ export const TreeSection: FC = () => {
             <Box
               width="100%"
               maxWidth="100vw"
-              overflowX="scroll"
+              display={['block', 'flex']}
+              alignItems="center"
+              justifyContent="center"
               paddingX={['spacing200', 'spacing400', 'spacing600']}
               paddingBottom={['spacing100', 'spacing400', 'spacing600']}
               paddingTop={'spacing100'}
+              overflowX="scroll"
             >
-              <Tree
-                tree={threes[selectedTree]}
-                onSelect={(value) => {
-                  if (!value) {
-                    // Empty value for non-clickable nodes
-                    return;
-                  }
+              <div ref={treeRef} style={{ display: 'inline-block' }}>
+                <Tree
+                  tree={threes[selectedTree]}
+                  onSelect={(value) => {
+                    if (!value) {
+                      // Empty value for non-clickable nodes
+                      return;
+                    }
 
-                  Router.push('/[lang]/[term]', `/${lang}/${value}`);
-                }}
-              />
+                    Router.push('/[lang]/[term]', `/${lang}/${value}`);
+                  }}
+                />
+              </div>
             </Box>
           </Stack>
         </TranslatedBox>

@@ -10,18 +10,21 @@ interface BlogSectionProps {
   posts: PostAttributes[];
 }
 
-const BlogLink = styled.a`
-  &:hover {
-    cursor: pointer;
+const Post = styled(Box)`
+  a {
+    &:hover {
+      cursor: pointer;
 
-    h3 {
-      text-decoration: underline;
+      h3 {
+        text-decoration: underline;
+      }
     }
   }
 `;
 
 export const BlogSection: FC<BlogSectionProps> = ({ posts }) => {
   const { lang } = i18n.useI18n();
+  const t = i18n.useT();
 
   return (
     <Box as="section" paddingY={['spacing600', 'spacing800']}>
@@ -38,18 +41,18 @@ export const BlogSection: FC<BlogSectionProps> = ({ posts }) => {
                 fontSize={['size300', 'size400', 'size500']}
                 maxWidth={200}
               >
-                From the blog
+                {t('home:blog:title')}
               </Heading>
             </Box>
 
             <Stack direction="column" as="ul" spacing="spacing600">
               {posts.map((post, index) => (
-                <Box as="li" key={index}>
+                <Post as="li" key={index}>
                   <Link
                     href="/[lang]/posts/[post]"
                     as={`/${lang}/posts/${post.slug}`}
                   >
-                    <BlogLink>
+                    <a title={post.title}>
                       <Stack direction="column" spacing="spacing100">
                         <Stack direction="column" spacing="spacing60">
                           <Heading
@@ -62,6 +65,7 @@ export const BlogSection: FC<BlogSectionProps> = ({ posts }) => {
                           <Heading
                             as="h3"
                             fontSize={['size200', 'size300', 'size400']}
+                            lineHeight={['lineHeight100', 'lineHeight80']}
                             maxWidth={630}
                           >
                             {post.title}
@@ -80,9 +84,9 @@ export const BlogSection: FC<BlogSectionProps> = ({ posts }) => {
                           />
                         )}
                       </Stack>
-                    </BlogLink>
+                    </a>
                   </Link>
-                </Box>
+                </Post>
               ))}
             </Stack>
           </Stack>

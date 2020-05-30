@@ -46,6 +46,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
   relatedTerms,
 }) => {
   const { lang } = i18n.useI18n();
+  const t = i18n.useT();
 
   return (
     <Layout>
@@ -55,13 +56,17 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
         canonical={`/${lang}/${content.attributes.slug}`}
       />
 
-      <Box as="section" paddingTop={['spacing500']} paddingBottom="spacing900">
+      <Box
+        as="section"
+        paddingTop={['spacing500']}
+        paddingBottom={['spacing600', 'spacing900']}
+      >
         <Box margin="0 auto" width="100%" maxWidth="size100">
           <Box paddingX={['spacing200', 'spacing400', 'spacing600']}>
             <Box maxWidth={700} paddingBottom="spacing200">
               <Stack direction="column" spacing="spacing60">
                 <Heading as="p" color="yellow200" fontSize="size100">
-                  TERM
+                  {t('term:subtitle').toUpperCase()}
                 </Heading>
                 <Heading as="h1" fontSize={['size400', 'size500', 'size600']}>
                   {content.attributes.title}
@@ -69,7 +74,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
               </Stack>
             </Box>
 
-            <Box maxWidth={720} paddingBottom="spacing500">
+            <Box maxWidth={720} paddingBottom={['spacing300', 'spacing500']}>
               <Heading
                 as="p"
                 fontSize={['size200', 'size300']}
@@ -92,7 +97,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                   <Stack direction="column" spacing="spacing400">
                     <Stack direction="column" spacing="spacing100">
                       <Heading as="h3" color="yellow200" fontSize="size200">
-                        Related terms
+                        {t('term:relatedTerms:title')}
                       </Heading>
 
                       <Box borderBottom="1px solid" borderColor="gray300" />
@@ -135,7 +140,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                         maxWidth={140}
                         paddingBottom="spacing80"
                       >
-                        Share it on
+                        {t('term:social:title')}
                       </Heading>
 
                       <Box as="ul" display="flex" flexDirection="row">
@@ -144,7 +149,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                             href={getFacebookShareLink(
                               `/${lang}/${content.attributes.slug}`
                             )}
-                            title="Share it on Facebook"
+                            title={t('term:social:facebook:title')}
                             target="_blank"
                             rel="noreferrer nofollow"
                           >
@@ -162,7 +167,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                             href={getTwitterShareLink(
                               `/${lang}/${content.attributes.slug}`
                             )}
-                            title="Share it on Twitter"
+                            title={t('term:social:twitter:title')}
                             target="_blank"
                             rel="noreferrer nofollow"
                           >
@@ -180,7 +185,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                             href={getLinkedinShareLink(
                               `/${lang}/${content.attributes.slug}`
                             )}
-                            title="Share it on LinkedIn"
+                            title={t('term:social:linkedin:title')}
                             target="_blank"
                             rel="noreferrer nofollow"
                           >
@@ -199,7 +204,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                     <BlogLink
                       target="_blank"
                       rel="noreferrer"
-                      title="Contribute on GitHub to improve this page"
+                      title={t('term:contribute:description')}
                       href={getTermContributeLink({
                         term: content.attributes.slug,
                         lang,
@@ -214,7 +219,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                             lineHeight="lineHeight100"
                             maxWidth={140}
                           >
-                            Want to improve this page?
+                            {t('term:contribute:title')}
                           </Heading>
                           <Heading
                             as="p"
@@ -222,7 +227,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
                             fontWeight="size100"
                             lineHeight="lineHeight100"
                           >
-                            Contribute on GitHub
+                            {t('term:contribute:description')}
                           </Heading>
                         </Stack>
                       </Box>

@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 
 import i18n from '@/utils/i18n';
 import { getRepositoryLink } from '@/utils/contribute';
-import { theme, md } from '@/theme';
+import { theme, md, lg } from '@/theme';
 import { Box, Stack } from '@/components/primitives';
 import { Logo } from '@/components/Logo';
 
@@ -56,10 +56,18 @@ const NavItem = styled.li<{ active?: boolean }>`
       }
     }
 
+    .about span:first-child {
+      display: inline;
+
+      ${lg(css`
+        display: none;
+      `)}
+    }
+
     .about span:last-child {
       display: none;
 
-      ${md(css`
+      ${lg(css`
         display: inline;
       `)}
     }
@@ -71,6 +79,7 @@ export const HEADER_HEIGHT = [70, 90];
 export const Header: FC = () => {
   const { route } = useRouter();
   const { lang } = i18n.useI18n();
+  const t = i18n.useT();
 
   return (
     <Box
@@ -111,24 +120,24 @@ export const Header: FC = () => {
               <Stack as="ul" direction="row" spacing="spacing60">
                 <NavItem active={route === '/[lang]/list'}>
                   <Link href="/[lang]/list" as={`/${lang}/list`}>
-                    <a title="List" className="list">
-                      List
+                    <a title={t('header:nav:list:title')} className="list">
+                      {t('header:nav:list')}
                     </a>
                   </Link>
                 </NavItem>
 
                 <NavItem active={route === '/[lang]/about'}>
                   <Link href="/[lang]/about" as={`/${lang}/about`}>
-                    <a title="About the project" className="about">
-                      <span>About</span>
-                      <span> the project</span>
+                    <a title={t('header:nav:about:title')} className="about">
+                      <span>{t('header:nav:about')}</span>
+                      <span>{t('header:nav:about:title')}</span>
                     </a>
                   </Link>
                 </NavItem>
 
                 <NavItem>
                   <a
-                    title="Contribute to the project on GitHub"
+                    title={t('header:nav:github:title')}
                     href={getRepositoryLink()}
                     target="_blank"
                     rel="noreferrer"

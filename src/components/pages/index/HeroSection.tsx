@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
 import { Heading, Box, Text, Stack } from '@/components/primitives';
+import i18n from '@/utils/i18n';
 
 export const HeroSection: FC = () => {
+  const t = i18n.useT();
+
   return (
     <Box
       maxWidth={750}
@@ -16,7 +19,7 @@ export const HeroSection: FC = () => {
           textAlign="center"
           fontSize={['size400', 'size500', 'size600']}
         >
-          Redefining the Cloud to better understand how it works.
+          {t('home:hero:title')}
         </Heading>
 
         <Text
@@ -25,9 +28,7 @@ export const HeroSection: FC = () => {
           maxWidth={600}
           justifySelf="center"
         >
-          From a microservice to a container and a service mesh, it can be hard
-          to make sense of the words you see on a daily basis and how they
-          relate to each other. This guide is here to help you get it.
+          {t('home:hero:description')}
         </Text>
       </Stack>
     </Box>

@@ -1,3 +1,23 @@
 {
-  "hello": "Hello World"
+  "header:nav:list": "List",
+  "header:nav:list:title": "All terms",
+  "header:nav:about": "About",
+  "header:nav:about:title": "About the project",
+  "header:nav:github:title": "Contribute to the project on GitHub",
+  "footer:nav:privacy": "Terms & Privacy",
+  "home:hero:title": "Redefining the Cloud to better understand how it works.",
+  "home:hero:description": "From a microservice to a container and a service mesh, it can be hard to make sense of the words you see on a daily basis and how they relate to each other. This guide is here to help you get it.",
+  "home:tree:subtitle": "Let's figure out",
+  "home:blog:title": "From the blog",
+  "list:title": "A list, from A to Z",
+  "about:title": "About the project",
+  "term:subtitle": "Term",
+  "term:relatedTerms:title": "Related terms",
+  "term:social:title": "Share it on",
+  "term:social:facebook:title": "Share it on Facebook",
+  "term:social:twitter:title": "Share it on Twitter",
+  "term:social:linkedin:title": "Share it on LinkedIn",
+  "term:contribute:title": "Want to improve this page?",
+  "term:contribute:description": "Contribute on GitHub",
+  "privacy:title": "Terms & Privacy"
 }

@@ -35,9 +35,9 @@ const About: NextPage<AboutProps> = ({ content }) => {
             as="h1"
             fontSize={['size400', 'size500', 'size600']}
             textAlign="center"
-            paddingBottom="spacing700"
+            paddingBottom={['spacing400', 'spacing700']}
           >
-            About the project
+            {t('about:title')}
           </Heading>
 
           <Box maxWidth={624} margin="0 auto">
