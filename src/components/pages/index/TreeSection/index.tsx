@@ -1,6 +1,5 @@
-import React, { FC, useState, useRef, useLayoutEffect } from 'react';
+import React, { FC, useState, useRef, useEffect } from 'react';
 import styled, { css } from 'styled-components';
-import Router from 'next/router';
 
 import i18n from '@/utils/i18n';
 import { Heading, Box, Stack } from '@/components/primitives';
@@ -26,12 +25,11 @@ export const TreeSection: FC = () => {
     },
   ];
 
-  const { lang } = i18n.useI18n();
   const t = i18n.useT();
   const [selectedTree, setSelectedTree] = useState(options[0].value);
   const treeRef = useRef<HTMLDivElement>();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const containerWidth = treeRef.current.offsetWidth;
 
     // Center Tree when larger than window
@@ -91,17 +89,7 @@ export const TreeSection: FC = () => {
               overflowX="scroll"
             >
               <div ref={treeRef} style={{ display: 'inline-block' }}>
-                <Tree
-                  tree={threes[selectedTree]}
-                  onSelect={(value) => {
-                    if (!value) {
-                      // Empty value for non-clickable nodes
-                      return;
-                    }
-
-                    Router.push('/[lang]/[term]', `/${lang}/${value}`);
-                  }}
-                />
+                <Tree tree={threes[selectedTree]} />
               </div>
             </Box>
           </Stack>

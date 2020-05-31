@@ -8,6 +8,8 @@ import {
   SpaceProps,
   fontSize,
   FontSizeProps,
+  fontFamily,
+  FontFamilyProps,
   maxWidth,
   MaxWidthProps,
   textAlign,
@@ -21,17 +23,23 @@ import { Theme } from '@/theme';
 interface TextProps
   extends ColorProps<Theme>,
     FontSizeProps<Theme>,
+    FontFamilyProps<Theme>,
     SpaceProps<Theme>,
     TextAlignProps<Theme>,
     FlexboxProps<Theme>,
     MaxWidthProps<Theme> {
   as?: 'p' | 'span' | 'li';
   className?: string;
+  id?: string;
 }
 
-const RawText: FC<TextProps> = ({ as = 'p', className, children }) => {
+const RawText: FC<TextProps> = ({ as = 'p', id, className, children }) => {
   const TextTag = `${as}` as keyof JSX.IntrinsicElements;
-  return <TextTag className={className}>{children}</TextTag>;
+  return (
+    <TextTag className={className} id={id}>
+      {children}
+    </TextTag>
+  );
 };
 
 export const Text = styled(RawText)<TextProps>`
@@ -39,5 +47,5 @@ export const Text = styled(RawText)<TextProps>`
   line-height: ${(p) => p.theme.lineHeights.lineHeight200};
   color: ${(p) => p.theme.colors.gray800};
 
-  ${compose(fontSize, color, space, maxWidth, textAlign, flexbox)}
+  ${compose(fontSize, fontFamily, color, space, maxWidth, textAlign, flexbox)}
 `;

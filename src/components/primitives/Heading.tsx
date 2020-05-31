@@ -32,11 +32,16 @@ interface HeadingProps
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   fontSize: keyof Theme['fontSizes'] | Array<keyof Theme['fontSizes']>;
   className?: string;
+  id?: string;
 }
 
-const RawHeading: FC<HeadingProps> = ({ as, className, children }) => {
+const RawHeading: FC<HeadingProps> = ({ as, className, id, children }) => {
   const HeadingTag = `${as}` as keyof JSX.IntrinsicElements;
-  return <HeadingTag className={className}>{children}</HeadingTag>;
+  return (
+    <HeadingTag className={className} id={id}>
+      {children}
+    </HeadingTag>
+  );
 };
 
 export const Heading = styled(RawHeading)<HeadingProps>`

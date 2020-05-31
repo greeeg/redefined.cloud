@@ -15,9 +15,11 @@
   },
   "dependencies": {
     "@reach/menu-button": "^0.10.3",
+    "@reach/portal": "^0.10.3",
     "dotenv": "^8.2.0",
     "focus-visible": "^5.1.0",
     "gray-matter": "^4.0.2",
+    "jsonp": "^0.2.1",
     "next": "^9.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

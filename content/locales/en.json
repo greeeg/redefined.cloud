@@ -19,5 +19,14 @@
   "term:social:linkedin:title": "Share it on LinkedIn",
   "term:contribute:title": "Want to improve this page?",
   "term:contribute:description": "Contribute on GitHub",
-  "privacy:title": "Terms & Privacy"
+  "privacy:title": "Terms & Privacy",
+  "newsletter:title": "Want to learn more about the Cloud?",
+  "newsletter:description": "Receive detail posts and new terms directly to your inbox to better understand how the cloud works by subscribing to this newsletter.",
+  "newsletter:input:firstName": "John",
+  "newsletter:input:email": "john@gmail.com",
+  "newsletter:cta": "Subscribe",
+  "newsletter:status:success": "Success! Check your emails to confirm your subscription.",
+  "newsletter:status:loading": "Loading...",
+  "newsletter:status:error": "An error happened. You might want to try it again later.",
+  "newsletter:status:duplicate": "Oops. Looks like you&apos;re already in. That&apos;s good."
 }

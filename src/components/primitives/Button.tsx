@@ -3,17 +3,27 @@ import styled from 'styled-components';
 
 interface ButtonProps {
   variation: 'primary' | 'secondary';
+  onClick?: () => void;
+  type?: 'button' | 'submit';
   disabled?: boolean;
   loading?: boolean;
   className?: string;
 }
 
-const RawButton: FC<ButtonProps> = ({ children, className }) => {
-  return <button className={className}>{children}</button>;
+const RawButton: FC<ButtonProps> = ({
+  children,
+  type = 'button',
+  onClick,
+  className,
+}) => {
+  return (
+    <button className={className} onClick={onClick} type={type}>
+      {children}
+    </button>
+  );
 };
 
 export const Button = styled(RawButton)<ButtonProps>`
-  margin-right: 10px;
   font-family: ${(p) => p.theme.fonts.font100};
   font-size: ${(p) => p.theme.fontSizes.size80}px;
   background-color: ${(p) => {
@@ -76,35 +86,5 @@ export const Button = styled(RawButton)<ButtonProps>`
         : p.theme.colors.gray400;
     }};
     box-shadow: ${(p) => p.theme.shadows.boxShadow200};
-  }
-
-  &:focus {
-    background-color: ${(p) => {
-      if (p.disabled) {
-        return p.theme.colors.gray300;
-      }
-      return p.variation === 'primary'
-        ? p.theme.colors.yellow100
-        : p.theme.colors.gray200;
-    }};
-    border-color: ${(p) => {
-      if (p.disabled) {
-        return p.theme.colors.gray300;
-      }
-      return p.variation === 'primary'
-        ? p.theme.colors.yellow100
-        : p.theme.colors.gray200;
-    }};
-    box-shadow: 0 0 0 3px ${(p) => p.theme.colors.gray100},
-      0 0 0 4px
-        ${(p) => {
-          if (p.disabled) {
-            return p.theme.colors.gray300;
-          }
-          return p.variation === 'primary'
-            ? p.theme.colors.yellow200
-            : p.theme.colors.gray400;
-        }};
-    outline: none;
   }
 `;

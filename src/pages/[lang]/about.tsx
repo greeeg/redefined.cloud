@@ -24,7 +24,11 @@ const About: NextPage<AboutProps> = ({ content }) => {
         canonical={`/${lang}/about`}
       />
 
-      <Box as="section" paddingY={['spacing600', 'spacing700']}>
+      <Box
+        as="section"
+        paddingY={['spacing600', 'spacing700']}
+        paddingBottom={['spacing600', 'spacing900']}
+      >
         <Box
           margin="0 auto"
           width="100%"

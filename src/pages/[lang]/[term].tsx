@@ -16,6 +16,7 @@ import { Layout } from '@/components/Layout';
 import { Head } from '@/components/Head';
 import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
+import { NewsletterForm } from '@/components/NewsletterForm';
 
 const BlogLink = styled.a`
   &:hover {
@@ -90,7 +91,10 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
               rows="70% 30%"
               spacing={['spacing600', 'spacing600', 'spacing900']}
             >
-              <Markdown content={content.content} />
+              <Stack direction="column" spacing={['spacing600']}>
+                <Markdown content={content.content} />
+                <NewsletterForm />
+              </Stack>
 
               <Box as="aside">
                 <Box maxWidth={['100%', 340, 230]}>

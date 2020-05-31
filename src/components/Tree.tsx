@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
+import Link from 'next/link';
 
 import { md } from '@/theme';
+import i18n from '@/utils/i18n';
 
 type Node = {
   label: string;
@@ -12,43 +14,39 @@ type Node = {
 interface TreeMasterProps {
   tree: Node;
   className?: string;
-  onSelect: (value: string) => void;
 }
 
 interface TreeNodeProps {
   node: Node;
-  onSelect: (value: string) => void;
 }
 
-const TreeNode: FC<TreeNodeProps> = ({ node, onSelect }) => (
-  <li>
-    <button
-      aria-label={node.label}
-      onClick={() => onSelect(node.value)}
-      disabled={node.value === ''}
-    >
-      {node.label}
-    </button>
+const TreeNode: FC<TreeNodeProps> = ({ node }) => {
+  const { lang } = i18n.useI18n();
 
-    {node.children && node.children.length > 0 && (
-      <ul>
-        {node.children.map((child, index) => (
-          <TreeNode
-            node={child}
-            onSelect={onSelect}
-            key={`${node.label}-${index}`}
-          />
-        ))}
-      </ul>
-    )}
-  </li>
-);
+  return (
+    <li>
+      <Link href="/[lang]/[term]" as={`/${lang}/${node.value}`}>
+        <a title={node.label} data-disabled={node.value === ''}>
+          {node.label}
+        </a>
+      </Link>
 
-const TreeMaster: FC<TreeMasterProps> = ({ tree, className, onSelect }) => {
+      {node.children && node.children.length > 0 && (
+        <ul>
+          {node.children.map((child, index) => (
+            <TreeNode node={child} key={`${node.label}-${index}`} />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+};
+
+const TreeMaster: FC<TreeMasterProps> = ({ tree, className }) => {
   return (
     <div className={className}>
       <ul>
-        <TreeNode node={tree} onSelect={onSelect} />
+        <TreeNode node={tree} />
       </ul>
     </div>
   );
@@ -129,7 +127,8 @@ export const Tree = styled(TreeMaster)`
         border-radius: 5px 0 0 0;
       }
 
-      button {
+      a {
+        cursor: pointer;
         position: relative;
         display: inline-block;
         padding: 0.5em 0.75em;
@@ -143,12 +142,12 @@ export const Tree = styled(TreeMaster)`
         border-radius: ${p.theme.radii.borderRadius100}px;
         transition: all ${p.theme.transitions.transition100};
 
-        &:hover:not(:disabled) {
-          cursor: pointer;
+        &:hover:not([data-disabled='true']) {
           border-color: ${p.theme.colors.yellow200};
         }
 
-        &:disabled {
+        &[data-disabled='true'] {
+          cursor: default;
           background-color: ${(p) => p.theme.colors.gray800};
           border-color: ${p.theme.colors.gray800};
         }

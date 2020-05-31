@@ -54,6 +54,11 @@ export const GlobalStyles = createGlobalStyle`
     box-shadow: 0px 0px 0px 3px ${(p) => p.theme.colors.yellow200};
   }
 
+  input.focus-visible:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px ${(p) => p.theme.colors.yellow200};
+  }
+
   .js-focus-visible {
     * {
       outline: none;
