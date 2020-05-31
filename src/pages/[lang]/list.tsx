@@ -14,12 +14,14 @@ interface ListProps {
   terms: TermAttributes[];
 }
 
-const BlogLink = styled.a`
-  &:hover {
-    cursor: pointer;
+const TermItem = styled(Box)`
+  a {
+    &:hover {
+      cursor: pointer;
 
-    h3 {
-      text-decoration: underline;
+      h3 {
+        text-decoration: underline;
+      }
     }
   }
 `;
@@ -59,9 +61,9 @@ const List: NextPage<ListProps> = ({ terms }) => {
           >
             {terms.map((term, index) => {
               return (
-                <Box as="li" key={term.slug}>
+                <TermItem as="li" key={term.slug}>
                   <Link href="/[lang]/[term]" as={`/${lang}/${term.slug}`}>
-                    <BlogLink title={term.title}>
+                    <a title={term.title}>
                       <Stack direction="column" spacing="spacing100">
                         <Stack direction="column" spacing="spacing60">
                           <Heading
@@ -89,9 +91,9 @@ const List: NextPage<ListProps> = ({ terms }) => {
                           />
                         )}
                       </Stack>
-                    </BlogLink>
+                    </a>
                   </Link>
-                </Box>
+                </TermItem>
               );
             })}
           </Stack>

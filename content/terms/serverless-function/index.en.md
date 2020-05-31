@@ -1,6 +1,6 @@
 ---
-title: 'What is a Serverless Function or Lambda Function?'
-description: ''
+title: 'What is a Serverless function or Lambda function?'
+description: 'A Serverless function is a block of code triggered on incoming requests which executes application logic.'
 name: 'Serverless function'
 summary: ''
 keywords: ['serverless', 'serverless function', 'lambda function']

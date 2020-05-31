@@ -1,6 +1,6 @@
 ---
-title: 'What is a Monolith Architecture?'
-description: ''
+title: 'What is a Monolith architecture?'
+description: 'A monolith architecture is a single unified solution to a problem, where all components of the solution are combined.'
 name: 'Monolith architecture'
 summary: ''
 keywords: ['monolith architecture', 'monolith']

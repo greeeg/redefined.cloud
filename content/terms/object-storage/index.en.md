@@ -1,6 +1,6 @@
 ---
 title: 'What is Object Storage?'
-description: ''
+description: 'Object storage is like storing files in moving boxes in warehouses: easy to search and scalable to infinity.'
 name: 'Object storage'
 summary: ''
 keywords: ['object storage', 'storage']

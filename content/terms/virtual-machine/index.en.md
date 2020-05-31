@@ -1,6 +1,6 @@
 ---
 title: 'What is a VM or Virtual Machine?'
-description: ''
+description: 'A Virtual machine is like using a school bus instead of individual cars to bring children to school: shared resources, less expensive & easier to use.'
 name: 'Virtual machine'
 shortName: 'VM'
 summary: ''

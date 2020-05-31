@@ -1,6 +1,6 @@
 ---
 title: 'What is Profiling?'
-description: ''
+description: 'Profiling is about providing a statistic overview of past events to create profiles and catch bad performances or issues.'
 name: 'Profiling'
 summary: ''
 keywords: ['profiling', 'logging', 'tracing']

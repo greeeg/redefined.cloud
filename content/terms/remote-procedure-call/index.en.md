@@ -1,6 +1,6 @@
 ---
 title: 'What is Remote Procedure Call or RPC?'
-description: ''
+description: 'Remote procedure call is like outsourcing a task to someone else and use the result to your own end.'
 name: 'Remote procedure call'
 shortName: 'RPC'
 summary: ''

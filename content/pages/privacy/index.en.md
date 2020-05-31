@@ -52,4 +52,4 @@ The Site is not intended for children and we do not knowingly solicit personal d
 
 ## Consent
 
-If you have any questions about this Privacy Policy or our privacy practices, please feel free to email us at hello@greeeg.com
+If you have any questions about this Privacy Policy or our privacy practices, please feel free to email us at redefined.cloud@greeeg.com

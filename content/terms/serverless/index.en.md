@@ -1,6 +1,6 @@
 ---
 title: 'What is Serverless?'
-description: ''
+description: 'Serverless is like renting coworking space instead of renting a building.'
 name: 'Serverless'
 summary: ''
 keywords: ['serverless']

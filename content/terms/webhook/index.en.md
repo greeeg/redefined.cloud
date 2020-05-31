@@ -1,6 +1,6 @@
 ---
 title: 'What is a Webhook?'
-description: ''
+description: 'A Webhook is like a P.O. Box third-party applications can use to notify you when something happens.'
 name: 'Webhook'
 summary: ''
 keywords: ['webhook']

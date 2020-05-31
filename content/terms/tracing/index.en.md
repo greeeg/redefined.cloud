@@ -1,6 +1,6 @@
 ---
 title: 'What is Tracing?'
-description: ''
+description: 'Tracing is like a black box inside a plane: used to understand how things went during a crash.'
 name: 'Tracing'
 summary: ''
 keywords: ['tracing', 'logging', 'monitoring']

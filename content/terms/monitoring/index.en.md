@@ -1,6 +1,6 @@
 ---
 title: 'What is Monitoring?'
-description: ''
+description: 'Monitoring is the act of collecting, aggregating and analyzing information to understand how an application is doing.'
 name: 'Monitoring'
 summary: ''
 keywords: ['monitoring', 'logging']

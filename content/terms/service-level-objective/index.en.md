@@ -1,6 +1,6 @@
 ---
-title: 'What is Service Level Objective or SLO?'
-description: ''
+title: 'What is Service level objective or SLO?'
+description: 'A Service level objective is a metric used to define a Service level agreement.'
 name: 'Service level objective'
 shortName: 'SLO'
 summary: ''

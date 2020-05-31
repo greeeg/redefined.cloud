@@ -127,7 +127,7 @@
                                     "children": [
                                       {
                                         "label": "Memory database",
-                                        "value": "memory-database"
+                                        "value": "in-memory-database"
                                       }
                                     ]
                                   }

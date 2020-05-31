@@ -1,6 +1,6 @@
 ---
 title: 'What is Observability?'
-description: ''
+description: 'Observability is the capacity to provide answers to questions you never asked yourself before about an application or service.'
 name: 'Observability'
 summary: ''
 keywords: ['observability', 'monitoring']

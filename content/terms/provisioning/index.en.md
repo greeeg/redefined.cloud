@@ -1,13 +1,11 @@
 ---
 title: 'What is Provisioning?'
-description: ''
+description: 'Provisioning is the process of setting up infrastructure in order for it to be ready to use.'
 name: 'Provisioning'
 summary: ''
 keywords: ['provisioning', 'server']
 relatedTerms: ['baremetal-server', 'virtual-machine']
 ---
-
-Provisioning is the process of setting up infrastructure in order for it to be ready to use (installation, connection, security, etc.).
 
 In the context of Cloud computing, provisioning defines how you set up new servers, services ans networks. It can be done in multiple ways:
 

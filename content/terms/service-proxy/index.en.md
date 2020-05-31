@@ -1,6 +1,6 @@
 ---
 title: 'What is a Service Proxy?'
-description: ''
+description: 'A service proxy is like a gatekeeper between a service and incoming requests.'
 name: 'Service proxy'
 summary: ''
 keywords: ['service proxy', 'microservices']

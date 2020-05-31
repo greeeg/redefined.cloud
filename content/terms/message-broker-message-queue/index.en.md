@@ -1,6 +1,6 @@
 ---
 title: 'What is a Message Broker or Message Queue?'
-description: ''
+description: 'A Message broker is like a todo list you would use for the tasks you want to complete throughout the day.'
 name: 'Message broker'
 summary: ''
 keywords: ['message broker', 'message queue']
@@ -22,3 +22,10 @@ Message queuing is made of 4 things:
 
 - Repetitive heavy workload (eg. generating payslips)
 - Asynchronous work (eg. sending emails)
+
+## Examples of Message brokers
+
+- [NSQ](https://nsq.io/)
+- [RabbitMQ](https://www.rabbitmq.com/)
+- [Apache Kafka](https://kafka.apache.org/)
+- [Redis](https://redis.io/)

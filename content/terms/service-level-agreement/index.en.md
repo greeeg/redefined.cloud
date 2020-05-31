@@ -1,6 +1,6 @@
 ---
 title: 'What is Service Level Agreement or SLA?'
-description: ''
+description: 'A Service level agreement is a commitment a company makes to its customers in terms of quality of service.'
 name: 'Service level agreement'
 shortName: 'SLA'
 summary: ''
