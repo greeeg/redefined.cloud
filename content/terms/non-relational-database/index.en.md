@@ -13,9 +13,14 @@ Instead of having each piece of data stored in a table in a row like Google Shee
 
 This type of database is particularly useful when dealing with data that doesn't have explicit schema (IoT events, Big Data, etc.).
 
-## Advantages of NoSQL databases
+## Benefits of using NoSQL databases
 
 - Flexibility
 - Scalability
 
-Important NoSQL databases are MongoDB (document-based), Neo4j (graph-based), Redis (key-value pair based) or DynamoDB.
+## Examples of NoSQL databases
+
+- MongoDB (document-based)
+- Neo4J (graph-based)
+- Redis (key-value pair based)
+- DynamoDB

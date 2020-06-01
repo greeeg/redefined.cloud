@@ -20,15 +20,20 @@ Service registry would be a place (or storage) where you would be sure to always
 
 Now, you might be wondering in what possible case a ressource (database, service, etc.) would have its address change. Indeed, a database URL should not change from one day to another.
 
-However, if you're working in a microservice-oriented or containerised architecture, this is pretty common. Indeed, because you want your application to be highly available, you always make sure to progressively release new versions of a service: you create new instances of service A, progressively redirect traffic to those new instances and then shut down old ones. But how should services connected to service A behave? How are they suppose to know how to connect to those new instances? This is when service registry comes into place.
+However, if you're working in a [microservice-oriented](#microservice-architecture 'What is a Microservice architecture?') or [containerised architecture](#containers-and-docker 'What is a Container and Docker?'), this is pretty common. Indeed, because you want your application to be highly available, you always make sure to progressively release new versions of a service: you create new instances of service A, progressively redirect traffic to those new instances and then shut down old ones. But how should services connected to service A behave? How are they suppose to know how to connect to those new instances? This is when service registry comes into place.
 
-Using container orchestration tools like Kubernetes, you have two ways of registering and discovering services:
+Using [container orchestration](#container-orchestration-and-kubernetes 'What is Container orchestration and Kubernetes?') tools like Kubernetes, you have two ways of registering and discovering services:
 
 - Using DNS (just like domain names)
 - Using environment variables
 
 However, when working with complex architectures, you can use what we call a service mesh, which happens to do exactly that (plus a bunch of other things) for you.
 
-Apache Zookeeper
+## Examples of Service registry
 
-ETCD
+- [Apache Zookeeper](https://zookeeper.apache.org/)
+- [etcd](https://etcd.io/)
+
+## Digging deeper into Service registry & discovery
+
+- Learn more about [why using Service registry in a microservice architecture](https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/) with NGINX

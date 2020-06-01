@@ -7,7 +7,7 @@ keywords: ['profiling', 'logging', 'tracing']
 relatedTerms: ['observability', 'logging', 'tracing', 'monitoring']
 ---
 
-While logging tells you what happened and in which order, profiling quantifies it by providing a statistic overview of an inventory of events and timings: how much time your code spent in each area, or how many times a body of code was executed. It helps you create a profile, just like profilers in the police. But instead of catching bad guys, you want to catch bad performances.
+While [logging](#logging 'What is logging?') tells you what happened and in which order, profiling quantifies it by providing a statistic overview of an inventory of events and timings: how much time your code spent in each area, or how many times a body of code was executed. It helps you create a profile, just like profilers in the police. But instead of catching bad guys, you want to catch bad performances.
 
 It tracks things like memory allocations and garbage collection. Most profilers that developers use are for when they’re having a very bad day.
 

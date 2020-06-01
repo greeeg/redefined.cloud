@@ -21,9 +21,9 @@ A service proxy acts as an intermediary, with the ability to perform additional 
 - Caching
 - and more.
 
-In a distributed architecture like microservices, some of the biggest challenges are how services communicate and how to improve observability. Service proxies improve the way services communicate in a controlled and standardized way.
+In a distributed architecture like [microservices](#microservice-architecture 'What is a Microservice architecture?'), some of the biggest challenges are how services communicate and how to improve observability. Service proxies improve the way services communicate in a controlled and standardized way.
 
-## Advantages of service proxy
+## Benefits of using a Service proxy
 
 - Granularity
 - Traffic management
@@ -31,4 +31,8 @@ In a distributed architecture like microservices, some of the biggest challenges
 - Monitoring & Analytics
 - Security
 
-One of the most used service proxy is Envoy, developed by Lyft. It is also used within a service mesh called Istio.
+## Examples of Service proxy
+
+- [Envoy Proxy](https://www.envoyproxy.io/)
+- [NGINX](https://www.nginx.com/)
+- [HAProxy](https://www.haproxy.org/)

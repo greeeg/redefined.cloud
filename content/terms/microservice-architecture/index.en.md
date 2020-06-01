@@ -9,7 +9,7 @@ relatedTerms: ['monolith-architecture', 'service-mesh', 'serverless']
 
 Let's imagine you want to cook a chocolate cake. Having a microservice architecture would mean to use different tools (a bowl, a cooking paddle, a cake pan, etc) which all have a single responsibility and are not linked in the way they work (you don't need a bowl to use a cake pan).
 
-We generally oppose this architecture to a monolith architecture, which would consist of using a single tool to do it all in our example, like a thermomix.
+We generally oppose this architecture to a [monolith architecture](#monolith-architecture 'What is a Monolith architecture?'), which would consist of using a single tool to do it all in our example, like a thermomix.
 
 Microservices have several advantages over monoliths:
 

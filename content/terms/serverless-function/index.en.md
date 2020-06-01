@@ -7,9 +7,9 @@ keywords: ['serverless', 'serverless function', 'lambda function']
 relatedTerms: ['serverless', 'api-gateway-server-proxy']
 ---
 
-Serverless functions are one of the most developed way of using the serverless paradigm. They consist of small and autonomous pieces of code that can be scaled up or down depending on incoming requests.
+Serverless functions are one of the most developed way of using the [serverless paradigm](#serverless 'What is Serverless?'). They consist of small and autonomous pieces of code that can be scaled up or down depending on incoming requests.
 
-Serverless functions can be considered as microservices, as opposed to monoliths.
+Serverless functions can be considered as [microservices](#microservice-architecture 'What is a Microservice architecture?'), as opposed to [monoliths](#monolith-architecture 'What is a Monolith architecture?').
 
 They are triggered by events, which can be:
 

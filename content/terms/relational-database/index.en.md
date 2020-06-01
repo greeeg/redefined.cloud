@@ -24,4 +24,10 @@ One important aspect of this type of database is data consistency. Each column (
 
 In order to work with relational databases, we use transactions, which follow ACID principles. Transactions are a way to ask questions or update data in the database. To do so, we use a computer language called SQL (Structured query language).
 
-Important relational databases are PostgresSQL, MySQL, Oracle or MariaDB. Using services like AWS RDS or GCP Cloud SQL, it is really easy to set up and maintain this type of database.
+## Examples of Relational databases
+
+- [PostgreSQL](https://www.postgresql.org/)
+- [MySQL](https://www.mysql.com/)
+- [MariaDB](https://mariadb.org/)
+
+Using services like AWS RDS or GCP Cloud SQL, it is really easy to set up and maintain this type of database.

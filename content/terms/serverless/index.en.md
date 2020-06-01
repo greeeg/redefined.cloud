@@ -24,7 +24,7 @@ Serverless can dramatically simplify how you deploy your code to production. Ind
 
 The only downside with serverless is that you need to make sure your application doesn't depend on some local state on the current server (sessions, cache, etc).
 
-Serverless should not be confused with microservices. Both are generally associated but you can run a monolith application in a serverless way.
+Serverless should not be confused with [microservices](#microservice-architecture 'What is a Microservice architecture?'). Both are generally associated but you can run a monolith application in a serverless way.
 
 ## Benefits of using serverless
 
