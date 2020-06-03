@@ -48,25 +48,39 @@ const MenuButton = styled(SourceMenuButton)`
   border: none;
   cursor: pointer;
   max-width: 100vw;
-  text-align: left;
-  color: ${(p) => p.theme.colors.white};
-  font-family: ${(p) => p.theme.fonts.font100};
-  font-size: ${(p) => p.theme.fontSizes.size300}px;
-  font-weight: bold;
   padding: 0;
   border-radius: ${(p) => p.theme.radii.borderRadius100}px;
   transition: all ${(p) => p.theme.transitions.transition100};
   padding: ${(p) => p.theme.space.spacing60}px;
   transform: translateX(-${(p) => p.theme.space.spacing60}px);
   outline: none;
+  text-align: left;
+
+  span {
+    text-align: left;
+    color: ${(p) => p.theme.colors.white};
+    font-family: ${(p) => p.theme.fonts.font100};
+    font-size: ${(p) => p.theme.fontSizes.size300}px;
+    font-weight: bold;
+    padding-right: ${(p) => p.theme.space.spacing40}px;
+
+    ${md(css`
+      font-size: ${(p) => p.theme.fontSizes.size400}px;
+      padding-right: ${(p) => p.theme.space.spacing80}px;
+    `)}
+  }
+
+  svg {
+    transform: scale(0.75);
+
+    ${md(css`
+      transform: translateY(-3px);
+    `)}
+  }
 
   &:hover {
     background-color: ${(p) => p.theme.colors.gray800};
   }
-
-  ${md(css`
-    font-size: ${(p) => p.theme.fontSizes.size400}px;
-  `)}
 `;
 
 export const Select: FC<SelectProps> = ({ className, options, onSelect }) => {
@@ -80,7 +94,18 @@ export const Select: FC<SelectProps> = ({ className, options, onSelect }) => {
   return (
     <div className={className}>
       <Menu>
-        <MenuButton>{selectedOption.label}</MenuButton>
+        <MenuButton>
+          <span>{selectedOption.label}</span>
+          <svg
+            width="25"
+            height="18"
+            viewBox="0 0 25 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M2 2L12 13.5L22.5 2" stroke="white" strokeWidth="5" />
+          </svg>
+        </MenuButton>
 
         <MenuList>
           {options.map((option, index) => (

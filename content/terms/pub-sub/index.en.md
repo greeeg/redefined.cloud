@@ -1,5 +1,5 @@
 ---
-title: 'What is Pub/Sub or the Publish/Subscribe Pattern?'
+title: 'What is Pub/Sub or the Publish/Subscribe pattern?'
 description: 'Pub/Sub is like a stock market where investors publish sell orders and buyers subscribe to those orders to receive messages when new ones arrive.'
 name: 'Pub Sub'
 summary: ''

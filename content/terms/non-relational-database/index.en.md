@@ -1,7 +1,7 @@
 ---
 title: 'What is a Non-relational database or NoSQL database?'
 description: 'A Non-relational database is a way to store data in documents, key-value pairs or graphs.'
-name: 'Non relational database'
+name: 'Non-relational database'
 shortName: 'NoSQL DB'
 keywords: ['non relational database', 'nosql', 'database']
 relatedTerms: ['in-memory-database', 'relational-database']
@@ -20,7 +20,7 @@ This type of database is particularly useful when dealing with data that doesn't
 
 ## Examples of NoSQL databases
 
-- MongoDB (document-based)
-- Neo4J (graph-based)
-- Redis (key-value pair based)
-- DynamoDB
+- [MongoDB](https://www.mongodb.com/) (document-based)
+- [Neo4J](https://neo4j.com/) (graph-based)
+- [Redis](https://redis.io/) (key-value pair based)
+- [DynamoDB](https://aws.amazon.com/dynamodb/)

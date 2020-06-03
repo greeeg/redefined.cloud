@@ -20,10 +20,6 @@ export const TreeSection: FC = () => {
       value: 'containarized',
     },
     {
-      label: 'Microservice architecture',
-      value: 'microservices',
-    },
-    {
       label: 'Serverless architecture',
       value: 'serverless',
     },

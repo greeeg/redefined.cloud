@@ -34,6 +34,6 @@ By using CDNs, you're reducing the time to access your assets for your users, re
 - Increased availability
 - Decreased load on main application & services
 
-## Digging deeper in CDNs
+## Digging deeper into CDNs
 
 - Learn [how CDNs work with Cloudflare](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)

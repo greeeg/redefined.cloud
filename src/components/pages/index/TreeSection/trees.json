@@ -41,7 +41,7 @@
                                         "children": [
                                           {
                                             "label": "Provisioning",
-                                            "value": "provisioning",
+                                            "value": "cloud-provisioning",
                                             "children": [
                                               {
                                                 "label": "Continuous delivery",
@@ -157,19 +157,182 @@
       }
     ]
   },
-  "microservices": {
-    "label": "ACME.com",
-    "value": "",
-    "children": []
-  },
   "serverless": {
     "label": "ACME.com",
     "value": "",
-    "children": []
+    "children": [
+      {
+        "label": "DNS",
+        "value": "domain-name-system",
+        "children": [
+          {
+            "label": "Load balancer",
+            "value": "load-balancer",
+            "children": [
+              {
+                "label": "API gateway",
+                "value": "api-gateway-server-proxy",
+                "children": [
+                  {
+                    "label": "Serverless",
+                    "value": "serverless",
+                    "children": [
+                      {
+                        "label": "Serverless function",
+                        "value": "serverless-function",
+                        "children": [
+                          {
+                            "label": "Virtual machine",
+                            "value": "virtual-machine",
+                            "children": [
+                              {
+                                "label": "Baremetal server",
+                                "value": "baremetal-server",
+                                "children": [
+                                  {
+                                    "label": "Provisioning",
+                                    "value": "cloud-provisioning",
+                                    "children": [
+                                      {
+                                        "label": "Continuous delivery",
+                                        "value": "continuous-delivery",
+                                        "children": [
+                                          {
+                                            "label": "Continuous integration",
+                                            "value": "continuous-integration",
+                                            "children": [
+                                              {
+                                                "label": "Webhook",
+                                                "value": "webhook"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Service communication",
+                    "value": "",
+                    "children": [
+                      {
+                        "label": "Message broker",
+                        "value": "message-broker-message-queue",
+                        "children": [
+                          {
+                            "label": "Pub/Sub",
+                            "value": "pub-sub",
+                            "children": [
+                              {
+                                "label": "RPC",
+                                "value": "remote-procedure-call",
+                                "children": [
+                                  {
+                                    "label": "CRON job",
+                                    "value": "cron-job"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Databases",
+                    "value": "",
+                    "children": [
+                      {
+                        "label": "Relational database",
+                        "value": "relational-database",
+                        "children": [
+                          {
+                            "label": "Non-relational database",
+                            "value": "non-relational-database",
+                            "children": [
+                              {
+                                "label": "Memory database",
+                                "value": "in-memory-database"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "CDN",
+            "value": "content-delivery-network",
+            "children": [
+              {
+                "label": "Object storage",
+                "value": "object-storage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "observability": {
     "label": "ACME.com",
     "value": "",
-    "children": []
+    "children": [
+      {
+        "label": "Observability",
+        "value": "observability",
+        "children": [
+          {
+            "label": "SLA",
+            "value": "service-level-agreement",
+            "children": [
+              {
+                "label": "SLO",
+                "value": "service-level-objective"
+              }
+            ]
+          },
+          {
+            "label": "Monitoring",
+            "value": "monitoring",
+            "children": [
+              {
+                "label": "Profiling",
+                "value": "profiling",
+                "children": [
+                  {
+                    "label": "Tracing",
+                    "value": "tracing",
+                    "children": [
+                      {
+                        "label": "Logging",
+                        "value": "logging"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Chaos engineering",
+            "value": "chaos-engineering"
+          }
+        ]
+      }
+    ]
   }
 }

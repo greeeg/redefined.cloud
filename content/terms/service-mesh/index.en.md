@@ -1,5 +1,5 @@
 ---
-title: 'What is a Service Mesh?'
+title: 'What is a Service mesh?'
 description: 'A Service mesh is a tool to standardize service-to-service communication in a secure and application-code decoupled way.'
 name: 'Service mesh'
 summary: ''

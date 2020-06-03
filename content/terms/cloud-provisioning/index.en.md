@@ -1,9 +1,9 @@
 ---
-title: 'What is Provisioning?'
-description: 'Provisioning is the process of setting up infrastructure in order for it to be ready to use.'
-name: 'Provisioning'
+title: 'What is Cloud provisioning?'
+description: 'Cloud provisioning is the process of setting up infrastructure in order for it to be ready to use.'
+name: 'Cloud provisioning'
 summary: ''
-keywords: ['provisioning', 'server']
+keywords: ['cloud-provisioning', 'server']
 relatedTerms: ['baremetal-server', 'virtual-machine']
 ---
 

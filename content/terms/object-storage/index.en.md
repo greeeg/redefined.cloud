@@ -1,5 +1,5 @@
 ---
-title: 'What is Object Storage?'
+title: 'What is Object storage?'
 description: 'Object storage is like storing files in moving boxes in warehouses: easy to search and scalable to infinity.'
 name: 'Object storage'
 summary: ''

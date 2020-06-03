@@ -1,15 +1,19 @@
-Hey, Let's talk about cloud computing.
+Hey, let's talk about cloud computing.
 
-Cloud computing is awesome, but also hard to understand. It profoundly changed the way we design, build and ship software applications.
+Building websites and applications used to be simple. Create an HTML file, use PHP to save things into a database and deploy the result via FTP on a cheap Apache Server.
 
-From monolithic applications hosted on manually managed servers, we now have the possibility to scale to millions of users in seconds.
+But things have now changed.
 
-Cloud computing is made of new software pieces like API gateways, object storage, serverless and new practices like chaos engineering or increased observability.
+Cloud computing profoundly chnaged the way we design, build and ship software applications. Thanks to companies like AWS, Netlify or Heroku, you now have the posibility to scale to millions of users with a few clicks.
 
-## Things can get complicated quickly
+And yet, Cloud computing is hard.
 
-While experts like Infrastructure engineers and Site Reliability engineers work with those on a daily basis, it can be quite hard for students, other engineers and product managers to get their head around it.
+Hard to have a full grasp and get the big picture, dealing with new software pieces like API gateways, object storage, serverless and new practices like chaos engineering or increased observability.
 
-Redefined.cloud serves as a getting started guide/entreypoint to the world of Cloud computing.
+But it's awesome: awesome to work with and awesome to learn.
 
-If you feel like it, you can contribute on GitHub to add new terms, improve the content or translate it to different languages.
+Redefined.cloud serves as a fresh start, a way to get started with cloud computing using simple words and analogies you can understand. Wether you are a student, someone working closely with engineers or just a curious mind, this website is a reintroduction to the Cloud I would have loved to read when I first heard of it.
+
+If you feel like it, please be part of that adventure and contribute on GitHub to add new terms, improve the content or translate it to your language.
+
+Best, Greg.

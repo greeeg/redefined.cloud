@@ -1,5 +1,5 @@
 ---
-title: 'What is a Microservice Architecture?'
+title: 'What is a Microservice architecture?'
 description: 'A Microservice architecture is like solving a problem with a set of simple tools that do one thing well instead of a single larger and harder tool.'
 name: 'Microservice architecture'
 summary: ''

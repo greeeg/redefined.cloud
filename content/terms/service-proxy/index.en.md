@@ -1,5 +1,5 @@
 ---
-title: 'What is a Service Proxy?'
+title: 'What is a Service proxy?'
 description: 'A service proxy is like a gatekeeper between a service and incoming requests.'
 name: 'Service proxy'
 summary: ''

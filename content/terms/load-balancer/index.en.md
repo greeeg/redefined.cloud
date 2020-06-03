@@ -1,5 +1,5 @@
 ---
-title: 'What is a Load Balancer?'
+title: 'What is a Load balancer?'
 description: 'A load balancer is like a traffic cop directing traffic at the entrance of a tunnel to multiple lanes.'
 name: 'Load balancer'
 summary: ''

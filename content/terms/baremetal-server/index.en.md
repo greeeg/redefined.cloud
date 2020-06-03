@@ -1,10 +1,10 @@
 ---
 title: 'What is a Baremetal server?'
-description: 'Using a Baremetal Server is like renting a whole house instead of a room to benefit from its full potential.'
+description: 'Using a Baremetal server is like renting a whole house instead of a room to benefit from its full potential.'
 name: 'Baremetal server'
 summary: ''
 keywords: ['baremetal server', 'server', 'compute']
-relatedTerms: ['virtual-machine', 'load-balancer', 'provisioning']
+relatedTerms: ['virtual-machine', 'load-balancer', 'cloud-provisioning']
 ---
 
 Baremetal servers are physical machines dedicated to one organization/team of engineers, compared to virtual machines which share the underlying physical hardware between several organizations.

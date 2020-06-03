@@ -40,7 +40,7 @@ Container can be useful starting with one container if your application is a mon
 
 When working with huge applications and services, you can have dozens of docker images and thousands of containers running on different servers. This is when [orchestration](#container-orchestration-and-kubernetes 'What is Container orchestration and Kubernetes?') can become handy, helping you create, update and delete those containers in an automated way using tools like Kubernetes.
 
-## Digging deeper in containers
+## Digging deeper into containers
 
 - Watch [what it takes to use Docker in production](https://www.youtube.com/watch?v=6jT83lT6TU8)
 - Watch [how to create effective Docker images](https://www.youtube.com/watch?v=vlS5EiapiII) with Abby Fuller

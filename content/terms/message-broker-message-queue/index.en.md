@@ -1,5 +1,5 @@
 ---
-title: 'What is a Message Broker or Message Queue?'
+title: 'What is a Message broker or Message queue?'
 description: 'A Message broker is like a todo list you would use for the tasks you want to complete throughout the day.'
 name: 'Message broker'
 summary: ''

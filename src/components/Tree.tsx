@@ -85,7 +85,7 @@ export const Tree = styled(TreeMaster)`
       text-align: center;
       list-style-type: none;
       position: relative;
-      padding: 1em 0em 0 0em;
+      padding: 1em 0.2em 0 0.2em;
 
       &::before,
       &::after {

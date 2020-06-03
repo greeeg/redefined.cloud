@@ -29,7 +29,7 @@ In an engineering environment, it would mean having automated testing and builds
 
 With [continuous deployment](#continuous-deployment 'What is Continuous deployment?'), you can go one step further and automate the way your code is released on your production server, without any human interaction.
 
-## Digging deeper in Continuous delivery
+## Digging deeper into Continuous delivery
 
 - Learn more about [the difference between Continuous delivery & Continuous integration with Atlassian](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
 - Read more about [a commit life in a continuous delivery pipeline at LeBonCoin](https://medium.com/leboncoin-engineering-blog/leboncoin-commits-life-960a86cd35ff)

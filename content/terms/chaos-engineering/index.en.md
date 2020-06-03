@@ -17,13 +17,13 @@ Chaos engineering is one of the solution Netflix engineers came up with in order
 
 It can also highlight potential weaknesses before they impact all users.
 
-## Type of chaos engineering
+## Types of chaos engineering
 
 - Infrastructure failures (storage, cpu, etc.)
 - Network failures (DNS, bandwidth)
 - Application failure (microservice down)
 
-## Digging deeper in Chaos engineering
+## Digging deeper into Chaos engineering
 
 - Read [the Chaos principles](http://principlesofchaos.org/?lang=ENcontent) to master those testing techniques
 - Learn more about [Netflix's practices](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116) in terms of Chaos engineering

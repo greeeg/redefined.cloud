@@ -1,7 +1,7 @@
 ---
 title: 'What is DNS or Domain Name System?'
 description: 'DNS is like a service you would use to find the location of a restaurant a friend tells you about, just by knowing its name.'
-name: 'Domain name system'
+name: 'Domain Name System'
 shortName: 'DNS'
 summary: ''
 keywords: ['dns', 'domain name system']
@@ -28,6 +28,6 @@ Wether you're using a domain name for an ecommerce website, a serverless functio
 - Resiliency
 - DDoS protection
 
-## Digging deeper in DNS
+## Digging deeper into DNS
 
 - Learn all about [the details that make DNS work](https://cloudacademy.com/blog/how-dns-works/)
