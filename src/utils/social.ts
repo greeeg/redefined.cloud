@@ -7,7 +7,9 @@ export const getFacebookShareLink = (path: string): string => {
 export const getTwitterShareLink = (path: string): string => {
   const link = `${process.env.NEXT_PUBLIC_BASE_URL}${path}`;
 
-  return `https://twitter.com/intent/tweet/?url=${encodeURIComponent(link)}`;
+  return `https://twitter.com/intent/tweet/?url=${encodeURIComponent(
+    link
+  )}&hashtags=RedefinedCloud`;
 };
 
 export const getLinkedinShareLink = (path: string): string => {

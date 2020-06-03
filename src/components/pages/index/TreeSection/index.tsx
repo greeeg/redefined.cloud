@@ -23,6 +23,14 @@ export const TreeSection: FC = () => {
       label: 'Microservice architecture',
       value: 'microservices',
     },
+    {
+      label: 'Serverless architecture',
+      value: 'serverless',
+    },
+    {
+      label: 'Observability',
+      value: 'observability',
+    },
   ];
 
   const t = i18n.useT();
@@ -60,16 +68,7 @@ export const TreeSection: FC = () => {
                 </Heading>
 
                 <Select
-                  options={[
-                    {
-                      label: 'Containarized architecture',
-                      value: 'containarized',
-                    },
-                    {
-                      label: 'Microservice architecture',
-                      value: 'microservices',
-                    },
-                  ]}
+                  options={options}
                   onSelect={(value) => {
                     setSelectedTree(value);
                   }}

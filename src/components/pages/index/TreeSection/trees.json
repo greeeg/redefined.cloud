@@ -160,43 +160,16 @@
   "microservices": {
     "label": "ACME.com",
     "value": "",
-    "children": [
-      {
-        "label": "Cloud provider",
-        "value": "cloud-provider",
-        "children": [
-          {
-            "label": "DNS",
-            "value": "domain-name-system",
-            "children": [
-              {
-                "label": "CDN",
-                "value": "content-delivery-network",
-                "children": [
-                  {
-                    "label": "Object storage",
-                    "value": "object-storage"
-                  },
-                  {
-                    "label": "Block storage",
-                    "value": "block-storage"
-                  }
-                ]
-              },
-              {
-                "label": "API gateway",
-                "value": "api-gateway-server-proxy",
-                "children": [
-                  {
-                    "label": "Load balancer",
-                    "value": "load-balancer"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "children": []
+  },
+  "serverless": {
+    "label": "ACME.com",
+    "value": "",
+    "children": []
+  },
+  "observability": {
+    "label": "ACME.com",
+    "value": "",
+    "children": []
   }
 }

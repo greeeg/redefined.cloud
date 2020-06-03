@@ -2,15 +2,15 @@
 
 Re-defining cloud terms to better understand how it works
 
-[![PRs welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg)](https://github.com/greeeg/redefined.cloud)
-[![PRs welcome](https://img.shields.io/github/license/greeeg/redefined.cloud)](https://github.com/greeeg/redefined.cloud)
-[![PRs welcome](https://img.shields.io/badge/Tweet-RedefinedCloud-green?logo=twitter&style=social)](https://github.com/greeeg/redefined.cloud)
+[![PRs welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg)](https://github.com/greeeg/redefined.cloud/pulls)
+[![License](https://img.shields.io/github/license/greeeg/redefined.cloud)](https://github.com/greeeg/redefined.cloud/blob/master/LICENSE)
+[![Share it on Twitter](https://img.shields.io/badge/Tweet-RedefinedCloud-green?logo=twitter&style=social)](https://twitter.com/intent/tweet/?hashtags=RedefinedCloud&url=https://redefined.cloud)
 
 ## ✨ Features
 
 - Easy to understand analogies and definitions of cloud terms
 - Specific terms linked to a type of cloud architecture
-- Resources from the community (articles, videos) to dig dipper
+- Resources from the community (articles, videos) to dig deeper
 
 ## 🤝 Contributing to the project
 

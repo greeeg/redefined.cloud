@@ -51,16 +51,6 @@ const Post: NextPage<{ content: PostPage }> = ({ content }) => {
               spacing="spacing900"
             >
               <Markdown content={content.content} />
-
-              <Box as="aside">
-                <Box maxWidth={224}>
-                  <Stack direction="column" spacing="spacing100">
-                    <Heading as="h3" color="yellow200" fontSize="size200">
-                      Related terms
-                    </Heading>
-                  </Stack>
-                </Box>
-              </Box>
             </Stack>
           </Box>
         </Box>
