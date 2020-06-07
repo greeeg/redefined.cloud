@@ -64,7 +64,7 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
       >
         <Box margin="0 auto" width="100%" maxWidth="size100">
           <Box paddingX={['spacing200', 'spacing400', 'spacing600']}>
-            <Box maxWidth={700} paddingBottom="spacing200">
+            <Box maxWidth={700} paddingBottom={['spacing100', 'spacing200']}>
               <Stack direction="column" spacing="spacing60">
                 <Heading as="p" color="yellow200" fontSize="size100">
                   {t('term:subtitle').toUpperCase()}

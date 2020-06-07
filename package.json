@@ -10,8 +10,8 @@
     "start": "next",
     "build": "next build && next export",
     "type-check": "tsc --noEmit --skipLibCheck",
-    "scripts:sitemap": "node ./scripts/generateSitemap.js",
-    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}'"
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}'",
+    "scripts:sitemap": "node ./scripts/generateSitemap.js"
   },
   "dependencies": {
     "@reach/menu-button": "^0.10.3",

@@ -33,10 +33,20 @@ interface TextProps
   id?: string;
 }
 
-const RawText: FC<TextProps> = ({ as = 'p', id, className, children }) => {
+const RawText: FC<TextProps> = ({
+  as = 'p',
+  id,
+  className,
+  children,
+  ...props
+}) => {
   const TextTag = `${as}` as keyof JSX.IntrinsicElements;
   return (
-    <TextTag className={className} id={id}>
+    <TextTag
+      className={className}
+      id={id}
+      data-paragraph-type={props['data-paragraph-type']}
+    >
       {children}
     </TextTag>
   );

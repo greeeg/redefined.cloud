@@ -18,8 +18,36 @@ const Container = styled.div`
     padding-top: 0;
   }
 
-  h2 + p {
-    padding-top: ${(p) => p.theme.space.spacing200}px;
+  h2 + p,
+  h3 + p,
+  h2 + ul,
+  h3 + ul,
+  p + ul {
+    padding-top: ${(p) => p.theme.space.spacing100}px;
+
+    ${md(css`
+      padding-top: ${(p) => p.theme.space.spacing200}px;
+    `)}
+  }
+
+  p[data-paragraph-type='image'] {
+    padding-top: ${(p) => p.theme.space.spacing400}px;
+
+    ${md(css`
+      padding-top: ${(p) => p.theme.space.spacing600}px;
+    `)}
+
+    & + p {
+      font-size: ${(p) => p.theme.fontSizes.size80}px;
+      padding-top: ${(p) => p.theme.space.spacing40}px;
+      text-align: center;
+      color: ${(p) => p.theme.colors.gray600};
+
+      ${md(css`
+        font-size: ${(p) => p.theme.fontSizes.size100}px;
+        padding-bottom: ${(p) => p.theme.space.spacing200}px;
+      `)}
+    }
   }
 `;
 
@@ -35,15 +63,32 @@ const H2: FC = ({ children }) => (
   </Heading>
 );
 
-const Paragraph: FC = ({ children }) => (
-  <Text
+const H3: FC = ({ children }) => (
+  <Heading
+    as="h2"
     fontSize={['size100', 'size200']}
-    color="gray900"
-    paddingTop="spacing300"
+    lineHeight="lineHeight100"
+    paddingTop={['spacing300', 'spacing500']}
+    maxWidth={['100%', '80%']}
   >
     {children}
-  </Text>
+  </Heading>
 );
+
+const Paragraph: FC = ({ children }) => {
+  const childrenContainImages = children[0].type?.name === 'Image';
+
+  return (
+    <Text
+      fontSize={['size100', 'size200']}
+      color="gray900"
+      paddingTop={['spacing200', 'spacing300']}
+      data-paragraph-type={childrenContainImages ? 'image' : 'text'}
+    >
+      {children}
+    </Text>
+  );
+};
 
 const RawLink = styled.a`
   font-size: ${(p) => p.theme.fontSizes.size100}px;
@@ -89,17 +134,21 @@ const Link: FC<{ href: string; title?: string }> = ({
   );
 };
 
-const DotListRaw = styled(Stack)`
+const RawDotList = styled(Stack)`
   list-style: disc;
-  padding-top: ${(p) => p.theme.space.spacing300}px;
+  padding-top: ${(p) => p.theme.space.spacing200}px;
   padding-left: ${(p) => p.theme.space.spacing200}px;
+
+  ${md(css`
+    padding-top: ${(p) => p.theme.space.spacing300}px;
+  `)}
 `;
 
 const DotList: FC = ({ children }) => {
   return (
-    <DotListRaw as="ul" direction="column" spacing="spacing100">
+    <RawDotList as="ul" direction="column" spacing="spacing100">
       {children}
-    </DotListRaw>
+    </RawDotList>
   );
 };
 
@@ -108,6 +157,30 @@ const ListItem: FC = ({ children }) => {
     <Text as="li" fontSize={['size100', 'size200']} color="gray900">
       {children}
     </Text>
+  );
+};
+
+const RawImage = styled.a`
+  cursor: zoom-in;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  & + p {
+    padding-top: 0;
+  }
+`;
+
+const Image: FC<{ src: string; alt?: string }> = ({ src, alt }) => {
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+  const url = `${baseURL}/assets/content${src}`;
+
+  return (
+    <RawImage href={url} target="_blank" rel="noreferrer" title={alt}>
+      <img src={url} alt={alt} />
+    </RawImage>
   );
 };
 
@@ -121,9 +194,11 @@ export const Markdown: FC<MarkdownProps> = ({ content }) => {
             remarkReactComponents: {
               p: Paragraph,
               h2: H2,
+              h3: H3,
               a: Link,
               ul: DotList,
               li: ListItem,
+              img: Image,
             },
           })
           // Types are somehow wrong for `result` on VFile

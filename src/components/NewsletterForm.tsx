@@ -70,7 +70,11 @@ export const NewsletterForm: FC = () => {
   };
 
   return (
-    <Box backgroundColor="gray900" padding={['spacing300', 'spacing400']}>
+    <Box
+      backgroundColor="gray900"
+      padding={['spacing300', 'spacing400']}
+      borderRadius="borderRadius100"
+    >
       <form
         onSubmit={(e) => {
           e.preventDefault();

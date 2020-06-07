@@ -5,6 +5,16 @@
   "redirects": [
     { "source": "/", "destination": "/en", "permanent": true },
     {
+      "source": "/en/memory-database",
+      "destination": "/en/in-memory-database",
+      "permanent": true
+    },
+    {
+      "source": "/en/provisioning",
+      "destination": "/en/cloud-provisioning",
+      "permanent": true
+    },
+    {
       "source": "/wp-admin",
       "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },

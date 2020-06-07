@@ -72,7 +72,7 @@ export const BlogSection: FC<BlogSectionProps> = ({ posts }) => {
                           </Heading>
                         </Stack>
 
-                        <Text fontSize={['size100', 'size200']} maxWidth={530}>
+                        <Text fontSize={['size100', 'size200']} maxWidth={570}>
                           {post.description}
                         </Text>
 
