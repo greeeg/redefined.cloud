@@ -3,8 +3,7 @@
 Re-defining cloud terms to better understand how it works
 
 [![PRs welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg)](https://github.com/greeeg/redefined.cloud/pulls)
-[![License](https://img.shields.io/github/license/greeeg/redefined.cloud)](https://github.com/greeeg/redefined.cloud/blob/master/LICENSE)
-[![Share it on Twitter](https://img.shields.io/badge/Tweet-RedefinedCloud-green?logo=twitter&style=social)](https://twitter.com/intent/tweet/?hashtags=RedefinedCloud&url=https://redefined.cloud)
+[![License](https://img.shields.io/badge/license-AGPL--3.0-orange)](https://github.com/greeeg/redefined.cloud/blob/master/LICENSE)
 
 ## ✨ Features
 
