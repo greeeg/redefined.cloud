@@ -32,7 +32,11 @@ const List: NextPage<ListProps> = ({ terms }) => {
 
   return (
     <Layout>
-      <Head title="All terms" description="" canonical={`/${lang}/list`} />
+      <Head
+        title={t('list:head:title')}
+        description={t('list:head:description')}
+        canonical={`/${lang}/list`}
+      />
 
       <Box
         as="section"

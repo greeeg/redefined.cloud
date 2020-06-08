@@ -19,8 +19,8 @@ const Terms: NextPage<TermsPage> = ({ content }) => {
   return (
     <Layout>
       <Head
-        title="Terms & Privacy"
-        description=""
+        title={t('privacy:head:title')}
+        description={t('privacy:head:description')}
         canonical={`/${lang}/terms-and-privacy`}
       />
 

@@ -15,5 +15,3 @@ But it's awesome: awesome to work with and awesome to learn.
 Redefined.cloud serves as a fresh start, a way to get started with cloud computing using simple words and analogies you can understand. Wether you are a student, someone working closely with engineers or just a curious mind, this website is a reintroduction to the Cloud I would have loved to read when I first heard of it.
 
 If you feel like it, please be part of that adventure and contribute on GitHub to add new terms, improve the content or translate it to your language.
-
-Best, Greg.

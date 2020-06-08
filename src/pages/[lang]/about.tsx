@@ -19,8 +19,8 @@ const About: NextPage<AboutProps> = ({ content }) => {
   return (
     <Layout>
       <Head
-        title="About the project"
-        description=""
+        title={t('about:head:title')}
+        description={t('about:head:description')}
         canonical={`/${lang}/about`}
       />
 

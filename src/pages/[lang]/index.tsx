@@ -12,12 +12,13 @@ import { BlogSection } from '@/components/pages/index/BlogSection';
 
 const Index: NextPage<{ posts: PostAttributes[] }> = ({ posts }) => {
   const { lang } = i18n.useI18n();
+  const t = i18n.useT();
 
   return (
     <Layout>
       <Head
-        title="Redefining the Cloud to better understand how it works"
-        description="From a microservice to a container and a service mesh, it can be hard to make sense of the words you see on a daily basis and how they relate to each other. This guide is here to help you get it."
+        title={t('home:head:title')}
+        description={t('home:head:description')}
         canonical={`/${lang}`}
       />
 
