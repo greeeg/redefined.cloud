@@ -21,7 +21,7 @@
                     "children": [
                       {
                         "label": "Service registry",
-                        "value": "service-registry",
+                        "value": "service-registry-service-discovery",
                         "children": [
                           {
                             "label": "Service",
