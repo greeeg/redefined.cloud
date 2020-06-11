@@ -54,15 +54,14 @@ export const NewsletterForm: FC = () => {
     }&EMAIL=${encodeURIComponent(email)}&FNAME=${encodeURIComponent(
       firstName
     )}`;
+
     setStatus('loading');
 
     jsonp(url, { param: 'c' }, (err, data) => {
-      if (data.msg.includes('already subscribed')) {
+      if (err || !data || data.result !== 'success') {
+        setStatus('error');
+      } else if (data.msg.includes('already subscribed')) {
         setStatus('duplicate');
-      } else if (err) {
-        setStatus('error');
-      } else if (data.result !== 'success') {
-        setStatus('error');
       } else {
         setStatus('success');
       }
@@ -132,20 +131,24 @@ export const NewsletterForm: FC = () => {
               </Button>
             </Stack>
 
+            {status === 'idle' && (
+              <Text color="white">{t('newsletter:footer')}</Text>
+            )}
+
             {status === 'success' && (
-              <Text color="white">{t('newsletter:status:success')}</Text>
+              <Text color="yellow200">{t('newsletter:status:success')}</Text>
             )}
 
             {status === 'loading' && (
-              <Text color="white">{t('newsletter:status:loading')}</Text>
+              <Text color="yellow200">{t('newsletter:status:loading')}</Text>
             )}
 
             {status === 'error' && (
-              <Text color="white">{t('newsletter:status:error')}</Text>
+              <Text color="yellow200">{t('newsletter:status:error')}</Text>
             )}
 
             {status === 'duplicate' && (
-              <Text color="white">{t('newsletter:status:duplicate')}</Text>
+              <Text color="yellow200">{t('newsletter:status:duplicate')}</Text>
             )}
           </Stack>
         </Stack>
