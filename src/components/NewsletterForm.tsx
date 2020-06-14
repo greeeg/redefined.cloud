@@ -6,6 +6,7 @@ import i18n from '@/utils/i18n';
 import { Box, Stack, Heading, Text, Button } from '@/components/primitives';
 
 const Input = styled.input`
+  width: 100%;
   background-color: ${(p) => p.theme.colors.gray800};
   border: none;
   font-size: ${(p) => p.theme.fontSizes.size100}px;
@@ -97,8 +98,16 @@ export const NewsletterForm: FC = () => {
           </Stack>
 
           <Stack direction="column" spacing="spacing100">
-            <Stack direction={['column', 'row']} spacing="spacing200">
-              <Stack direction={['column', 'row']} spacing="spacing80">
+            <Stack
+              direction={['column', 'row']}
+              rows="1fr 120px"
+              spacing="spacing200"
+            >
+              <Stack
+                direction={['column', 'row']}
+                rows="1fr 1fr"
+                spacing="spacing80"
+              >
                 <Input
                   type="text"
                   required

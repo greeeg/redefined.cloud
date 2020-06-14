@@ -136,7 +136,7 @@ export const theme = {
   transitions: {
     transition100: '0.2s ease-in-out',
   },
-  breakpoints: ['40em', '52em', '64em'],
+  breakpoints: ['40em', '60em', '74em'],
 };
 
 export type BaseTheme = typeof theme;

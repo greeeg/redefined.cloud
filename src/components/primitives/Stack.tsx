@@ -15,6 +15,8 @@ import {
   AlignSelfProps,
   width,
   WidthProps,
+  position,
+  PositionProps,
 } from 'styled-system';
 
 import { Theme } from '@/theme';
@@ -28,6 +30,7 @@ interface StackProps
     JustifyContentProps<Theme>,
     JustifySelfProps<Theme>,
     WidthProps<Theme>,
+    PositionProps<Theme>,
     AlignSelfProps<Theme> {
   direction: Direction | Direction[];
   rows?: Track | Track[];
@@ -72,6 +75,7 @@ export const Stack = styled(RawStack)<StackProps>`
     justifyContent,
     justifySelf,
     alignSelf,
-    width
+    width,
+    position
   )}
 `;

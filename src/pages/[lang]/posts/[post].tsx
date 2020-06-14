@@ -15,6 +15,8 @@ import {
   getTwitterShareLink,
   getLinkedinShareLink,
 } from '@/utils/social';
+import { HEADER_HEIGHT } from '@/components/Header';
+import { theme } from '@/theme';
 
 const ShareLink = styled.a`
   display: inline-block;
@@ -76,17 +78,26 @@ const Post: NextPage<{ content: PostPage }> = ({ content }) => {
 
             <Stack
               direction={['column', 'column', 'row']}
-              rows="70% 30%"
-              spacing={['spacing600', 'spacing600', 'spacing900']}
+              rows="680px 1fr"
+              spacing={['spacing600', 'spacing600', 'spacing700']}
             >
-              <Stack direction="column" spacing={['spacing600']}>
+              <Stack direction="column" spacing="spacing600">
                 <Markdown content={content.content} />
                 <NewsletterForm />
               </Stack>
 
-              <Box as="aside">
+              <Box as="aside" display="flex">
                 <Box maxWidth={['100%', 340, 230]}>
-                  <Stack direction="column" spacing="spacing400">
+                  <Stack
+                    direction="column"
+                    spacing="spacing400"
+                    position={['relative', 'relative', 'sticky']}
+                    top={[
+                      'inherit',
+                      'inherit',
+                      HEADER_HEIGHT[1] + theme.space.spacing500,
+                    ]}
+                  >
                     <Box>
                       <Heading
                         as="p"

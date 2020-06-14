@@ -12,11 +12,13 @@ import {
   getTwitterShareLink,
   getLinkedinShareLink,
 } from '@/utils/social';
+import { theme } from '@/theme';
 import { Layout } from '@/components/Layout';
 import { Head } from '@/components/Head';
 import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
 import { NewsletterForm } from '@/components/NewsletterForm';
+import { HEADER_HEIGHT } from '@/components/Header';
 
 const BlogLink = styled.a`
   &:hover {
@@ -88,17 +90,26 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
 
             <Stack
               direction={['column', 'column', 'row']}
-              rows="70% 30%"
-              spacing={['spacing600', 'spacing600', 'spacing900']}
+              rows="680px 1fr"
+              spacing={['spacing600', 'spacing600', 'spacing700']}
             >
-              <Stack direction="column" spacing={['spacing600']}>
+              <Stack direction="column" spacing="spacing600">
                 <Markdown content={content.content} />
                 <NewsletterForm />
               </Stack>
 
-              <Box as="aside">
-                <Box maxWidth={['100%', 340, 230]}>
-                  <Stack direction="column" spacing="spacing400">
+              <Box as="aside" display="flex">
+                <Box width="100%" maxWidth={['100%', 340, 230]}>
+                  <Stack
+                    direction="column"
+                    spacing="spacing400"
+                    position={['relative', 'relative', 'sticky']}
+                    top={[
+                      'inherit',
+                      'inherit',
+                      HEADER_HEIGHT[1] + theme.space.spacing500,
+                    ]}
+                  >
                     <Stack direction="column" spacing="spacing100">
                       <Heading as="h3" color="yellow200" fontSize="size200">
                         {t('term:relatedTerms:title')}
