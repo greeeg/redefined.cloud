@@ -15,6 +15,11 @@
       "permanent": true
     },
     {
+      "source": "/en/posts/logging-tracing-profiling-crash-course",
+      "destination": "/en/posts/monitoring-explained-differences-logging-tracing-profiling",
+      "permanent": true
+    },
+    {
       "source": "/wp-admin",
       "destination": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
