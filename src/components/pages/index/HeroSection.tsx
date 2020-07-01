@@ -7,7 +7,7 @@ export const HeroSection: FC = () => {
 
   return (
     <Box
-      maxWidth={750}
+      maxWidth={810}
       paddingX={['spacing200', 'spacing400']}
       paddingY={['spacing600', 'spacing800']}
       margin="0 auto"
@@ -25,7 +25,7 @@ export const HeroSection: FC = () => {
         <Text
           fontSize={['size100', 'size200']}
           textAlign="center"
-          maxWidth={600}
+          maxWidth={710}
           justifySelf="center"
         >
           {t('home:hero:description')}

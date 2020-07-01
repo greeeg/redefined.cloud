@@ -69,7 +69,8 @@ export const Footer: FC = () => {
                   fontWeight="size80"
                   color="gray400"
                 >
-                  Copyright © 2020. All rights reserved.
+                  Copyright © {new Date().getFullYear()}.{' '}
+                  {t('footer:copyright')}
                 </Heading>
               </NavItem>
             </Stack>

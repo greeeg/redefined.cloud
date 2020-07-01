@@ -5,6 +5,7 @@
   "header:nav:about:title": "About the project",
   "header:nav:github:title": "Contribute to the project on GitHub",
   "footer:nav:privacy": "Terms & Privacy",
+  "footer:copyright": "All rights reserved.",
   "home:head:title": "Redefining the Cloud to better understand how it works",
   "home:head:description": "From a microservice to a container and a service mesh, it can be hard to make sense of the words you see on a daily basis and how they relate to each other. This guide is here to help you get it.",
   "home:hero:title": "Redefining the Cloud to better understand how it works.",

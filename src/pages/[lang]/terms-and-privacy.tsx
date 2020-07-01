@@ -54,6 +54,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: i18n.getI18nStaticPaths([
       {
         en: {},
+        fr: {},
       },
     ]),
     fallback: false,
