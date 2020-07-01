@@ -7,7 +7,7 @@ export const HeroSection: FC = () => {
 
   return (
     <Box
-      maxWidth={810}
+      maxWidth={800}
       paddingX={['spacing200', 'spacing400']}
       paddingY={['spacing600', 'spacing800']}
       margin="0 auto"

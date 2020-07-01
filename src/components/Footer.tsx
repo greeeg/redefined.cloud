@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import i18n from '@/utils/i18n';
-import { theme, md, lg } from '@/theme';
+import { theme } from '@/theme';
 import { Box, Stack, Heading } from '@/components/primitives';
 import { Logo } from '@/components/Logo';
 
