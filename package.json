@@ -25,7 +25,7 @@
     "react-dom": "^16.13.1",
     "remark-parse": "^8.0.2",
     "remark-react": "^7.0.1",
-    "styled-components": "^5.1.0",
+    "styled-components": "^5.1.1",
     "styled-reset": "^4.1.4",
     "styled-system": "^5.1.5",
     "unified": "^9.0.0"
