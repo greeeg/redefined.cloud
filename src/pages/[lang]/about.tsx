@@ -8,13 +8,14 @@ import { Box, Heading } from '@/components/primitives';
 import { Layout } from '@/components/Layout';
 import { Markdown } from '@/components/Markdown';
 
-interface AboutProps {
+interface AboutPageProps {
+  lang: Language;
+  alternate: Language[];
   content: string;
 }
 
-const About: NextPage<AboutProps> = ({ content }) => {
+const About: NextPage<AboutPageProps> = ({ lang, alternate, content }) => {
   const t = i18n.useT();
-  const { lang } = i18n.useI18n();
 
   return (
     <Layout>
@@ -22,6 +23,10 @@ const About: NextPage<AboutProps> = ({ content }) => {
         title={t('about:head:title')}
         description={t('about:head:description')}
         canonical={`/${lang}/about`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}/about`,
+        }))}
       />
 
       <Box
@@ -65,15 +70,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<any, { lang: Language }> = async (
-  context
-) => {
-  const {
-    params: { lang },
-  } = context;
-
+export const getStaticProps: GetStaticProps<
+  unknown,
+  { lang: Language }
+> = async ({ params }) => {
   return {
-    props: { content: getPage({ lang, page: 'about' }) },
+    props: {
+      lang: params.lang,
+      content: getPage({ lang: params.lang, page: 'about' }),
+      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+    },
   };
 };
 

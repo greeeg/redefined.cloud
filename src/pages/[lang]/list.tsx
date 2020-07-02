@@ -10,7 +10,9 @@ import { Head } from '@/components/Head';
 import { Box, Heading, Stack, Text } from '@/components/primitives';
 import { TermAttributes } from '@/types';
 
-interface ListProps {
+interface ListPageProps {
+  lang: Language;
+  alternate: Language[];
   terms: TermAttributes[];
 }
 
@@ -26,8 +28,7 @@ const TermItem = styled(Box)`
   }
 `;
 
-const List: NextPage<ListProps> = ({ terms }) => {
-  const { lang } = i18n.useI18n();
+const List: NextPage<ListPageProps> = ({ lang, alternate, terms }) => {
   const t = i18n.useT();
 
   return (
@@ -36,6 +37,10 @@ const List: NextPage<ListProps> = ({ terms }) => {
         title={t('list:head:title')}
         description={t('list:head:description')}
         canonical={`/${lang}/list`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}/list`,
+        }))}
       />
 
       <Box
@@ -119,10 +124,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const terms = getTerms(params.lang as Language);
+export const getStaticProps: GetStaticProps<
+  unknown,
+  { lang: Language }
+> = async ({ params }) => {
+  const terms = getTerms(params.lang);
+
   return {
-    props: { ...params, terms },
+    props: {
+      terms,
+      lang: params.lang,
+      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+    },
   };
 };
 

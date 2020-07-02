@@ -8,13 +8,14 @@ import { Box, Heading } from '@/components/primitives';
 import { Layout } from '@/components/Layout';
 import { Markdown } from '@/components/Markdown';
 
-interface TermsPage {
+interface TermsPageProps {
+  lang: Language;
+  alternate: Language[];
   content: string;
 }
 
-const Terms: NextPage<TermsPage> = ({ content }) => {
+const Terms: NextPage<TermsPageProps> = ({ lang, alternate, content }) => {
   const t = i18n.useT();
-  const { lang } = i18n.useI18n();
 
   return (
     <Layout>
@@ -22,6 +23,10 @@ const Terms: NextPage<TermsPage> = ({ content }) => {
         title={t('privacy:head:title')}
         description={t('privacy:head:description')}
         canonical={`/${lang}/terms-and-privacy`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}/terms-and-privacy`,
+        }))}
       />
 
       <Box as="section" paddingY={['spacing600', 'spacing700']}>
@@ -61,15 +66,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<any, { lang: Language }> = async (
-  context
-) => {
-  const {
-    params: { lang },
-  } = context;
-
+export const getStaticProps: GetStaticProps<
+  unknown,
+  { lang: Language }
+> = async ({ params }) => {
   return {
-    props: { content: getPage({ lang, page: 'privacy' }) },
+    props: {
+      lang: params.lang,
+      content: getPage({ lang: params.lang, page: 'privacy' }),
+      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+    },
   };
 };
 

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { TermPage, TermAttributes } from '@/types';
 import { getTermPaths, getTermPage, getTerm } from '@/utils/terms';
-import i18n from '@/utils/i18n';
+import i18n, { Language } from '@/utils/i18n';
 import { getTermContributeLink } from '@/utils/contribute';
 import {
   getFacebookShareLink,
@@ -43,11 +43,19 @@ const ShareLink = styled.a`
   }
 `;
 
-const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
+interface TermPageProps {
+  lang: Language;
+  alternate: Language[];
+  content: TermPage;
+  relatedTerms: TermAttributes[];
+}
+
+const Term: NextPage<TermPageProps> = ({
+  lang,
+  alternate,
   content,
   relatedTerms,
 }) => {
-  const { lang } = i18n.useI18n();
   const t = i18n.useT();
 
   return (
@@ -56,6 +64,10 @@ const Term: NextPage<{ content: TermPage; relatedTerms: TermAttributes[] }> = ({
         title={content.attributes.title}
         description={content.attributes.description}
         canonical={`/${lang}/${content.attributes.slug}`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}/${content.attributes.slug}`,
+        }))}
       />
 
       <Box
@@ -262,8 +274,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<
-  any,
-  { lang: string; term: string }
+  unknown,
+  { lang: Language; term: string }
 > = async (context) => {
   const {
     params: { lang, term },
@@ -273,7 +285,14 @@ export const getStaticProps: GetStaticProps<
     getTerm({ term: slug, lang })
   );
 
-  return { props: { content: termPage, relatedTerms } };
+  return {
+    props: {
+      lang,
+      relatedTerms,
+      content: termPage,
+      alternate: termPage.languages.filter((l) => l !== lang),
+    },
+  };
 };
 
 export default Term;

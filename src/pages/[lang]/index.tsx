@@ -10,8 +10,13 @@ import { TreeSection } from '@/components/pages/index/TreeSection';
 import { HeroSection } from '@/components/pages/index/HeroSection';
 import { BlogSection } from '@/components/pages/index/BlogSection';
 
-const Index: NextPage<{ posts: PostAttributes[] }> = ({ posts }) => {
-  const { lang } = i18n.useI18n();
+interface IndexPageProps {
+  lang: Language;
+  alternate: Language[];
+  posts: PostAttributes[];
+}
+
+const Index: NextPage<IndexPageProps> = ({ lang, alternate, posts }) => {
   const t = i18n.useT();
 
   return (
@@ -20,6 +25,10 @@ const Index: NextPage<{ posts: PostAttributes[] }> = ({ posts }) => {
         title={t('home:head:title')}
         description={t('home:head:description')}
         canonical={`/${lang}`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}`,
+        }))}
       />
 
       <HeroSection />
@@ -41,11 +50,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const posts = getPosts(params.lang as Language);
+export const getStaticProps: GetStaticProps<
+  unknown,
+  { lang: Language }
+> = async ({ params }) => {
+  const posts = getPosts(params.lang);
 
   return {
-    props: { ...params, posts },
+    props: {
+      posts,
+      lang: params.lang,
+      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+    },
   };
 };
 
