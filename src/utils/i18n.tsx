@@ -73,4 +73,6 @@ const i18n = (languages: Language[]) => {
   };
 };
 
-export default i18n(['en', 'fr']);
+export const SUPPORTED_LANGUAGES: Language[] = ['en', 'fr'];
+
+export default i18n(SUPPORTED_LANGUAGES);

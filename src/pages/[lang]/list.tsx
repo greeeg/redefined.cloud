@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Layout } from '@/components/Layout';
-import i18n, { Language } from '@/utils/i18n';
+import i18n, { Language, SUPPORTED_LANGUAGES } from '@/utils/i18n';
 import { getTerms } from '@/utils/terms';
 import { Head } from '@/components/Head';
 import { Box, Heading, Stack, Text } from '@/components/primitives';
@@ -134,7 +134,7 @@ export const getStaticProps: GetStaticProps<
     props: {
       terms,
       lang: params.lang,
-      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+      alternate: SUPPORTED_LANGUAGES.filter((lang) => lang !== params.lang),
     },
   };
 };

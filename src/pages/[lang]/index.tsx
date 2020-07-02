@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 import { PostAttributes } from '@/types';
-import i18n, { Language } from '@/utils/i18n';
+import i18n, { Language, SUPPORTED_LANGUAGES } from '@/utils/i18n';
 import { getPosts } from '@/utils/posts';
 import { Layout } from '@/components/Layout';
 import { Head } from '@/components/Head';
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps<
     props: {
       posts,
       lang: params.lang,
-      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+      alternate: SUPPORTED_LANGUAGES.filter((lang) => lang !== params.lang),
     },
   };
 };

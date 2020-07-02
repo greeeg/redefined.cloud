@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
-import i18n, { Language } from '@/utils/i18n';
+import i18n, { Language, SUPPORTED_LANGUAGES } from '@/utils/i18n';
 import { getPage } from '@/utils/pages';
 import { Head } from '@/components/Head';
 import { Box, Heading } from '@/components/primitives';
@@ -74,7 +74,7 @@ export const getStaticProps: GetStaticProps<
     props: {
       lang: params.lang,
       content: getPage({ lang: params.lang, page: 'privacy' }),
-      alternate: ['fr', 'en'].filter((lang) => lang !== params.lang),
+      alternate: SUPPORTED_LANGUAGES.filter((lang) => lang !== params.lang),
     },
   };
 };
