@@ -4,6 +4,11 @@ import { useRouter } from 'next/router';
 export type Language = 'en' | 'fr';
 export type Phrases = Record<string, string>;
 
+export const languageLabelMapping: Record<Language, string> = {
+  en: 'English',
+  fr: 'Français',
+};
+
 interface I18nProviderProps {
   phrases: Partial<Record<Language, Phrases>>;
 }

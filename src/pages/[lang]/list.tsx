@@ -18,6 +18,8 @@ interface ListPageProps {
 
 const TermItem = styled(Box)`
   a {
+    display: block;
+
     &:hover {
       cursor: pointer;
 

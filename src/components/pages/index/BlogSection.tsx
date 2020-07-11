@@ -12,6 +12,8 @@ interface BlogSectionProps {
 
 const Post = styled(Box)`
   a {
+    display: inline-block;
+
     &:hover {
       cursor: pointer;
 
