@@ -1,6 +1,6 @@
 ---
-title: 'Monitoring explained: what is the difference between Logging, Tracing and Profiling?'
-description: 'Using the right tools for the right job in order to gain visibility into systems and services.'
+title: 'Monitoring expliqué : quelle est la différence entre Logging, Tracing et Profiling?'
+description: 'Connaitre les outils à notre disposition afin de gagner en visiblité dans un système Cloud et nos différents services.'
 tag: 'Monitoring'
 ---
 
