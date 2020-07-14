@@ -9,7 +9,6 @@ import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
 import { Head } from '@/components/Head';
 import i18n from '@/utils/i18n';
-import { NewsletterForm } from '@/components/NewsletterForm';
 import {
   getFacebookShareLink,
   getTwitterShareLink,
@@ -81,10 +80,7 @@ const Post: NextPage<{ content: PostPage }> = ({ content }) => {
               rows="680px 1fr"
               spacing={['spacing600', 'spacing600', 'spacing700']}
             >
-              <Stack direction="column" spacing="spacing600">
-                <Markdown content={content.content} />
-                <NewsletterForm />
-              </Stack>
+              <Markdown content={content.content} />
 
               <Box as="aside" display="flex">
                 <Box maxWidth={['100%', 340, 230]}>
