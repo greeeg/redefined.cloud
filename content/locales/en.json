@@ -27,15 +27,5 @@
   "term:contribute:description": "Contribute on GitHub",
   "privacy:head:title": "Terms & Privacy",
   "privacy:head:description": "Our terms & privacy policy inform you about privacy practices of this website and how we use your personal information.",
-  "privacy:title": "Terms & Privacy",
-  "newsletter:title": "Want to learn more about the Cloud?",
-  "newsletter:description": "Receive curated links, detailed explanations and new terms directly to your inbox to better understand how the cloud works.",
-  "newsletter:footer": "Free. No spam ever.",
-  "newsletter:input:firstName": "John",
-  "newsletter:input:email": "john@gmail.com",
-  "newsletter:cta": "Subscribe",
-  "newsletter:status:success": "Success! Check your emails to confirm your subscription.",
-  "newsletter:status:loading": "Loading...",
-  "newsletter:status:error": "An error happened. You might want to try it again later.",
-  "newsletter:status:duplicate": "Oops. Looks like you&apos;re already in. That&apos;s good."
+  "privacy:title": "Terms & Privacy"
 }
