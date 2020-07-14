@@ -1,55 +1,55 @@
-The Redefined.cloud Privacy Policy (“Policy”) informs you about privacy practices of Redefined.cloud, including those related to our website https://redefined.cloud (“Site”). Redefined.cloud respects your privacy and this Policy provides you with information about how we use your personal information and the privacy choices you have regarding your personal information.
+La politique de confidentialité de Redefined.cloud (“Politique”) vous informe sur les pratiques de confidentialité de Redefined.cloud, y compris celles liées à notre site Web https://redefined.cloud (“Site”). Redefined.cloud respecte votre vie privée et cette politique vous fournit des informations sur la façon dont nous utilisons vos informations personnelles et les choix de confidentialité dont vous disposez concernant vos informations personnelles.
 
 ## Description
 
-This site is hosted by Vercel Inc:
+Ce site est hébergé par Vercel Inc:
 Vercel Inc.
 340 S Lemon Ave #4133
 Walnut, CA 91789
 privacy@vercel.com
 
-## Information we collect
+## Informations que nous collectons
 
-Redefined.cloud may collect and store, or have third parties collect and store, personal information provided through the Site. This information includes but is not limited to: information automatically collected from the devices you use to connect to the Site; other content you upload or submit to the Site when contributing to it (collectively, “Personal Information”).
+Redefined.cloud peut collecter et stocker, ou demander à des tiers de collecter et de stocker des informations personnelles fournies via le Site. Ces informations comprennent, sans s'y limiter: les informations collectées automatiquement à partir des appareils que vous utilisez pour vous connecter au Site, tout autre contenu que vous téléchargez ou soumettez au site lorsque vous y contribuez (collectivement, les “informations personnelles”).
 
-## How We Use Your Personal Information
+## Comment utilisons-nous vos informations personnelles
 
-We may use your Personal Information as follows:
+Nous pouvons utiliser vos informations personnelles comme suit :
 
-- To provide information you request based on your consent, which you can withdraw at any time;
-- To allow you to better use the Site, based on Redefined.cloud’s legitimate interest in providing the best experience to you and [to support our Terms of Use] to provide information regarding use of the Site;
-- To comply with our policies and applicable law.
+- Pour fournir les informations que vous demandez sur la base de votre consentement, que vous pouvez retirer à tout moment
+- Pour vous permettre de mieux utiliser le Site, sur la base de l'intérêt légitime de Redefined.cloud à vous fournir la meilleure expérience et à fournir des informations concernant l'utilisation du Site
+- Pour se conformer à nos politiques et à la loi applicable
 
-We may also combine your Personal Information in an aggregated manner which is no longer personally identifiable to use for Redefined.cloud’s own legitimate business purposes.
+Nous pouvons également combiner vos informations personnelles d'une manière agrégée qui n'est plus personnellement identifiable pour être utilisée à des fins commerciales légitimes de Redefined.cloud.
 
-## Information We Collect by Automated Means
+## Informations que nous collectons par des moyens automatisés
 
-Redefined.cloud is committed to ensuring your online experience with the Site is informative and relevant. To achieve this, Redefined.cloud collects certain information by automated means when you visit the Site. Information collected may include your IP address, internet browser type, device operating system, referring URLs, information on actions taken on the Site, how many users visited the Site and dates and times of Site visits. This information is collected to operate and improve the Site, learn about users, and better the Site, and comply with applicable law. This information is collected by various means, as explained below.
+Redefined.cloud s'engage à faire en sorte que votre expérience en ligne avec le Site soit informative et pertinente. Pour y parvenir, Redefined.cloud collecte certaines informations par des moyens automatisés lorsque vous visitez le Site. Les informations collectées peuvent inclure votre adresse IP, le type de navigateur Internet, le système d'exploitation de l'appareil, les URL de référence, des informations sur les actions prises sur le site, le nombre d'utilisateurs qui ont visité le site et les dates et heures des visites sur le site. Ces informations sont collectées pour exploiter et améliorer le site, en apprendre davantage sur les utilisateurs et améliorer le site, et se conformer à la loi applicable. Ces informations sont collectées par différents moyens, comme expliqué ci-dessous.
 
 ## Cookies
 
-Redefined.cloud and our Third Party Providers (as defined below) may also collect certain information about the use of the Site by automated means, such as cookies, web beacons and other technologies, which allow the collection of information about the Site users’ online activities over time. We currently do not respond to web browser-based do-not-track (“DNT”) mechanisms.
+Redefined.cloud et nos fournisseurs tiers (tels que définis ci-dessous) peuvent également collecter certaines informations sur l'utilisation du site par des moyens automatisés, tels que des cookies, des balises Web et d'autres technologies, qui permettent la collecte d'informations sur les utilisateurs du site en ligne. activités au fil du temps. Nous ne répondons actuellement pas aux mécanismes de non-suivi basés sur un navigateur Web (“DNT”).
 
-The information that may be collected by automated means includes URLs that refer users to the Site, search terms used to reach the Site, details about the devices that are used to access the Site (such as IP address, browser type, and operating system information), and users’ interaction with the Site (like date, time, frequency and length of visits, and pages accessed).
+Les informations qui peuvent être collectées par des moyens automatisés comprennent les URL renvoyant les utilisateurs vers le site, les termes de recherche utilisés pour accéder au site, les détails sur les appareils utilisés pour accéder au site (tels que l'adresse IP, le type de navigateur et les informations sur le système d'exploitation). ), et l'interaction des utilisateurs avec le Site (comme la date, l'heure, la fréquence et la durée des visites et les pages consultées).
 
-You do have control over cookies, and can refuse the use of cookies by selecting the appropriate settings on your browser. However, by not accepting or deleting the use of cookies, you may affect your website experience and you may not be able to take full advantage of all features of this Site. Most browsers will tell you how to stop accepting new cookies, how to be notified when you receive a new cookie, and how to disable existing cookies. Please consult the “Help” section of your browser for more information.
+Vous contrôlez les cookies et pouvez refuser l'utilisation de cookies en sélectionnant les paramètres appropriés sur votre navigateur. Cependant, en n'acceptant pas ou en supprimant l'utilisation de cookies, vous pouvez affecter votre expérience sur le site Web et vous ne pourrez peut-être pas profiter pleinement de toutes les fonctionnalités de ce site. La plupart des navigateurs vous diront comment cesser d'accepter de nouveaux cookies, comment être averti lorsque vous recevez un nouveau cookie et comment désactiver les cookies existants. Veuillez consulter la section “Aide” de votre navigateur pour plus d'informations.
 
-## Third Party Providers
+## Fournisseurs tiers
 
-Redefined.cloud may also use third-party solutions to conduct web analytics (“Third Party Providers”), such as Google Analytics, which collects information from cookies, such as your IP address and viewing information. Google Analytics is a web analytics service provided by Google, Inc., which uses cookies to help analyze how users use the Site, which is stored by Google in the United States. Third Party Providers are not operated or controlled by Redefined.cloud and this Privacy Policy does not apply to the Third Party Providers. Redefined.cloud does not take responsibility for the content, privacy policies, or practices of Third Party Providers. You should review and understand the privacy practices of any Third Party Provider before providing any information to or through them. Your interactions with these features are governed by the privacy policy of the Third Party Provider that provides the feature. You can review Google Analytics’ privacy policy at http://google.com/analytics/learn/privacy.html. Go to https://tools.google.com/dlpage/gaoptout to opt out of Google Analytics. IP addresses used to access redefined.cloud are kept anonymous and not made available via Google Analytics.
+Redefined.cloud peut également utiliser des solutions tierces pour effectuer des analyses Web (“fournisseurs tiers”), telles que Google Analytics, qui collecte des informations à partir des cookies, telles que votre adresse IP et les informations de visualisation. Google Analytics est un service d'analyse Web fourni par Google, Inc., qui utilise des cookies pour aider à analyser la façon dont les utilisateurs utilisent le site, qui est stocké par Google aux États-Unis. Les fournisseurs tiers ne sont pas exploités ou contrôlés par Redefined.cloud et cette politique de confidentialité ne s'applique pas aux fournisseurs tiers. Redefined.cloud ne prend aucune responsabilité pour le contenu, les politiques de confidentialité ou les pratiques des fournisseurs tiers. Vous devez examiner et comprendre les pratiques de confidentialité de tout fournisseur tiers avant de lui fournir des informations ou par son intermédiaire. Vos interactions avec ces fonctionnalités sont régies par la politique de confidentialité du fournisseur tiers qui fournit la fonctionnalité. Vous pouvez consulter la politique de confidentialité de Google Analytics à http://google.com/analytics/learn/privacy.html. Accédez à https://tools.google.com/dlpage/gaoptout pour désactiver Google Analytics. Les adresses IP utilisées pour accéder à redefined.cloud sont gardées anonymes et ne sont pas disponibles via Google Analytics.
 
-## Security
+## Sécurité
 
-The security of information is important to us, and we are committed to using reasonable measures to protect the Personal Information collected. However, it is not possible to completely eliminate the risks or guarantee the security of Personal Information from unauthorized access. We are not liable for any wrongful, illegal or malicious actions which compromise the security of your Personal Information.
+La sécurité des informations est importante pour nous et nous nous engageons à utiliser des mesures raisonnables pour protéger les informations personnelles collectées. Cependant, il n'est pas possible d'éliminer complètement les risques ou de garantir la sécurité des informations personnelles contre tout accès non autorisé. Nous ne sommes pas responsables des actions illicites, illégales ou malveillantes qui compromettent la sécurité de vos informations personnelles.
 
-## Links to Other Websites
+## Liens vers d'autres sites Web
 
-The Site may provide links to other websites for your convenience and information. These websites may operate independently and have their own privacy notices or policies, which you are strongly encouraged to review to better understand their procedures for collecting, using and disclosing Personal Information. Redefined.cloud is not responsible for the content of the linked websites, any use of these sites, or the privacy practices of these sites.
+Le site peut fournir des liens vers d'autres sites Web pour votre commodité et votre information. Ces sites Web peuvent fonctionner indépendamment et avoir leurs propres avis ou politiques de confidentialité, que vous êtes fortement encouragés à consulter pour mieux comprendre leurs procédures de collecte, d'utilisation et de divulgation des informations personnelles. Redefined.cloud n'est pas responsable du contenu des sites Web liés, de toute utilisation de ces sites ou des pratiques de confidentialité de ces sites.
 
-## Children
+## Enfants
 
-The Site is not intended for children and we do not knowingly solicit personal data from or communicate with children under the age of 13.
+Le Site n'est pas destiné aux enfants et nous ne sollicitons pas sciemment des données personnelles ou ne communiquons pas avec des enfants de moins de 13 ans.
 
-## Consent
+## Consentement
 
-If you have any questions about this Privacy Policy or our privacy practices, please feel free to email us at redefined.cloud@greeeg.com
+Si vous avez des questions sur cette politique de confidentialité ou nos pratiques de confidentialité, n'hésitez pas à nous envoyer un email à redefined.cloud@greeeg.com

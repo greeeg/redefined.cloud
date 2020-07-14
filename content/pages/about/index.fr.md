@@ -1,17 +1,17 @@
-Hey, let's talk about cloud computing.
+Hey, parlons du cloud computing.
 
-Building websites and applications used to be simple. Create an HTML file, use PHP to save things into a database and deploy the result via FTP on a cheap Apache Server.
+Par le passé, la création de sites internet et d'applications web a toujours été simple. Créez un fichier HTML, utilisez PHP pour enregistrer le résultat d'un formulaire dans une base de données et déployez l'ensemble via FTP sur un serveur Apache bon marché.
 
-But things have now changed.
+Mais les choses ont changé.
 
-Cloud computing profoundly chnaged the way we design, build and ship software applications. Thanks to companies like AWS, Netlify or Heroku, you now have the posibility to scale to millions of users with a few clicks.
+Le cloud computing a profondément modifié la façon dont nous concevons, construisons et déployons des applications web. Grâce à des entreprises comme AWS, Netlify ou Heroku, il est désormais possible de redimensionner son infrastructure cloud jusqu'à atteindre des millions d'utilisateurs en quelques clics.
 
-And yet, Cloud computing is hard.
+Et pourtant, le cloud computing est difficile.
 
-Hard to have a full grasp and get the big picture, dealing with new software pieces like API gateways, object storage, serverless and new practices like chaos engineering or increased observability.
+Difficile d'en avoir une compréhension globale et de saisir ses moindres détails, avec de nouveaux services à notre disposition tels que des API gateways, object storage, serverless ou bien de nouvelles pratiques telles que le chaos engineering ou encore l'observability.
 
-But it's awesome: awesome to work with and awesome to learn.
+Mais pourtant il se révèle être génial : génial à utiliser mais surtout à apprendre.
 
-Redefined.cloud serves as a fresh start, a way to get started with cloud computing using simple words and analogies you can understand. Wether you are a student, someone working closely with engineers or just a curious mind, this website is a reintroduction to the Cloud I would have loved to read when I first heard of it.
+Redefined.cloud a pour but de vous introduire ces nouvelles notions, de servir de ressource pour bien démarrer avec le cloud computing en utilisant des mots-clés et analogies simples à comprendre. Que vous soyez étudiant, quelqu'un qui travaille en étroite collaboration avec des ingénieurs ou simplement un esprit curieux, cette publication est une réintroduction au Cloud que j'aurais aimé lire lorsque j'en ai entendu parler pour la première fois.
 
-If you feel like it, please be part of that adventure and contribute on GitHub to add new terms, improve the content or translate it to your language.
+Si vous en avez l'envie, faites partie de cette aventure et contribuez sur GitHub afin d'ajouter de nouveaux termes, améliorer le contenu ou bien traduire l'ensemble dans votre langue.
