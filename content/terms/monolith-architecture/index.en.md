@@ -1,13 +1,13 @@
 ---
 title: 'What is a Monolith architecture?'
-description: 'A monolith architecture is a single unified solution to a problem, where all components of the solution are combined.'
+description: 'A monolithic architecture is a single unified solution to a problem, where all components of the solution are combined.'
 name: 'Monolith architecture'
 summary: ''
-keywords: ['monolith architecture', 'monolith']
+keywords: ['monolithic architecture', 'monolith']
 relatedTerms: ['microservice-architecture', 'baremetal-server', 'load-balancer']
 ---
 
-A monolith architecture is like a single tool we would use to do everything, like a Thermomix to cook a chocolate cake.
+A monolithic architecture is like a single tool we would use to do everything, like a Thermomix to cook a chocolate cake.
 
 We generally oppose this architecture to a [microservices architecture](#microservice-architecture 'What is a Microservice architecture?'), which would consist of using very specific different tools to achieve the same result.
 
@@ -17,13 +17,13 @@ However, when you have a spike of traffic, the only way to scale your applicatio
 
 Moreover, while your application gets bigger, it becomes harder and harder for your teams to contribute to it and iterate on features. Because everything lives in the same place, you have to make sure that you don't accidentally break something by updating parts of your tightly coupled features. And, if a bug happens to make your application crash, all your infrastructure is down.
 
-## Benefits of using a monolith architecture
+## Benefits of using a monolithic architecture
 
 - Easy to start with
 - Simple to deploy, test and scale horizontally
 - When small enough, easy to onboard new developers
 
-## Drawbacks of monolith architecture
+## Drawbacks of monolithic architecture
 
 - Size of the app can reduce velocity and increase maintenance
 - Reliability

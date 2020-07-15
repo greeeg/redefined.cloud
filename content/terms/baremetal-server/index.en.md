@@ -17,7 +17,7 @@ Just like dedicated servers, baremetal servers offer a complete control over the
 - Custom security or regulatory requirements
 - Enterprise software (CRM, ERP)
 
-While baremetal servers and dedicated servers offer the same thing, their [provisioning](#provisioning 'What is Provisioning?') model and pricing model are quite different:
+While baremetal servers and dedicated servers offer the same thing, their [provisioning](#cloud-provisioning 'What is Provisioning?') model and pricing model are quite different:
 
 - With dedicated servers, you generally sign a yearly or monthly contract and use it for that period of time. It can takes several hours before being able to access it after signing the contract.
 - With baremetal servers, everything is adapted to the cloud computing world. You pay as you go with a hourly price and can spin up a new instance in minutes.

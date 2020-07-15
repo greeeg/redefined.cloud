@@ -1,6 +1,6 @@
 ---
 title: 'What is Chaos engineering?'
-description: 'Chaos engineering is about intentionally trying to break things to spot weaknessses before they create damage, like car crash tests.'
+description: 'Chaos engineering is about intentionally trying to break things to spot weaknesses before they create damage, like car crash tests.'
 name: 'Chaos engineering'
 summary: ''
 keywords: ['chaos engineering']

@@ -1,16 +1,16 @@
 ---
-title: 'What is Cloud provisioning?'
-description: 'Cloud provisioning is the process of setting up infrastructure in order for it to be ready to use.'
-name: 'Cloud provisioning'
+title: "Qu'est-ce que le Provisioning Cloud ?"
+description: "Le Provisioning Cloud est le processus visant à mettre en place une infrastructure pour qu'elle soit prête à être utilisée."
+name: 'Provisioning Cloud'
 summary: ''
 keywords: ['cloud-provisioning', 'server']
 relatedTerms: ['baremetal-server', 'virtual-machine']
 ---
 
-In the context of Cloud computing, provisioning defines how you set up new servers, services ans networks. It can be done in multiple ways:
+Dans le contexte du Cloud computing, le provisioning définit la façon dont vous configurez de nouveaux serveurs, services et réseaux. Cela peut se faire de plusieurs manières :
 
-- Manually: engineers use a UI or CLI to manually set up infrastructure as needed
-- Semi-automated: engineers use a mix of UI/CLI and scripts to set up infrastructure
-- Automated: Infrastructure is defined as code and can be deployed/used on-demand without human intervention
+- Manuellement : les ingénieurs utilisent une interface utilisateur ou un CLI pour configurer manuellement l'infrastructure selon les besoins
+- Semi-automatisé : les ingénieurs utilisent un mélange d'interface utilisateur/CLI et de scripts pour configurer l'infrastructure
+- Automatisé : l'infrastructure est définie comme du code et peut être déployée/utilisée à la demande sans intervention humaine
 
-While it is really easy to set up an EC2 instance for a blog, it can be harder as teams grow and your application becomes more complex. Using tools like Terrafom or Ansible can simplify how systems are deployed and managed.
+Bien qu'il soit très facile de configurer une instance EC2 pour un blog, cela peut être plus difficile à mesure que les équipes se développent et que votre application devient plus complexe. L'utilisation d'outils comme Terrafom ou Ansible peut simplifier la façon dont les systèmes sont déployés et gérés.

@@ -1,41 +1,41 @@
 ---
-title: 'What is an API gateway?'
-description: 'An API gateway acts as a front desk employee responsible for answering customers requests by asking the relevant underlying services.'
+title: "Qu'est-ce qu'un API gateway ?"
+description: 'Un API gateway agit comme un agent de réception chargé de répondre aux requêtes des clients en interrogeant les services sous-jacents pertinents.'
 name: 'API gateway'
-summary: 'Routing requests to the right service'
+summary: 'Diriger les requêtes vers le bon service'
 relatedTerms: ['microservice-architecture', 'serverless', 'service-mesh']
 keywords: ['api', 'gateway', 'proxy', 'api gateway', 'server proxy']
 ---
 
-Let's imagine you are heading to the state office in order to get your brand new driving license. When entering the building, you meet a front desk employee who is responsible for checking your identity, asking you why you're here. You're then assigned a ticket number which is used to call you and guide you to the right employee and get your driving license.
+Imaginez que vous vous rendiez à la mairie afin de récupérer votre tout nouveau permis de conduire. En entrant dans le bâtiment, un agent de réception est en charge de vérifier votre identité ainsi que de connaître la raison de votre visite. Vous récupérez par la suite un numéro qui vous permettra d'être appelé par le bon employé pour récupérer votre permis.
 
-If no front desk employee was available, you would have to go from desk to desk in order to complete your request. At each step, you would have to introduce yourself (again), prove your identity and explain why you're here.
+Si aucun agent de réception n'était disponible, vous devriez vous rendre de bureau en bureau afin de réaliser ce pourquoi vous vous êtes déplacé. A chaque étape, vous devriez vous présenter (à nouveau), prouver votre identité et expliquer la raison de votre visite.
 
-The more services there are, the more steps you would have to go through and repeat the same pattern.
+Plus il y a de services, plus vous devriez passer à nouveau par ces étapes et répéter le même schéma.
 
-An API gateway is like a front desk employee. It is responsible for receiving all incoming requests, routing them to the appropriate services and sometimes performs additional tasks (load balancing, rate limiting, authentication/authorization, monitoring).
+Un API gateway agit comme un agent de réception. Il est chargé de répondre aux requêtes de l'ensemble des clients, les diriger vers les bons services et parfois effectuer certaines tâches supplémentaires (load balancing, rate limiting, authentification, monitoring).
 
-## The single entrypoint for your application
+## Le point d'entrée unique de votre application
 
-While some applications in [monolith architectures](#monolith-architecture 'What is a monolith architecture?') for example are self-contained, most of them are decoupled in multiple parts, also known as services.
+Alors que certaines applications Cloud suivent une [architecture monolithique](#monolith-architecture "Qu'est-ce qu'une architecture monolithique ?") dans lesquelles elles sont autonomes, la plupart d'entre elles sont distribuées en plusieurs parties, également appelées services.
 
-In a [microservice architecture](#microservice-architecture 'What is a microservice architecture?'), your overall application can be made of dozens of services, handled by different teams with different practices and paces. Some of them might not even be available through standard HTTP calls.
+Dans une [architecture microservices](#microservice-architecture "Qu'est-ce qu'une architecture microservices ?"), une application peut être composée de dizaines de services, gérés par différentes équipes aux pratiques et rythmes variés. Certains d'entre eux peuvent même ne pas être disponibles via des appels HTTP standard.
 
-While users want to see a unified version of your application, several requests to different services can be necessary to display a page or screen, each of them going through the web (excessive roundtrips).
+Alors que les utilisateurs finals souhaitent bénéficier d'une expérience unifiée de votre application, plusieurs requêtes à différents services peuvent être nécessaires à l'affichage d'une page web, chacun passant par le Web (aller-retour excessifs).
 
-## Benefits of using an API gateway
+## Avantages d'un API gateway
 
-- Request routing and composition
-- One tool to rule them all (authentication, rate limiting, etc.)
-- Protocol translation
+- Routage et composition des requêtes
+- Boîte à outils (authentification, rate limiting, etc.)
+- Traduction de protocoles
 - Monitoring
 
-Moreover, in a microservice architecture, services can have their location updated dynamically, or their number of instances increase. With an API gateway, the client does not have to think about it.
+De plus, dans une architecture microservices, les services peuvent voir leur adresse changer dynamiquement, ou leur nombre d'instances augmenter. Avec un API gateway, le client n'a pas besoin de se préoccuper de ce type de détail.
 
-If you decide to introduce new services or retire some of them, you want requests to be routed to the right place.
+Si vous décidez de créer de nouveaux services ou d'en déprécier certains, vous souhaitez que l'ensemble des requêtes soient dirigés vers les bons services.
 
-## Digging deeper into API gateways
+## Aller plus loin avec l'API gateway
 
-- Read more about the [API gateway pattern](https://microservices.io/patterns/apigateway.html) on Microservices.io
-- Watch how [Netflix uses API gateways to route traffic to hundreds of microservices](https://youtu.be/CZ3wIuvmHeM?t=1046)
-- Watch [an explanation from NGINX about API gateways](https://www.youtube.com/watch?v=hYgP0cBORVg)
+- En apprendre plus sur [le pattern de l'API gateway](https://microservices.io/patterns/apigateway.html) sur Microservices.io
+- Regarder comment [Netflix utilise des API gateways pour diriger son trafic vers des centaines de microservices](https://youtu.be/CZ3wIuvmHeM?t=1046)
+- Regarder [une explication de NGINX sur les API gateways](https://www.youtube.com/watch?v=hYgP0cBORVg)

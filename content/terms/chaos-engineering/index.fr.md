@@ -1,29 +1,29 @@
 ---
-title: 'What is Chaos engineering?'
-description: 'Chaos engineering is about intentionally trying to break things to spot weaknessses before they create damage, like car crash tests.'
+title: "Qu'est-ce que le Chaos engineering ?"
+description: "Le Chaos engineering consiste à intentionnellement tenter de causer des pannes pour détecter des faiblesses avant qu'elles ne causent des dommages, comme les crash tests automobiles."
 name: 'Chaos engineering'
 summary: ''
 keywords: ['chaos engineering']
 relatedTerms: ['observability', 'monitoring', 'containers-and-docker']
 ---
 
-Chaos engineering is like car crash tests where you break things intentionally in order to see how resilient your application is to those situations.
+Le Chaos engineering est similaire aux crash tests automobiles durant lesquels on cherche à casser les choses intentionnellement afin de voir à quel point une application est résistante à ces situations.
 
-If you ever had to buy a car, chances are you would not agree to buy one which didn't go through crash tests, thus certifying that you would (maybe) survive in case of accidents. Indeed, knowing that makes you confident in your choice.
+Si jamais vous deviez acheter une voiture, il est probable que vous n'accepteriez pas d'en acheter une qui n'a pas subi de crash tests, certifiant ainsi de sa sécurité en cas d'accident. En effet, le savoir vous rend confiant dans votre choix.
 
-In the same spirit, most engineers don't like the idea of deploying systems and applications which were not tested for unexpected conditions and partial outages.
+Dans le même esprit, la plupart des ingénieurs n'aiment pas l'idée de déployer des systèmes et des applications qui n'ont pas été testés pour des conditions inattendues ou des pannes partielles.
 
-Chaos engineering is one of the solution Netflix engineers came up with in order to build trust among their teams. By practicing real-world crash tests (production experimentations), chaos engineering brings confidence in an application’s capacity to survive turbulent conditions in production.
+Le Chaos engineering est une des solutions imaginées par des ingénieurs chez Netflix afin de bâtir de la confiance entre ses équipes techniques. En tentant de produire des pannes dans l'environnement de production, le Chaos engineering apporte une confiance nécessaire en l'application et sa capacité à supporter des conditions turbulentes.
 
-It can also highlight potential weaknesses before they impact all users.
+Cela peut également mettre en évidence des faiblesses potentielles avant qu'elles n'affectent tous les utilisateurs.
 
-## Types of chaos engineering
+## Types de Chaos engineering
 
-- Infrastructure failures (storage, cpu, etc.)
-- Network failures (DNS, bandwidth)
-- Application failure (microservice down)
+- Pannes d'infrastructure (stockage, calcul, etc.)
+- Pannes de réseau (DNS, bande passante)
+- Pannes d'application (microservice non disponible)
 
-## Digging deeper into Chaos engineering
+## Aller plus loin avec le Chaos engineering
 
-- Read [the Chaos principles](http://principlesofchaos.org/?lang=ENcontent) to master those testing techniques
-- Learn more about [Netflix's practices](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116) in terms of Chaos engineering
+- Lire [les principes du Chaos](http://principlesofchaos.org/?lang=ENcontent) pour maîtriser ces techniques de test
+- En apprendre plus sur [les pratiques de Netflix](https://netflixtechblog.com/the-netflix-simian-army-16e57fbab116) en matière de Chaos engineering
