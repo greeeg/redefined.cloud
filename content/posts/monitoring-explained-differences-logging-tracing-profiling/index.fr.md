@@ -4,105 +4,104 @@ description: 'Connaitre les outils à notre disposition afin de gagner en visibl
 tag: 'Monitoring'
 ---
 
-While organizations and engineers are shifting to a new paradigm which changes the way we build and operate applications, the need of effective [monitoring](#monitoring 'What is monitoring?') and [observability](#observability 'What is observability?') is even more important to meet reliability objectives and user satisfaction.
+Alors que beaucoup d'organisations et d'ingénieurs évoluent vers un nouveau paradigme qui change la façon dont nous concevons et exploitons des applications Cloud, le besoin d'un [monitoring](#monitoring "Qu'est-ce que le Monitoring Cloud ?") et d'une [observability](#observability "Qu'est-ce que l'observability ?") efficaces est encore plus important pour atteindre des objectifs de fiabilité et de satisfaction utilisateurs.
 
-Indeed, with cloud computing, visibility into services is crucial, especially when we talk about [containers](#containers-and-docker 'What is Docker and containers?'), [microservices](#microservice-architecture 'What are microservices?') and highly distributed systems. While imagining a plane flying without any way to tell how its systems are doing is hard, imagining a fleet or aircrafts flying over cities without any traffic control towers monitoring the all thing is even harder and close to impossible.
+En effet, avec le Cloud Computing, la visibilité au sein de nos services est essentielle, plus particulièrement en ce qui concerne les [containers](#containers-and-docker "Qu'est-ce que Docker et un container ?"), les [microservices](#microservice-architecture "Qu'est-ce qu'un microservice ?") et les architectures distribuées. Alors qu'il apparait comme difficile d'imaginer un avion voler sans aucun moyen de connaître l'état de ses systèmes embarqués, il est encore plus dur d'imaginer une flotte d'appareils voler au dessus de zones habitées sans tours de contrôle pour aiguiller les pilotes et monitorer l'ensemble.
 
-From this starting point, we should be able to agree that monitoring is important, because:
+De ce point de départ, nous devrions être d'accord sur le fait que le monitoring est essentiel car :
 
-- Issues will arise, even with the best applications built by the best engineers
-- With distributed systems come distributed failures, which can be devastating when not prepared for and no way to tell where they come from
-- It contributes to transparancy and accountability
-- It reveals mistakes early and offers paths for learning and improvements
+- Des problèmes surgiront, même avec les meilleures applications conçues par les meilleurs ingénieurs
+- Avec des architectures distribuées apparaissent des problèmes distribués, qui peuvent avoir un impact significatif lorsque l'on est pas préparé à les détecter et y faire face
+- Cela laisse apparaître les erreurs tôt et offre des pistes d'améliorations
 
-With all that said, where should we start and what are the differences between Logging, Tracing and Profiling which are essential parts of how we monitor and create observability into systems?
+En considérant tous ces éléments, par quoi devrions-nous commencer et quelles sont les différences entre le Logging, Tracing et Profiling ?
 
-## Logging: taking notes of things happening into a system
+## Logging : prendre des notes de tous les évènements se produisant dans un système
 
-Let's start by the most straightforward way of understanding how a system behaves : logs.
+Commençons par la façon la plus simple de comprendre le comportement d'un système : les logs.
 
-A log is a record of events that happened over time: a screenshot of something with an associated timestamp.
+Un log est un enregistrement d'événements se produisant au fil du temps : une capture d'écran de quelque chose associée à une date.
 
-![A list of logs displayed in Datadog](/monitoring-explained/datadog-logs.jpg)
+![Une liste de logs affichés dans Datadog](/monitoring-explained/datadog-logs.jpg)
 
-A list of logs displayed in Datadog
+Une liste de logs affichés dans Datadog
 
-A flight manifest is a good example of that principle: we log all passengers and crew members before departing so we know who is in all flying aircrafts at any given time.
+Un manifeste de vol est un bon exemple de ce principe : on enregistre la liste de tous les passagers et membres d'équipage à bord d'un appareil avant le départ afin de connaître le nom de toutes les personnes en vol à tout instant.
 
-In the context of cloud applications, logging can be used to save information about requests (duration, status code, userId), database queries, load balancer usage and more. It gives you precious details when bugs arise to determine the root cause of an outage or performance issue.
+Dans le contexte d'applications Cloud, le logging peut être utilisé pour enregistrer des données sur les requêtes entrantes (durée, statut, utilisateur concerné), requêtes en base de données, usage du load balancer et bien plus. Cela nous donne des informations précieuses lorsque des bugs surviennent qui permettent de déterminer la raison d'une baisse de performances ou d'une panne.
 
-While logging everything is tempting, this strategy can be really expensive and ineffective. You need to find the right balance between logging everything and nothing to gain enough context for it to be useful.
+Bien que la tentation de logger tout ce qui se passe dans un système est grande, cette stratégie peut se révéler onéreuse et inefficace. Il faut trouver le juste milieu entre tout logger et ne rien logger de manière à disposer de suffisamment de contexte pour que cela soit utile.
 
-Logging consists of multiple steps:
+Le logging consiste en plusieurs étapes :
 
-- Collecting & Ingesting: When you generate logs in different services, you need a central place where to send them.
-- Processing: Ingested logs are enriched with metadata & attributes for future use.
-- Indexing: Logs are segmented into groups to generate metrics, patterns and dashboards.
+- Collecte & Ingestion : lorsque vous générez des logs dans différents services, vous avez besoin d'un emplacement central où les envoyer
+- Traitement : les logs ingérés sont enrichis de métadonnées et d'attributs pour une utilisation future
+- Indexage : les logs sont segmentés en groupes pour générer des métriques et des tableaux de bord
 
-With tools like the [ELK stack](https://www.elastic.co/what-is/elk-stack), [Datadog](https://docs.datadoghq.com/logs/) or [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), you can generate powerful insights from huge amounts of logs coming from hundreds of different services.
+Avec des outils tels que la [ELK stack](https://www.elastic.co/what-is/elk-stack), [Datadog](https://docs.datadoghq.com/logs/) ou encore [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), vous êtes en mesure de générer des informations pertinentes à partir d'énormes quantités de logs provenant de centaines de services différents.
 
-### Digging deeper into Logging
+### Aller plus loin avec le Logging
 
-- Learn more about [the Elastic stack](https://logz.io/learn/complete-guide-elk-stack/#intro) to collect, aggregate & analyzie logs using Elasticsearch, Logstash and Kibana
-- See how AWS logging solution, [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_architecture.html), works
-- Read how you can use services like [Datadog](https://docs.datadoghq.com/logs/) to collect logs and use them to monitor your application
+- En apprendre plus à propos de la [Elastic stack](https://logz.io/learn/complete-guide-elk-stack/#intro) pour collecter, agréger et analyser des logs à l'aide d'Elasticsearch, Logstash et Kibana
+- Découvrir comment la solution de Logging d'AWS, [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_architecture.html), fonctionne
+- Lire comment des services tels que [Datadog](https://docs.datadoghq.com/logs/) permettent de collecter des logs et de les utiliser pour monitorer votre application
 
-## Tracing: a single user's or request's journey through a system
+## Tracing : le parcours d'une requête à travers tout un système
 
-While per-service logging is a good way of introspecting things, it is not enough to convey the big picture of a request propagating across a distributed system. In a microservices architecture, a request is the result of many interactions between different entities (APIs, databases, queues) which can all be a point of failure.
+Bien que le logging par service soit un bon moyen d'introspection, il n'est pas suffisant pour donner une vue d'ensemble d'une requête se propageant à travers une architecture distribuée. Dans une architecture orientée microservices, une requête est le résultat de nombreuses interactions entre différentes entités (API, bases de données, message queues) qui peuvent toutes être source d'erreurs.
 
-Tracing acts like the blackbox of an aircraft during a crash: it helps you understand how things went during a crash, to discover the chain of events that led to a problem.
+Le Tracing agit comme une boîte noire lors d'un crash aérien : il permet de comprendre comment les choses se sont déroulées durant le crash, découvrir la chaîne d'évènements qui a conduit au problème.
 
-It provides a low-level view to understand:
+Il fournit une vue bas niveau pour comprendre :
 
-- what triggered what in the program
-- with which arguments
-- in which order
-- how long did each step lasts
+- ce qui a déclenché quoi dans le programme
+- avec quels arguments
+- dans quel ordre
+- combien de temps a duré chaque étape
 
-It helps discover performance bottlenecks quickly and find the cause of failures when the occur.
+Il permet de découvrir rapidement la source de baisses de performances ou bien de trouver la cause de pannes lorsqu'elles se produisent.
 
-The result of Tracing can be visualized in two ways:
+Le résultat produit par le Tracing peut être visualisé de deux manières :
 
-- Traces: It looks like a flame graph with spans and their associated metadata
-- Service maps: It looks like a cloud of nodes and links between them to visualize the flow of requests
+- Traces : cela ressemble à un flame graph avec des bandes et leurs métadonnées associées
+- Service maps : cela ressemble à un nuage de noeuds avec des liens symbolisant les flux de requêtes
 
-![A distributed trace using the ELK stack](/monitoring-explained/distributed-tracing.png)
+![Exemple d'une trace distribuée avec la ELK stack](/monitoring-explained/distributed-tracing.png)
 
-A distributed trace using the ELK stack
+Exemple d'une trace distribuée avec la ELK stack
 
-With tools like [Open Tracing](https://opentracing.io/), [AWS X-Ray](https://aws.amazon.com/xray/) or [Zipkin](https://zipkin.io/), you can create traces and service maps to provide richer and more relevant context when troubleshooting issues.
+Avec des outils tels que [Open Tracing](https://opentracing.io/), [AWS X-Ray](https://aws.amazon.com/xray/) ou encore [Zipkin](https://zipkin.io/), il est possible de créer des traces et service maps pour bénéficier d'un contexte plus riche et plus pertinent lors de la résolution de pannes.
 
-### Digging deeper into Tracing:
+### Aller plus loin avec le Tracing
 
-- Learn [how Uber uses distributed tracing](https://www.youtube.com/watch?v=EW9GjQNcyzI) to conquer microservices complexity
-- Watch [how Lyft integrated and now uses distributed tracing](https://www.youtube.com/watch?v=URCLeycMrhU)
-- Read [how Netflix built observability tools](https://netflixtechblog.com/lessons-from-building-observability-tools-at-netflix-7cfafed6ab17) to better understand its systems
-- Learn more about tools like [Open Tracing](https://opentracing.io/) and [Jaeger Tracing](https://www.jaegertracing.io/)
+- Comprendre [comment Uber utilise le Tracing distribué](https://www.youtube.com/watch?v=EW9GjQNcyzI) pour faire face à la complexité associée aux microservices
+- Regarder [comment Lyft a mis en place et utilise le Tracing distribué](https://www.youtube.com/watch?v=URCLeycMrhU)
+- Lire [comment Netflix a construit des outils d'observability](https://netflixtechblog.com/lessons-from-building-observability-tools-at-netflix-7cfafed6ab17) pour mieux comprendre ses systèmes
+- En apprendre plus sur des outils tels que [Open Tracing](https://opentracing.io/) et [Jaeger Tracing](https://www.jaegertracing.io/)
 
-## Profiling & Metrics: measure a system's health over time
+## Profiling & Metrics : mesurer l'état d'un système à travers le temps
 
-Profiling and metrics are the last piece of the monitoring puzzle. Together, they provide a statistic overview of a system's health and tracked events over time.
+Le Profiling et les metrics sont les dernières pièces du puzzle du Monitoring. Ensemble, ils fournissent un aperçu statistique de la santé d'un système et des événements suivis au fil du temps.
 
-Software profiling helps you create profiles just like profilers in the police. But instead of catching bad guys, you want to catch bad performances.
+Le Profiling logiciel permet de créer des profils tout comme les profileurs dans la police. Au lieu de chasser des malfrats, il permet de mettre la main sur de mauvaises performances.
 
-![Metrics displayed in Grafana using Prometheus](/monitoring-explained/metrics-and-profiling.png)
+![Des metrics affichée dans Grafana à l'aide de Prometheus](/monitoring-explained/metrics-and-profiling.png)
 
-Metrics displayed in Grafana using Prometheus
+Des metrics affichée dans Grafana à l'aide de Prometheus
 
-Profiles range from low-level metrics like CPU usage or file I/O to higher-level metrics like throughput or latency. When aggregated and seen together, they are powerful signals giving you a holistic view of your system and can help detect issues.
+Les profils vont de la mesure bas niveau de l'utilisation d'un processeur aux mesures de niveau supérieur comme la latence d'un service. Lorsqu'ils sont aggrégés et observés ensemble, ce sont des signaux puissants qui donnent une vue globale d'un système et peuvent aider à détecter des problèmes.
 
-Like for logging, it's easy to think that the more metrics you have, the best your monitoring is gonna be. While it is tempting, you want to make sure to measure things that directly affect users of your application to be able to effectively detect and alert engineers when necessary.
+Comme pour le Logging, il est facile de penser que plus vous aurez de metrics, mieux sera votre Monitoring. Bien que cela soit tentant, il est plus pertinent de mesurer les choses qui affectent directement les utilisateurs de votre application afin de pouvoir détecter et alerter efficacement les ingénieurs si nécessaire.
 
-With tools like [Prometheus](https://prometheus.io/), [Zabbix](https://www.zabbix.com/) or [Datadog](https://docs.datadoghq.com/tracing/profiling/?tab=java), you can build profiles and metrics to improve how you monitor your services and underlying infrastructure.
+Avec des outils tels que [Prometheus](https://prometheus.io/), [Zabbix](https://www.zabbix.com/) ou encore [Datadog](https://docs.datadoghq.com/tracing/profiling/?tab=java), il est possible de construire des profils et metrics pour améliorer la façon dont vous surveillez vos services et votre infrastructure sous-jacente.
 
-### Digging deeper into profiling & metrics
+### Aller plus loin avec le Profiling & les metrics
 
-- Learn more about [the golden SRE signals](https://medium.com/faun/how-to-monitor-the-sre-golden-signals-1391cadc7524) as described by Steve Mushero
-- Read about [Digital Ocean's introduction to Monitoring & Alerting](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting)
+- En apprendre plus sur [les signaux en or SRE](https://medium.com/faun/how-to-monitor-the-sre-golden-signals-1391cadc7524) tels que décrits par Steve Mushero
+- Lire [l'introduction de Digital Ocean sur le Monitoring & l'Alerting](https://www.digitalocean.com/community/tutorials/an-introduction-to-metrics-monitoring-and-alerting)
 
-## The bottom line
+## En conclusion
 
-When used together, Logging, Tracing and Profiling can give you powerful insights about your services and systems: detecting anomalies when they arise and quickly understand the root cause of performance issues.
+Lorsqu'ils sont utilisés ensemble, le Logging, le Tracing et le Profiling peuvent vous donner des informations essentiels sur vos services et systèmes : détecter les anomalies lorsqu'elles se produisent et comprendre rapidement la cause principale de problèmes de performances.
 
-While monitoring is perfect at answering questions you're already asking yourself about your application, it only works when systems fail in predictable ways. [Observability](#observability 'What is Observability?') is about going one step further by providing tooling to openly observe and explore systems.
+Bien que le Monitoring soit idéal pour répondre aux questions que vous vous posez déjà sur votre application, il ne se révèle utile que lorsque votre système tombe en panne de manière prévisible. [L'Observability](#observability "Qu'est-ce que l'Observability ?") est un moyen d'aller encore plus loin pour gagner en visibilité dans un système.
