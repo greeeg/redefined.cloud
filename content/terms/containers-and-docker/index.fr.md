@@ -1,6 +1,6 @@
 ---
-title: 'What are Containers and Docker?'
-description: 'A container is like a campervan: a box containing everything needed to work, anywhere.'
+title: "Qu'est-ce que Docker et les containers ?"
+description: "Un container est comme un camping car : une boîte contenant toutes les choses nécessaires à son fonctionnement, n'importe où."
 name: 'Containers & Docker'
 shortName: 'Container'
 summary: ''
@@ -9,39 +9,39 @@ relatedTerms:
   ['microservice-architecture', 'virtual-machine', 'container-registry']
 ---
 
-A container is like a box containing everything needed to run an application in the cloud: from code, dependencies to system tools and settings.
+Un container est comme une boîte contenant tout le nécessaire pour exécuter une application dans le cloud : du code aux dépendances en passant par les outils et paramètres système.
 
-Like shipping containers (in the transportation field), developers don't need to think about on which ship (server, cloud infrastructure) the container is gonna be executed: because it is self-contained.
+Comme pour les containers dans le domaine du transport de marchandises, les ingénieurs n'ont pas besoin de penser sur quel porte-containers (serveur, infrastructure cloud) le container va être exécuté : il est autonome.
 
-It comes with all the pieces needed for it to work. They are boxes with a standard shape, size, and locking mechanism used to ship goods around the world. Any shipping container can be moved around by the same cranes, ships, trains, and trucks because these only interact with the box itself, regardless of its contents.
+Il contient tous les éléments nécessaires à son fonctionnement. Ce sont des boîtes de forme et de taille standardisée permettant d'expédier des marchandises dans le monde entier. N'importe lequel d'entre eux peut être déplacé par les mêmes grues, navires, trains et camions, car ceux-ci n'interagissent qu'avec la boîte elle-même, quel que soit son contenu.
 
-## Running code in the exact same conditions, no matter the environment
+## Exécuter du code dans les mêmes conditions, quel que soit l'environnement
 
-Containers are a response to a growing pain when working with code and environments: it is hard to make sure two environments run code in the exact same conditions.
+Les containers sont une réponse à une problématique croissante lorsque l'on travaille avec du code dans différents environnements : il est difficile de s'assurer que deux environnements exécutent du code dans les mêmes conditions.
 
-Let's say you are deploying your application on a brand-new server manually. You would have to install your programming language, pull your codebase, install dependencies, probably configure a web server, open some ports, etc.
+Supposons que vous déployiez manuellement votre application sur un nouveau serveur. Vous devrez installer votre langage de programmation, pull votre base de code, installer des dépendances, probablement configurer un serveur web, ouvrir certains ports, etc.
 
-You might have to do it several times in the future, when scaling up your application or deploying new versions of it. Risks of configuration mismatch or dependency version mismatch are real. Using containers, you make sure this running environment stays the same throughout time. And if a container works on your machine, it will definitely work on someone else's.
+Vous devrez peut-être le faire plusieurs fois à l'avenir, lors de la montée en charge de votre application ou lors du déploiement de nouvelles versions de celle-ci. Les risques de non-concordance de configuration ou de version de dépendance sont importants. À l'aide de containers, vous vous assurez que l'environnement dans lequel s'éxecute votre code reste le même au cours du temps. Ainsi, si vous parvenez à faire fonctionner un container sur votre machine, il fonctionnera certainement sur d'autres.
 
-## Benefits of using containers
+## Avantages des containers
 
-- Deploy services in a consistent way across environments
-- Continuous deployment & Testing
-- Isolation
-- Languages & Cloud platforms support
+- Déployer des services de manière cohérente dans tous les environnements
+- Meilleure expérience de déploiement continu
+- Encapsulation de votre code
+- Prise en charge de nombreux langages de programmation et plateformes Cloud
 
-One of the most used solution to create containers is Docker. Docker helps you work with containers by using 3 principles:
+Une des solutions les plus utilisées pour créer des containers est Docker. Docker vous aide à travailler avec des containers en suivant 3 principes :
 
-- Docker file: A docker file is a way for developers to describe how an application is set up and started (I need Node.js 12 with those dependencies, with this port opened and this command started).
-- Docker Image: A docker image is like a package or base, which results from Docker executing your docker file. It can then be used to run your application.
-- Container: A docker container is a docker image running on a machine that has Docker installed in an isolated and secure way. You can have as many containers running on one machine as the machine can handle.
+- Docker file : Un fichier Docker est un moyen pour les ingénieurs de décrire comment une application est configurée et exécutée (j'ai besoin de Node.js 12 avec ces dépendances, avec ce port ouvert et cette commande démarrée).
+- Docker Image : Une image Docker est comme un package ou une base, qui résulte de l'exécution par Docker de votre fichier Docker. Elle peut ensuite être utilisée pour exécuter votre application.
+- Container : Un container Docker est une image Docker s'exécutant sur une machine sur laquelle Docker est installé de manière isolée et sécurisée. Vous pouvez avoir autant de containers en cours d'exécution sur une seule machine que la machine peut en gérer.
 
-Container can be useful starting with one container if your application is a monolith. However, we can leverage their full potential when working with several different microservices.
+Adopter le paradigme des containers peut être aussi simple que de créer un seul container pour votre application monolithique. Cependant, ils se révèlent être particulièrement efficaces dans une architecture orientée microservices.
 
-When working with huge applications and services, you can have dozens of docker images and thousands of containers running on different servers. This is when [orchestration](#container-orchestration-and-kubernetes 'What is Container orchestration and Kubernetes?') can become handy, helping you create, update and delete those containers in an automated way using tools like Kubernetes.
+Lorsque vous travaillez avec de larges applications et services, il est possible de devoir gérer des dizaines d'images Docker et des centaines de containers s'exécutant sur différents serveurs. Dans cette situation, [l'orchestration de containers](#container-orchestration-and-kubernetes "Qu'est-ce que Kubernetes et l'orchestration de containers ?") permet de créer, mettre à jour et supprimer des containers de manière coordonnée avec des outils tels que Kubernetes.
 
-## Digging deeper into containers
+## Aller plus loin avec les containers
 
-- Watch [what it takes to use Docker in production](https://www.youtube.com/watch?v=6jT83lT6TU8)
-- Watch [how to create effective Docker images](https://www.youtube.com/watch?v=vlS5EiapiII) with Abby Fuller
-- Watch [how containers differ from virtual machines](https://www.youtube.com/watch?v=TvnZTi_gaNc)
+- Regarder [comment mettre en place Docker en production](https://www.youtube.com/watch?v=6jT83lT6TU8)
+- Regarder [comment créer des images Docker performantes](https://www.youtube.com/watch?v=vlS5EiapiII) avec Abby Fuller
+- Regarder [en quoi les containers diffèrent des machines virtuelles](https://www.youtube.com/watch?v=TvnZTi_gaNc)

@@ -13,7 +13,7 @@ relatedTerms:
   ]
 ---
 
-Continuous delivery is an engineering practise in which you want to reduce the time between writing the first line of code and deploying it live to customers in a safe and reliable way.
+Continuous delivery is an engineering practice in which you want to reduce the time between writing the first line of code and deploying it live to users in a safe and reliable way.
 
 Imagine Bob and Jane who both own a renown ice cream shop with exotic flavours. Each day, they have hundreds of customers who come to buy their ice creams.
 

@@ -70,43 +70,48 @@ const List: NextPage<ListPageProps> = ({ lang, alternate, terms }) => {
             as="ul"
             spacing={['spacing200', 'spacing400', 'spacing600']}
           >
-            {terms.map((term, index) => {
-              return (
-                <TermItem as="li" key={term.slug}>
-                  <Link href="/[lang]/[term]" as={`/${lang}/${term.slug}`}>
-                    <a title={term.title}>
-                      <Stack direction="column" spacing="spacing100">
-                        <Stack direction="column" spacing="spacing60">
-                          <Heading
-                            as="h3"
-                            fontSize={['size200', 'size300', 'size400']}
-                            maxWidth={630}
+            {terms
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((term, index) => {
+                return (
+                  <TermItem as="li" key={term.slug}>
+                    <Link href="/[lang]/[term]" as={`/${lang}/${term.slug}`}>
+                      <a title={term.title}>
+                        <Stack direction="column" spacing="spacing100">
+                          <Stack direction="column" spacing="spacing60">
+                            <Heading
+                              as="h3"
+                              fontSize={['size200', 'size300', 'size400']}
+                              maxWidth={630}
+                            >
+                              {term.name}
+                            </Heading>
+                          </Stack>
+
+                          <Text
+                            fontSize={['size100', 'size200']}
+                            maxWidth={530}
                           >
-                            {term.name}
-                          </Heading>
+                            {term.description}
+                          </Text>
+
+                          {index !== terms.length - 1 && (
+                            <Box
+                              paddingTop={[
+                                'spacing60',
+                                'spacing200',
+                                'spacing300',
+                              ]}
+                              borderBottom="1px solid"
+                              borderColor="gray300"
+                            />
+                          )}
                         </Stack>
-
-                        <Text fontSize={['size100', 'size200']} maxWidth={530}>
-                          {term.description}
-                        </Text>
-
-                        {index !== terms.length - 1 && (
-                          <Box
-                            paddingTop={[
-                              'spacing60',
-                              'spacing200',
-                              'spacing300',
-                            ]}
-                            borderBottom="1px solid"
-                            borderColor="gray300"
-                          />
-                        )}
-                      </Stack>
-                    </a>
-                  </Link>
-                </TermItem>
-              );
-            })}
+                      </a>
+                    </Link>
+                  </TermItem>
+                );
+              })}
           </Stack>
         </Box>
       </Box>

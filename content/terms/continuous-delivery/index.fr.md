@@ -1,6 +1,6 @@
 ---
-title: 'What is Continuous delivery or CD?'
-description: 'Continuous delivery is like serving meals plate by plate instead of waiting for everything to be ready.'
+title: "Qu'est-ce que le Continuous delivery ou CD ?"
+description: "La livraison continue ou continuous delivery s'apparente au fait de servir des plats au fur et à mesure durant un repas au lieu d'attendre que tous soient prêts à être servi."
 name: 'Continuous delivery'
 shortName: 'CD'
 summary: ''
@@ -13,23 +13,23 @@ relatedTerms:
   ]
 ---
 
-Continuous delivery is an engineering practise in which you want to reduce the time between writing the first line of code and deploying it live to customers in a safe and reliable way.
+La livraison continue est une pratique d'ingénierie qui vise à réduire le temps entre l'écriture d'une ligne de code et son déploiement en production auprès d'utilisateurs de manière sûre et fiable.
 
-Imagine Bob and Jane who both own a renown ice cream shop with exotic flavours. Each day, they have hundreds of customers who come to buy their ice creams.
+Imaginez Bob et Jane qui possèdent tous deux un magasin de glaces renommé aux saveurs exotiques. Chaque jour, ils ont des centaines de clients qui viennent acheter leurs glaces.
 
-Bob always fears that something can go bad during the day so he like to prepare all his ice cream in the morning. This way, he and his team do not have to think about creating new ones before the next day.
+Bob craint toujours que quelque chose se passe mal pendant la journée. Il aime donc préparer toutes ses glaces le matin. De cette façon, lui et son équipe n'ont pas à en produire de nouvelles avant le lendemain.
 
-On the other hand, Jane likes to progressively prepare her ice cream throughout the day, depending on urgent needs or a small number of clients.
+De son côté, Jane aime préparer progressivement ses glaces tout au long de la journée, en fonction de l'affluence des clients.
 
-For Halloween, they both decided to create a special pumpkin ice cream. What they don't know is that their pumpkin delivery in the morning was bad quality. When they open their respective stores, they discover it. Jane is really quick to react, she decides to prepare new ones and stop selling the bad ones. However, Bob is in a really bad situation where he basically have to wait for the next day or react to something he's not prepared for.
+Pour Halloween, ils décident tous deux de créer une glace spéciale à la citrouille. Cependant, leur livraison matinale de citrouille se révèle être de mauvaise qualité. Lorsqu'ils ouvrent leurs magasins respectifs, ils le découvrent. Jane réagit très vite, elle décide d'en préparer de nouvelles et d'arrêter de vendre les mauvaises. Cependant, Bob n'est pas préparé à ce type de situation qui perturbe toute son organisation. Il a le choix entre attendre le lendemain ou de réagir à quelque chose auquel il n'est pas préparé.
 
-In this example, Jane is following continuous delivery best practises where Bob is not. Instead of having slow release cycles, Jane automated her release process so she can deliver changes at any point in a sustainable way.
+Dans cet exemple, Jane suit les meilleures pratiques de livraison continue là où Bob ne les suit pas. Au lieu d'avoir des cycles de mise en production lents, Jane a automatisé son processus de livraison afin de pouvoir apporter des modifications à tout moment de manière durable.
 
-In an engineering environment, it would mean having automated testing and builds when pushing new code to your source control system, to guarantee everything is ready to be shipped.
+Dans le contexte d'une application Cloud, cela impliquerait de build et de tester de manière automatisée les nouvelles versions de code pour garantir la fiabilité de ce qui sera déployé en production.
 
-With [continuous deployment](#continuous-deployment 'What is Continuous deployment?'), you can go one step further and automate the way your code is released on your production server, without any human interaction.
+Avec les principes de [déploiement continu](#continuous-deployment "Qu'est-ce que le continuous deployment ?"), vous êtes en mesure d'aller encore plus loin en automatisant la manière dont de nouvelles versions de code sont rendues disponibles sur vos serveurs de production sans aucune interaction humaine.
 
-## Digging deeper into Continuous delivery
+## Aller plus loin avec le continuous delivery ou livraison continue
 
-- Learn more about [the difference between Continuous delivery & Continuous integration with Atlassian](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
-- Read more about [a commit life in a continuous delivery pipeline at LeBonCoin](https://medium.com/leboncoin-engineering-blog/leboncoin-commits-life-960a86cd35ff)
+- En apprendre plus sur [la différence entre Continuous delivery & Continuous integration avec Atlassian](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+- En lire davantage [sur la vie d'un commit dans un pipeline de continuous delivery chez LeBonCoin](https://medium.com/leboncoin-engineering-blog/leboncoin-commits-life-960a86cd35ff)

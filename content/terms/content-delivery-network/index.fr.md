@@ -1,6 +1,6 @@
 ---
-title: 'What is a Content Delivery Network or CDN?'
-description: 'A CDN is like owning a restaurant chain instead of one restaurant to sell more of your burgers around the world.'
+title: "Qu'est-ce qu'un Content Delivery Network ou CDN ?"
+description: "Utiliser un CDN revient à posséder une chaîne de restaurants plutôt qu'un seul restaurant local de manière à servir plus de clients dans le monde."
 name: 'Content delivery network'
 shortName: 'CDN'
 summary: ''
@@ -8,32 +8,32 @@ keywords: ['cdn', 'content delivery network', 'cloudflare']
 relatedTerms: ['api-gateway-server-proxy', 'domain-name-system']
 ---
 
-CDN, which stands for Content Delivery Network, is a mechanism of distributing content to users in a highly available and fast way. CDNs are like fast food restaurant chains. Instead of having one restaurant which serves all burgers to all customers in the world, they rely on a high number of identical restaurants which are distributed across the globe to better serve customers.
+CDN, qui signifie Content Delivery Network, est un mécanisme de distribution de contenu hautement disponible et rapide à nos utilisateurs. Les CDN agissent comme des chaînes de restaurants. Au lieu de posséder un seul restaurant qui répond à l'ensemble des demandes des clients autour du globe, elles possèdent un grand nombre de restaurants identiques qui sont en charge de servire localement tous leurs clients de manière efficace.
 
-## The story of Jane and the unique restaurant
+## L'histoire de Jane et de son bistrot de quartier
 
-Let's take the example of Jane, who loves this unique and delicious Burger from her hometown. Because she lives far away from it, each time she wants a burger, she has to travel for two hours, and sometimes, even wait for another hour in line because too many people are waiting for the same burger. In case there's an issue in the kitchen, it's impossible for Jane and all the other customers to get their burger.
+Prenons l'exemple de Jane, passionnée de burgers qui privilégie un bistrot de quartier qu'elle fréquente régulièrement. Parce qu'elle a déménagé et vit désormais loin de son restaurant favoris, il lui faut près de deux heures pour s'y rendre à chaque fois que l'envie lui prend. Si leur cuisine est victime d'une panne, il est impossible pour Jane et les autres clients de ce bistrot d'être servis.
 
-## The story of Bob and the famous restaurant chain
+## L'histoire de Bob et de sa chaîne de fastfood préférée
 
-Now, let's take a look at Bob and this famous burger restaurant chain which you can find almost anywhere across the globe. Bob is used to travel a lot. Whether he's at home or traveling for work, he can always find a place to eat his favorite sandwich nearby. They always taste and smell exactly the same, because they're using the same recipe and the same ingredients. This food chain has its headquarters in the US, where they elaborate new recipes, so that new burgers can then be sold all over the world. If one restaurant has to close because of a fire in the kitchen, you can always go to a different restaurant where they sell the exact same product.
+Maintenant, prenons l'exemple de Bob et de sa chaîne de fastfood préférée que vous pouvez retrouver partout autour du globe. Bob a pour habitude de beaucoup voyager. Qu'il se trouve chez lui ou en voyage de l'autre côté de la planète, il peut toujours trouver un restaurant de sa chaîne de fastfood favorite près de lui. Il y retrouve les mêmes produits, car ils sont tous basés sur la même recette. Si un restaurant est amené à fermer, Bob peut toujours se rendre dans un autre pour retrouver ces mêmes produits.
 
-## An efficient way to distribute your content to global users
+## Un moyen efficace de distribuer votre contenu à grande échelle
 
-Content delivery networks are made possible thanks to 3 different parts:
+Les Content delivery networks s'appuient sur trois entités distinctes :
 
-- Origin Servers which contain content the source of data to distribute
-- Servers across the world which cache and distribute that content and sync with the first ones
-- A mechanism to always route users to the nearest server.
+- Des serveurs d'origine dont le contenu est la source de données à distribuer
+- Des serveurs à travers le monde qui mettent en cache et distribuent ce contenu et se synchronisent avec les premiers
+- Un mécanisme pour toujours acheminer les utilisateurs vers le serveur le plus proche
 
-By using CDNs, you're reducing the time to access your assets for your users, reducing the load on your main server which doesn't have to server static assets anymore.
+En utilisant des CDN, vous réduisez le temps d'accès à vos assets pour vos utilisateurs, ce qui réduit la charge sur votre serveur principal qui n'a plus à distribuer les assets statiques.
 
-## Benefits of using a CDN
+## Avantages d'un CDN
 
-- Improved latency & response time for global users
-- Increased availability
-- Decreased load on main application & services
+- Haute disponibilité
+- Latence réduite & meilleur temps de réponse à grande échelle
+- Charge réduite sur vos services et votre application principale
 
-## Digging deeper into CDNs
+## Aller plus loin avec les CDN
 
-- Learn [how CDNs work with Cloudflare](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
+- Découvrir [comment les CDN fonctionnent avec Cloudflare](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
