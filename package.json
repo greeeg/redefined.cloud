@@ -23,7 +23,7 @@
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "remark-parse": "^8.0.2",
+    "remark-parse": "^8.0.3",
     "remark-react": "^7.0.1",
     "styled-components": "^5.1.1",
     "styled-reset": "^4.2.1",
