@@ -1,22 +1,22 @@
 ---
-title: 'What is a CRON job or task?'
-description: 'A CRON job is a way to run code at predetermined intervals for repetitive tasks.'
-name: 'CRON job'
+title: "Qu'est-ce qu'une tâche CRON ?"
+description: "Une tâche CRON est un moyen d'exécuter du code à un intervalle de temps fixe pour des tâches répétitives."
+name: 'Tâche CRON'
 shortName: 'CRON'
 summary: ''
 keywords: ['cron job', 'cron']
 relatedTerms: ['webhook', 'logging', 'message-broker-message-queue']
 ---
 
-Cron jobs are a way to schedule code to run automatically at predetermined intervals. It helps automate repetitive work to be done at specific times.
+Les tâches CRON sont un moyen de planifier l'exécution automatique de code à des intervalles prédéterminés. Il permet d'automatiser des travaux répétitifs à effectuer à des moments précis.
 
-They are made of:
+Elles sont définies à partir de :
 
-- Cron expression: defines the interval at which we need to run the command
-- Command: code to execute
+- Cron expression : elle définit l'intervalle de temps auquel répéter la tâche
+- Commande : Le code à exécuter
 
-## Use cases for cron jobs
+## Cas d'usage pour les tâches CRON
 
-- Backups to run each months
-- Analytics exports to run each days
-- Integration test to run each hours
+- Sauvegardes à exécuter tous les mois
+- Exports Analytics à exécuter tous les jours
+- Tests d'intégration à exécuter toutes les heures

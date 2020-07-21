@@ -1,26 +1,24 @@
 ---
-title: 'What is Continuous Integration or CI?'
+title: "Qu'est-ce que l'intégration continue ou CI ?"
 name: 'Continuous integration'
-description: 'Continuous integration is like assembling a car piece by piece while making sure there is no issue instead of putting everything together at the end.'
+description: "L'intégration continue s'apparente au fait d'assembler une voiture pièce par pièce tout en s'assurant qu'il n'y a pas de problème au lieu de tout assembler à la fin."
 shortName: 'CI'
 summary: ''
 keywords: ['continuous integration', 'ci/cd', 'ci']
 relatedTerms: ['continuous-delivery', 'logging', 'service-level-objective']
 ---
 
-Let's imagine that you and your friends want to build a car. You each agree to focus on building one part of the car, and then you'll come together once everyone's done and slap the whole thing together.
+Imaginons que vous et vos amis décidiez de construire une voiture. Vous acceptez que chacun d'entre vous se consacre à l'élaboration d'une partie de la voiture, pour ainsi vous retrouver une fois que l'ensemble est terminé.
 
-The problem with this approach is that you might all meet up with your finished parts and realize that they don't fit together. You had a plan, but as always things went wrong, so each of you had to make small tweaks to the components you built to make them work. Those small tweaks, though, mean that the parts work individually, but don't fit together for a thousand tiny reasons.
+Le problème avec cette approche est qu'il y a de grandes chances que vous vous retrouviez avec des pièces indépendamment fonctionnelles mais qui ne s'emboîtent pas. Malgré un plan pré-établi, chacun d'entre vous a dû apporter des ajustements à sa pièce pour que celle-ci fonctionne. Ces petits ajustements, bien que limités, ont pour conséquence à l'échelle de la voiture de ne plus permettre son assemblage.
 
-A better approach is continuous integration. A few times a day, you all take your stuff and put together the car with what you have to see if it fits. You'll find that some of your parts don't fit, but then the issue can be addressed quickly and easily because it's only one problem rather than a thousand like before.
+Une meilleure approche à ce type de problématique est l'intégration continue. Régulièrement, vous décidez de vous retrouver afin de comparer vos avancées et vérifier le fonctionnement de l'ensemble. Ainsi, vous êtes en mesure de parer aux ajustements faits par vos amis pour ne pas compromettre le projet dans sa globalité.
 
-CI is usually applied to software development but the same idea applies. The project is broken into parts and each team works on one part. A few times a day, they all update the master version of the project with the newest version of their part. That way, when two parts don't interact well, the issue is caught immediately and can be fixed before the problematic code gets used elsewhere.
+Les principes d'intégration continue sont largement utilisés dans le développement d'applications Cloud. Chaque équipe d'ingénieurs travaillant sur des services différents collaborent sur une même base de code. À chaque modification majeure, des tests automatisés peuvent être exécutés de manière à détecter des régressions ou nouvelles interactions entre services sources de bugs.
 
-Developers practicing continuous integration merge their changes back to the main branch as often as possible. The developer's changes are validated by creating a build and running automated tests against the build. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
+Généralement, les modifications des ingénieurs sont validées en créant un build et en exécutant des tests automatisés sur ce build. Ce processus de validation automatisé se révèle être particulièrement efficace dans l'amélioration continue de la qualité de code d'organisations, tout en évitant les désagréments d'une mise en production de code non fonctionnel.
 
-Continuous integration puts a great emphasis on testing automation to check that the application is not broken whenever new commits are integrated into the main branch.
+## Aller plus loin avec l'intégration continue
 
-## Digging deeper into Continuous integration
-
-- Read [how Google uses CI at scale](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45880.pdf) by running more than 150 millions tests/day
-- Learn about some [best practises for CI/CD pipelines](https://www.digitalocean.com/community/tutorials/an-introduction-to-ci-cd-best-practices)
+- Lire [comment Google utilise les principes de CI à grande échelle](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45880.pdf) en effectuant plus de 150 millions de tests/jour
+- En apprendre plus sur [les bonnes pratiques de CI/CD](https://www.digitalocean.com/community/tutorials/an-introduction-to-ci-cd-best-practices)

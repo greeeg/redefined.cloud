@@ -1,6 +1,6 @@
 ---
-title: 'What is DNS or Domain Name System?'
-description: 'DNS is like a service you would use to find the location of a restaurant a friend tells you about, just by knowing its name.'
+title: "Qu'est-ce que le DNS ou Domain Name System ?"
+description: "Le DNS s'apparante à un service que vous utiliseriez pour trouver l'emplacement d'un restaurant dont un ami vous a parlé, simplement en connaissant son nom."
 name: 'Domain Name System'
 shortName: 'DNS'
 summary: ''
@@ -8,26 +8,26 @@ keywords: ['dns', 'domain name system']
 relatedTerms: ['service-proxy', 'service-mesh', 'load-balancer']
 ---
 
-DNS, which stands for Domain name system, is like a map you would use to associate cities with their geographical positions.
+DNS, qui signifie Domain Name System, est comme une carte que vous utiliseriez pour associer des villes à leurs positions géographiques.
 
-Imagine visiting a country or a state for the first time. Someone told you about this fantastic place where they sell amazing home-made ice creams. The problem is, except the name, you don't know anything about the place.
+Imaginez visiter un pays ou une région pour la première fois. Quelqu'un vous a vendu les mérites d'un glacier au coeur d'un village d'exception. Le problème est que, à l'exception de son nom, vous ne connaissez rien de ce lieu.
 
-The first thing you would probably do is go to Google Maps, type the name of the place and wait for it to show you where it is. DNS plays the same role. From an easy-to-remember domain name, it is responsible for giving you the exact and not so easy-to-remember IP address (geographical position) of the website.
+La première chose que vous feriez serait probablement d'aller sur Google Maps, tapez le nom du lieu et attendre qu'il vous indique où il se trouve. Le DNS joue le même rôle. À partir d'un nom de domaine facile à retenir, il est chargé de vous donner l'adresse IP exacte, pas si facile à retenir, qui correspond à la position géographique du site Web.
 
-## Wait, I never signed for this, or did I?
+## Un des mécanismes les plus importants du fonctionnement d'Internet
 
-Well, DNS is one of the most important part of how Internet works. So important that its existence goes back to the early days of the Internet, when it was still called ARPANET. At that time, all websites adresses where listed in a simple text file which was maintained by the Stanford Research institute. Without it, it would have been impossible for computers to discuss between each others. Nowadays, some servers around the world play this key role of maintaining key/value pairs of where a specific domain name should link to.
+Le DNS est l'un des éléments les plus importants du fonctionnement d'Internet. Si important que son existence remonte aux débuts d'Internet, alors qu'il s'appelait encore ARPANET. À cette époque, toutes les adresses de sites Web étaient répertoriées dans un simple fichier texte géré par l'institut de recherche de Stanford. Sans cela, il aurait été impossible pour les ordinateurs de discuter entre eux. De nos jours, certains serveurs du monde entier jouent ce rôle clé de maintenir une liste de clé/valeur vers lesquelles un nom de domaine spécifique doit être lié.
 
-## It all starts with a domain name
+## Tout commence avec un nom de domaine
 
-Wether you're using a domain name for an ecommerce website, a serverless function or a database, you now understand the magic going on behind the curtain which makes everything possible. Because DNS servers are the first piece of how your users interact with your cloud architecture, they're really important. Indeed, if no one is able to route your traffic to the proper server, you basically disappear from the map. This is exactly what happened to Cloudflare on July, 2nd 2019, when [all websites using their DNS servers were not accessible for several hours](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/ 'Test').
+Que vous utilisiez un nom de domaine pour un site e-commerce, une fonction serverless ou une base de données, vous comprenez désormais la magie opérée qui rend tout cela possible. Parce que les serveurs DNS sont le premier élément avec lequel vos utilisateurs interagissent avec votre architecture cloud, ils ont un rôle capital. En effet, si personne ne parvient à acheminer votre trafic vers le bon serveur, vous disparaissez fondamentalement de la carte. C'est précisément ce qui est arrivé à Cloudflare le 2 juillet 2019 lorsque [l'ensemble des sites utilisant son service DNS n'étaient plus accessibles pendant plusieurs heures](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/).
 
-## Requirements for an optimal DNS solution
+## Avantages d'une solution DNS performante
 
-- Global Performance & Availability
-- Resiliency
-- DDoS protection
+- Haute disponibilité & performances
+- Résistance aux pics de trafic
+- Protection DDoS
 
-## Digging deeper into DNS
+## Aller plus loin avec le DNS
 
-- Learn all about [the details that make DNS work](https://cloudacademy.com/blog/how-dns-works/)
+- En apprendre plus sur [le fonctionnement des serveurs DNS](https://cloudacademy.com/blog/how-dns-works/)
