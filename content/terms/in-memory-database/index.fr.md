@@ -1,31 +1,32 @@
 ---
-title: 'What is an In-memory database?'
-description: 'An in-memory database is a way to store data and access it in the fastest way possible.'
+title: "Qu'est-ce qu'une base de données en mémoire ?"
+description: 'Une base de données en mémoire est un moyen de stocker des informations pour un accès le plus performant et rapide possible.'
 name: 'In-memory database'
 summary: ''
 keywords: ['memory database', 'database']
 relatedTerms: ['relational-database', 'non-relational-database']
 ---
 
-An in-memory database is a database where data is stored in the memory of computers, as opposed to traditional databases which use SSDs or hard drives.
+Une base de données en mémoire est une base de données où l'information est stockée dans la mémoire (RAM) de serveurs, en opposition aux bases de données traditionnelles qui stockent leurs informations dans des SSD ou disques durs.
 
-In-memory databases can be [Non-relational databases](#non-relational-database 'What is a Non-relational database?') or [Relational databases](#relational-database 'What is a Relational database?').
+Les bases de données en mémoire peuvent être des [base de données non relationnelles](#non-relational-database "Qu'est-ce qu'une base de données non relationnelle ?") ou des [base de données relationnelles](#relational-database "Qu'est-ce qu'une base de données relationnelle ?").
 
-## Best when speed and availability is key
+## Un usage axé sur les performances et la huate disponibilité
 
-This type of database is particularly useful when dealing with data that need to be accessed in real-time or really quickly: think of gaming platforms, real-time biding or embedded software systems. However, it comes at a price: by default, data stored in in-memory databases is not persistent and can be lost in case of crash.
+Ce type de base de données est particulièrement utile lorsqu'il s'agit de données qui doivent être consultées en temps réel ou très rapidement : pensez aux plateformes de jeux, aux enchères en temps réel ou aux systèmes logiciels embarqués. Cependant, cela a un prix : par défaut, les données stockées dans les bases de données en mémoire ne sont pas persistantes et peuvent être perdues en cas de panne.
 
-## Benefits of using In-memory databases
+## Avantages des bases de données en mémoire
 
-- Latency & response time
+- Faible latence
+- Temps de réponse
 
-## Use cases for In-memory databases
+## Cas d'usage pour les bases de données en mémoire
 
-- Caching layer for persistent databases
-- Real-time applications (Gaming, Banking, Biding)
-- Embedded software systems
+- Couche de mise en cache pour les bases de données persistantes
+- Applications en temps réel (gaming, système bancaire, enchères)
+- Systèmes logiciels embarqués
 
-## Examples of In-memory databases
+## Exemples de bases de données en mémoire
 
 - [Memcached](https://memcached.org/)
 - [Redis](https://redis.io/)

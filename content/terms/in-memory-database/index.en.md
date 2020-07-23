@@ -17,12 +17,13 @@ This type of database is particularly useful when dealing with data that need to
 
 ## Benefits of using In-memory databases
 
-- Latency & response time
+- Low latency
+- Fast response time
 
 ## Use cases for In-memory databases
 
 - Caching layer for persistent databases
-- Real-time applications (Gaming, Banking, Biding)
+- Real-time applications (gaming, banking, biding)
 - Embedded software systems
 
 ## Examples of In-memory databases

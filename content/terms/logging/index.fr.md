@@ -1,21 +1,21 @@
 ---
-title: 'What is Logging?'
-description: 'Logging is like writing down in a notebook each time you complete a task in your day.'
+title: "Qu'est-ce que le Logging ?"
+description: "Le Logging s'apparante au fait de prendre des notes de toutes les choses qui se passent dans votre journée dans un carnet."
 name: 'Logging'
 summary: ''
 keywords: ['logs', 'logging']
 relatedTerms: ['observability', 'tracing', 'profiling', 'monitoring']
 ---
 
-Logging is like writing down in a notebook each time you complete a task in your day. In the end, you have a log file, your notebook, which you can then come back to if you need to clarify something (a task you forgot or didn't complete entirely) or create statistics (on average, how many tasks do you complete each day).
+Le Logging est comme écrire dans un carnet chaque fois que vous effectuez une tâche dans votre journée. Au final, vous avez un fichier de logs, votre carnet de notes, sur lequel vous pouvez ensuite revenir si vous avez besoin de clarifier quelque chose (une tâche que vous avez oubliée ou pas entièrement terminée) ou de créer des statistiques (en moyenne, combien de tâches complétez-vous chaque jour).
 
-Logging can often be confused with [monitoring](#monitoring 'What is Monitoring?'), [tracing](#tracing 'What is Tracing?') or [profiling](#profiling 'What is Profiling?').
+Le Logging peut souvent être confondu avec le [monitoring](#monitoring "Qu'est-ce que le Monitoring ?"), le [tracing](#tracing "Qu'est-ce que le Tracing ?") ou encore le [profiling](#profiling "Qu'est-ce que le Profiling ?").
 
-In the cloud and in software development, anything can be subject to logging: http requests metadata coming in (IP address, endpoint, duration, etc), database access (security control) and more. Logging can help you detect issues (anormal logs) and troubleshoot bugs by giving you context.
+Dans le cloud et dans le développement logiciel, tout peut être soumis à la journalisation: http demande des métadonnées entrantes (adresse IP, point de terminaison, durée, etc.), accès à la base de données (contrôle de sécurité) et plus encore. La journalisation peut vous aider à détecter les problèmes (journaux anormaux) et à résoudre les bogues en vous donnant du contexte.
 
-On the other end, it can be tempting to log everything happening in your services and apps so you can save and look back at everything happened. However, this strategy can be really expensive and ineffective (finding a needle in a haystack).
+D'un autre côté, il peut être tentant de consigner tout ce qui se passe dans vos services et applications afin que vous puissiez enregistrer et revenir sur tout ce qui s'est passé. Cependant, cette stratégie peut être très coûteuse et inefficace (trouver une aiguille dans une botte de foin).
 
-## Benefits of using logging
+## Avantages du Logging
 
 - Monitor how your app is doing
 - Troubleshoot bugs when they happen with some context
