@@ -1,26 +1,26 @@
 ---
-title: 'What is a Non-relational database or NoSQL database?'
-description: 'A Non-relational database is a way to store data in documents, key-value pairs or graphs.'
+title: "Qu'est-ce qu'une base de données non relationnelle ou NoSQL ?"
+description: 'Une base de données non relationnelle est un moyen de stocker des données dans des documents, des couples clé-valeur ou des graphs.'
 name: 'Non-relational database'
 shortName: 'NoSQL DB'
 keywords: ['non relational database', 'nosql', 'database']
 relatedTerms: ['in-memory-database', 'relational-database']
 ---
 
-A Non-relational database (or NoSQL database) as opposed to relational databases, is a type of database where data and relationships are represented in documents, key-value pairs or graphs.
+Une base de données non relationnelle (ou base de données NoSQL), en opposition aux bases de données relationnelles, est un type de base de données où l'information et les relations sont structurés sous forme de documents, de couples clé-valeur ou de graphs.
 
-Instead of having each piece of data stored in a table in a row like Google Sheet or Microsoft Excel, we represent them as unstructured shapes like Google Doc or Microsoft Word. This way, every document can have its own structure (titles, texts, numbers, etc.).
+Au lieu de stocker la donnée dans un tableau à l'aide de lignes et de colonnes comme dans Google Sheet ou Microsoft Excel, on la représente de manière non structurée comme dans Google Doc ou Microsoft Word. De cette manière, chaque document peut disposer de sa propre structure (attributs, textes, etc.).
 
-This type of database is particularly useful when dealing with data that doesn't have explicit schema (IoT events, Big Data, etc.).
+Ce type de base de données se révèle particulièrement pertinent lorsque l'on traite des données qui n'ont pas de schéma défini (évènements IoT, Big Data, etc.).
 
-## Benefits of using NoSQL databases
+## Avantages des bases de données NoSQL
 
-- Flexibility
-- Scalability
+- Flexibilité
+- Scalabilité
 
-## Examples of NoSQL databases
+## Exemples de bases de données NoSQL
 
-- [MongoDB](https://www.mongodb.com/) (document-based)
-- [Neo4J](https://neo4j.com/) (graph-based)
-- [Redis](https://redis.io/) (key-value pair based)
+- [MongoDB](https://www.mongodb.com/) (basé sur des documents)
+- [Neo4J](https://neo4j.com/) (basé sur un graph)
+- [Redis](https://redis.io/) (basé sur des couples clé-valeur)
 - [DynamoDB](https://aws.amazon.com/dynamodb/)

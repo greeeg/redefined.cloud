@@ -1,30 +1,30 @@
 ---
-title: 'What is a Microservice architecture?'
-description: 'A Microservice architecture is like solving a problem with a set of simple tools that do one thing well instead of a single larger and harder tool.'
+title: "Qu'est-ce qu'une architecture microservices ?"
+description: "Une architecture Microservice est comme résoudre un problème avec un ensemble d'outils simples spécialisés au lieu d'un seul outil complexe multifonction."
 name: 'Microservice architecture'
 summary: ''
 keywords: ['microservice architecture', 'microservice']
 relatedTerms: ['monolith-architecture', 'service-mesh', 'serverless']
 ---
 
-Let's imagine you want to cook a chocolate cake. Having a microservice architecture would mean to use different tools (a bowl, a cooking paddle, a cake pan, etc) which all have a single responsibility and are not linked in the way they work (you don't need a bowl to use a cake pan).
+Imaginons que vous vouliez cuisiner un gâteau au chocolat. Avoir une architecture orientée microservice signifierait utiliser différents outils (un bol, une palette de cuisson, un moule à gâteau, etc.) qui ont tous une seule responsabilité et ne sont pas liés dans leur fonctionnement (vous n'avez pas besoin d'un bol pour utiliser un moule à gâteau).
 
-We generally oppose this architecture to a [monolithic architecture](#monolith-architecture 'What is a Monolith architecture?'), which would consist of using a single tool to do it all in our example, like a thermomix.
+On oppose généralement cette architecture à une [architecture monolithique](#monolith-architecture "Qu'est-ce qu'une architecture Monolith ?"), qui consisterait à utiliser un seul outil pour tout faire dans notre exemple, comme un thermomix.
 
-Microservices have several advantages over monoliths:
+Les microservices présentent plusieurs avantages par rapport aux monolithes :
 
-- Because they are loosely coupled, it's really easy to update/evolve one of them without the others (using a different bowl without affecting how the cake pan works).
-- If you need to scale up and make more cakes and only need more cake pans, you can scale this microservice without scaling up the others, and thus saving money.
-- You can have different teams working on different parts of your application (working with the bowl without knowing how the paddle works.)
+- Parce qu'ils sont faiblement couplés, il est facile de mettre à jour/faire évoluer l'un d'eux sans les autres (en utilisant un bol différent sans affecter le fonctionnement du moule à gâteau).
+- Dans le cas d'une montée en charge n'impactant qu'une partie de votre application, vous êtes en mesure d'augmenter les ressources disponibles pour cette partie uniquement (augmenter le nombre de moules sans augmenter le nombre de bols) et ainsi économiser de l'argent.
+- Vous pouvez avoir différentes équipes travaillant sur différentes parties de votre application (travaillant avec le bol sans savoir comment fonctionne la palette.)
 
-This type of architecture was popularised by Netflix and AWS, which are heavily invested in that area and are developing tools for it.
+Ce type d'architecture a été popularisé par Netflix et AWS, qui ont fortement investis dans ce domaine et développent des outils pour cela.
 
-## Benefits of using microservices
+## Avantages des microservices
 
-- Independent teams organized around business capabilities
-- Highly maintainable and testable
+- Des équipes indépendantes organisées autour des capacités métier
+- Hautement maintenable et testable
 
-## Drawbacks of using microservices
+## Inconvénients des microservices
 
-- Communication between microservices
-- Who owns the data for a given microservice
+- Nouveaux modèles de communication à mettre en place entre microservices
+- Déterminer la responsabilité de la donnée entre microservices

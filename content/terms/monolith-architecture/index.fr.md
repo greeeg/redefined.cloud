@@ -1,29 +1,29 @@
 ---
-title: 'What is a Monolith architecture?'
-description: 'A monolithic architecture is a single unified solution to a problem, where all components of the solution are combined.'
+title: "Qu'est-ce qu'une architecture monolithique ?"
+description: 'Une architecture monolithique est une solution unifiée unique à un problème, où tous les composants de la solution sont combinés.'
 name: 'Monolith architecture'
 summary: ''
 keywords: ['monolithic architecture', 'monolith']
 relatedTerms: ['microservice-architecture', 'baremetal-server', 'load-balancer']
 ---
 
-A monolithic architecture is like a single tool we would use to do everything, like a Thermomix to cook a chocolate cake.
+Une architecture monolithique est comme un outil unique que nous utiliserions pour tout faire, comme un Thermomix pour cuire un gâteau au chocolat.
 
-We generally oppose this architecture to a [microservices architecture](#microservice-architecture 'What is a Microservice architecture?'), which would consist of using very specific different tools to achieve the same result.
+On oppose généralement cette architecture à une [architecture orientée microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?") qui consisterait à utiliser plusieurs outils très spécifiques pour aboutir au même résultat.
 
-It seems to always be the best solution, at least at first. Indeed, you only have one tool (or service) to maintain and every developer can contribute to all parts of your application.
+Ce type d'architecture est souvent privilégié aux débuts d'une application Cloud. En effet, vous n'avez qu'un seul outil (ou service) à maintenir et chaque ingénieur peut contribuer à toutes les parties de votre application.
 
-However, when you have a spike of traffic, the only way to scale your application is to run multiple copies of the app behind a [load balancer](#load-balancer 'What is a Load balancer?'). If you have an ecommerce website and only product pages see a spike of traffic, you have to scale up everything, even the checkout flow and search feature, which can cost a lot.
+Cependant, lorsque vous avez un pic de trafic, la seule façon de supporter la montée en charge est d'exécuter plusieurs copies de l'application derrière un [load balancer](#load-balancer "Qu'est-ce qu'un load balancer ?"). Si vous avez un site Web e-commerce et que seules les pages de produits subissent un pic de trafic, vous devez tout mettre à l'échelle, même le flow de paiement et la fonction de recherche, ce qui peut entrainer une augmentation de vos coûts.
 
-Moreover, while your application gets bigger, it becomes harder and harder for your teams to contribute to it and iterate on features. Because everything lives in the same place, you have to make sure that you don't accidentally break something by updating parts of your tightly coupled features. And, if a bug happens to make your application crash, all your infrastructure is down.
+De plus, plus la taille de votre application augmente, plus il devient difficile pour vos équipes d'y contribuer et d'itérer sur les fonctionnalités. Parce que tout vit au même endroit, vous devez vous assurer de ne pas casser quelque chose accidentellement en mettant à jour des parties de vos fonctionnalités étroitement couplées. Si un bug venait à compromettre le fonctionnement de l'un de vos services, toute votre application risquerait de ne plus fonctionner.
 
-## Benefits of using a monolithic architecture
+## Avantages d'une architecture monolithique
 
-- Easy to start with
-- Simple to deploy, test and scale horizontally
-- When small enough, easy to onboard new developers
+- Facilité de mise en place
+- Simple à déployer et tester
+- Lorsqu'elle est assez petite, il est facile d'intégrer de nouveaux ingénieurs
 
-## Drawbacks of monolithic architecture
+## Inconvénients d'une architecture monolithique
 
-- Size of the app can reduce velocity and increase maintenance
-- Reliability
+- Vélocité limitée et maintenance importante passé une certaine taille
+- Fiabilité

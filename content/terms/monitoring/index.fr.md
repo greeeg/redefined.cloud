@@ -1,14 +1,14 @@
 ---
-title: 'What is Monitoring?'
-description: 'Monitoring is the act of collecting, aggregating and analyzing information to understand how an application is doing.'
+title: "Qu'est-ce que le Monitoring ?"
+description: "Le Monitoring est l'acte de collecter, d'agréger et d'analyser des informations pour comprendre le fonctionnement d'une application."
 name: 'Monitoring'
 summary: ''
 keywords: ['monitoring', 'logging']
 relatedTerms: ['logging', 'tracing', 'observability', 'profiling']
 ---
 
-Monitoring is the act of collecting, aggregating and analyzing metrics to understand how a system works. If you ever took a ECG using a smart watch, you monitored during few minutes your heat beat rate.
+Le Monitoring est l'acte de collecter, d'agréger et d'analyser des métriques pour comprendre le fonctionnement d'un système. Si vous avez déjà pris un ECG à l'aide d'une smart watch, vous avez monitoré pendant quelques minutes votre rythme cardiaque.
 
-Monitoring is essential to cloud applications and people managing them, in order to know if an application or services are working as expected (diagnostic monitoring). They use it to improve their understanding of their app and react in case of emergencies.
+Le Monitoring est essentiel pour les applications Cloud et les personnes qui les gèrent afin de savoir si une application ou des services fonctionnent comme prévu (surveillance de diagnostic). Ils l'utilisent pour améliorer leur compréhension de leur application et réagir en cas d'urgence.
 
-So, to monitor things, you need metrics. What can be those metrics? They can be made of real-time data (server workload), events, [logs](#logging 'What is Logging?') analysis, [traces](#tracing 'What is Tracing?'), etc.
+Donc, pour surveiller les choses, vous avez besoin de métriques. Quelles peuvent être ces métriques ? Elles peuvent être constituées de données en temps réel (charge de travail du serveur), d'événements, de [logs](#logging "Qu'est-ce que le Logging ?") ou encore de [traces](#tracing "Qu'est-ce que le Tracing ?").

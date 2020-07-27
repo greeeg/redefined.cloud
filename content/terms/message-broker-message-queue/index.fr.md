@@ -1,29 +1,29 @@
 ---
-title: 'What is a Message broker or Message queue?'
-description: 'A Message broker is like a todo list you would use for the tasks you want to complete throughout the day.'
+title: "Qu'est-ce qu'un Message broker ou fil de messages ?"
+description: 'Un Message broker est similaire à une liste de tâches à réaliser au cours de la journée.'
 name: 'Message broker'
 summary: ''
 keywords: ['message broker', 'message queue']
 relatedTerms: ['cron-job', 'webhook', 'pub-sub']
 ---
 
-Message queuing is like a todo list: tasks are added to a list and removed once processed throughout the day.
+Une fil de messages est comme une liste de tâches : elles sont ajoutées et retirées de la liste au fur et à mesure qu'elles sont réalisées tout au long de la journée.
 
-It is a form of asynchronous messaging service, which moves messages from producers to consumers. Each message is processed only once, by a single consumer, as opposed to Pub/Sub which allows multiple consumers to receive a message.
+C'est une forme de communication asynchrone entre services, composée d'expéditeurs de messages et de récepteurs de ces mêmes messages. Chaque message est traité une seule fois, par un seul récepteur, en opposition au modèle Pub/Sub qui permet à plusieurs récepteurs de recevoir le même message.
 
-Message queuing is made of 4 things:
+Une fil de messages est composée de 4 éléments :
 
-- Producers: Service(s) producing messages
-- Queue: A list of messages to be consumed
-- Consumers: Service(s) listening for messages
-- Message: Data sent by publishers to a specific topic
+- Expéditeurs : les services qui produisent des messages
+- Fil de messages : elle contient tous les messages restants à consommer
+- Récepteurs : les services qui écoutent pour de nouveaux messages à traiter
+- Message : Données envoyées par les expéditeurs
 
-## Use cases for message queuing
+## Cas d'usage pour les fils de messages
 
-- Repetitive heavy workload (eg. generating payslips)
-- Asynchronous work (eg. sending emails)
+- Charge de travail répétitive et lourde (exemple : génération de fiches de paie)
+- Tâches asynchrones (exemple : envoi d'emails)
 
-## Examples of Message brokers
+## Exemples de Message brokers
 
 - [NSQ](https://nsq.io/)
 - [RabbitMQ](https://www.rabbitmq.com/)

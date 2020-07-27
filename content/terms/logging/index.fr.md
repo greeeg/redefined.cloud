@@ -11,11 +11,11 @@ Le Logging est comme écrire dans un carnet chaque fois que vous effectuez une t
 
 Le Logging peut souvent être confondu avec le [monitoring](#monitoring "Qu'est-ce que le Monitoring ?"), le [tracing](#tracing "Qu'est-ce que le Tracing ?") ou encore le [profiling](#profiling "Qu'est-ce que le Profiling ?").
 
-Dans le cloud et dans le développement logiciel, tout peut être soumis à la journalisation: http demande des métadonnées entrantes (adresse IP, point de terminaison, durée, etc.), accès à la base de données (contrôle de sécurité) et plus encore. La journalisation peut vous aider à détecter les problèmes (journaux anormaux) et à résoudre les bogues en vous donnant du contexte.
+Dans le cadre d'une application Cloud, tout peut être sujet à la création de logs : métadonnées de requêtes HTTP entrantes (adresse IP, endpoint, durée, etc.), accès à la base de données et bien plus. Le Logging peut vous aider à détecter les problèmes (logs d'erreurs) et à résoudre les bugs en vous donnant du contexte (utilisateur concerné, requête concernée).
 
-D'un autre côté, il peut être tentant de consigner tout ce qui se passe dans vos services et applications afin que vous puissiez enregistrer et revenir sur tout ce qui s'est passé. Cependant, cette stratégie peut être très coûteuse et inefficace (trouver une aiguille dans une botte de foin).
+D'un autre côté, il peut être tentant de logger tout ce qui se passe dans vos services et applications afin que vous puissiez enregistrer et revenir sur tout ce qui s'est passé. Cependant, cette stratégie peut s'avérer être très coûteuse et inefficace (trouver une aiguille dans une botte de foin).
 
 ## Avantages du Logging
 
-- Monitor how your app is doing
-- Troubleshoot bugs when they happen with some context
+- Surveilleur l'état de votre application
+- Disposer de contexte lors de la résolution de bugs
