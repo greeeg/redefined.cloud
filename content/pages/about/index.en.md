@@ -4,7 +4,7 @@ Building websites and applications used to be simple. Create an HTML file, use P
 
 But things have now changed.
 
-Cloud computing profoundly chnaged the way we design, build and ship software applications. Thanks to companies like AWS, Netlify or Heroku, you now have the posibility to scale to millions of users with a few clicks.
+Cloud computing profoundly changed the way we design, build and ship software applications. Thanks to companies like AWS, Netlify or Heroku, you now have the posibility to scale to millions of users with a few clicks.
 
 And yet, Cloud computing is hard.
 
