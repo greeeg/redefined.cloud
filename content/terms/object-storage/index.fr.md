@@ -1,32 +1,32 @@
 ---
-title: 'What is Object storage?'
-description: 'Object storage is like storing files in moving boxes in warehouses: easy to search and scalable to infinity.'
+title: "Qu'est-ce que l'Object storage ?"
+description: "L'Object storage s'apparente au stockage de fichiers dans des cartons identiques étiquetés par rayonnage dans un entrepôt : faciles à retrouver et scalable à l'infini"
 name: 'Object storage'
 summary: ''
 keywords: ['object storage', 'storage']
 relatedTerms: ['content-delivery-network', 'load-balancer']
 ---
 
-If you're building a web service or any other internet-related product, there's no doubt you're gonna have to deal with data, lots of it. And when there's data, there has to be storage where we can safely put it in order to access it at any given time.
+Si vous décidez de créer une application Cloud, il ne fait aucun doute que vous devrez gérer des données en grande quantité. Il est primordial que le stockage de ces données soit scalable, sécurisé et hautement disponible afin de pouvoir y accéder à tout moment.
 
-One of the most common type of storage you might be familiar with is the filesystem, like the one you have on your computer. Filesystem works like a huge library with thousands of books. When looking at it from outside, it's just a massive amount of paper which doesn't make sense. However, using paths, you're able to easily find a book that you stored 2 months ago: 1st floor, lane 23, rack 4, book 5. Moreover, you can store any type of books, from encyclopaedias (text files), novels (videos) or mangas (mp3).
+L'un des types de stockage les plus courants que vous connaissez sans doute est le file system, comme celui que vous avez sur votre ordinateur. Le file system fonctionne comme une immense bibliothèque avec des milliers de livres. De l'extérieur, ce n'est qu'une immense quantité de papier qui n'a pas de sens. Cependant, en utilisant des répertoires et des chemins d'accès, vous pouvez facilement trouver un livre que vous avez stocké il y a 2 mois.
 
-This way of working with data is quite interesting but isn't very scalable. If the library is full of books, you have to build a new one or extend the existing one.
+Ce fonctionnement est particulièrement pertinent à l'échelle d'un disque dur mais est peu scalable. En effet, l'organisation de vos fichiers est dépendante des disques durs sur lesquels ils sont enregistrés. Sans système de réplication de données, si la machine sur laquelle le disque dur est installé tombe en panne, vos données ne sont plus accessibles.
 
-Using object storage, you want all data you're storing to be stored in the same way and look the same, like boxes you would use when moving out. Those boxes always have the same three things:
+Avec l'object storage, pour chaque fichier stocké, la notion de disque dur et de chemin d'accès n'existe pas. Tous les fichiers sont représentés de manière uniforme telles des cartons de taille similaire avec 3 éléments :
 
-- A unique identifier (a number you would write on the box)
-- Some metadata (weight, size, etc.)
-- The data itself (content of the box)
+- Un identifiant unique (qui vous permettrait de reconnaitre un carton par rapport à un autre)
+- Des métadonnées (taille, date de création, etc.)
+- Les données elles-mêmes (contenu de la boîte)
 
-This way, when you're looking for a specific object, you just have to remember its unique identifier.
+De cette manière, il ne vous suffit que de connaitre l'identifiant unique de votre fichier afin de le retrouver.
 
-It can contain anything you want and this type of storage can theoretically work with an infinite amount of data, as long as the warehouse (cloud infrastructure behind it) has space for it. This way, you don't have to worry about if there's enough space left, or if your box is too big for it.
+L'object storage permet de stocker tout type de données avec une montée à l'échelle théorique infinie. Tant que l'infrastructure cloud derrière ce système dispose d'espace, votre application peut continuer à gagner en popularité sans problème.
 
-## Use cases for object storage
+## Cas d'usage pour l'Object storage
 
-- Backups (Databases, media)
-- Data archive
-- Application assets (user pictures, videos, etc.)
+- Backups (base de données, médias)
+- Archives
+- Fichiers mis en ligne sur votre application (photos de profil, vidéos, etc.)
 
-Using services like AWS S3 with AWS Cloudfront, you're able to work with unlimited data in an effective way where it is made available across multiple regions, so your boxes are only few milliseconds away.
+En utilisant des services tels que AWS S3 avec AWS Cloudfront, vous êtes en mesure de disposer d'espace inifini pour vos données tout en les rendant accessible de manière efficace à travers plusieurs régions.

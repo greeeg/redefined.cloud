@@ -1,25 +1,25 @@
 ---
-title: 'What is Tracing?'
-description: 'Tracing is like a black box inside a plane: used to understand how things went during a crash.'
+title: "Qu'est-ce que le Tracing ?"
+description: "Le Tracing agit comme une boîte noire à l'intérieur d'un avion : comprendre ce qu'il s'est passé lors d'un crash."
 name: 'Tracing'
 summary: ''
 keywords: ['tracing', 'logging', 'monitoring']
 relatedTerms: ['observability', 'logging', 'monitoring', 'profiling']
 ---
 
-Where [logging](#logging 'What is Logging?') could be compared to a flight manifest, tracing would be the black box used to understand how things went during a crash, to discover the chain of events that led to a problem.
+Là où le [logging](#logging "Qu'est-ce que le Logging ?") pourrait être comparé à un manifeste de vol, le tracing serait la boîte noire utilisée pour comprendre ce qui s'est produit lors d'un crash et ainsi connaître la chaîne des évènements qui a mené à un problème.
 
-Instead of providing a high level view of event-triggered logs, tracing provides a low-level view of a program's flow (what triggered what in the program, in which order, how long did each step lasts).
+Au lieu de fournir une vue haut niveau des logs créés par des événements, le tracing fournit une vue bas niveau de l'exécution d'un programme (ce qui a déclenché quoi dans le programme, dans quel ordre, combien de temps a duré chaque étape).
 
-Where logs can be used to monitor a service, tracing can be used to debug it when a problem occurs: how did we get there, which function, for how long, parameters passed, etc. Typically a trace is useful for detailed examination of timing issues occurring within a code.
+Alors que les logs peuvent être utilisés pour monitorer un service, le tracing peut être utilisé pour comprendre la source d'un problème lorsqu'il survient : comment y sommes-nous arrivés, quelle fonction, pendant combien de temps, les paramètres passés, etc. En général, une trace est utile pour un examen détaillé de l'exécution du code.
 
-## Benefits of using Tracing
+## Avantages du Tracing
 
-- Understand a program's flow when something is not right
-- Evaluate the performance of a request in a [microservice architecture](#microservice-architecture 'What is a Microservice architecture?')
-- Optimize execution of hot paths of your application
+- Comprendre l'exécution d'un programme lors de pannes
+- Évaluer la performance d'une requête au sein [d'une architecture orientée microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?")
+- Optimiser l'exécution des hot paths de votre application
 
-## Digging deeper into Tracing
+## Aller plus loin avec le Tracing
 
-- Learn [how Uber uses distributed tracing](https://www.youtube.com/watch?v=EW9GjQNcyzI) to conquer microservices complexity
-- Watch [how Lyft integrated and now uses distributed tracing](https://www.youtube.com/watch?v=URCLeycMrhU)
+- Comprendre [comment Uber utilise le distributed tracing](https://www.youtube.com/watch?v=EW9GjQNcyzI) pour maîtriser la complexité de son architecture orientée microservices
+- Regarder [comment Lyft a intégré et utilise désormais le distributed tracing](https://www.youtube.com/watch?v=URCLeycMrhU)

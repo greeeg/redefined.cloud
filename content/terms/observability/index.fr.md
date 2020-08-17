@@ -1,37 +1,35 @@
 ---
-title: 'What is Observability?'
-description: 'Observability is the capacity to provide answers to questions you never asked yourself before about an application or service.'
+title: "Qu'est-ce que l'Observability ?"
+description: "L'observabilité est la capacité d'un système à apporter des réponses à des questions qui n'ont pas encore été posées sur une application ou un service."
 name: 'Observability'
 summary: ''
 keywords: ['observability', 'monitoring']
 relatedTerms: ['monitoring', 'logging', 'tracing', 'profiling']
 ---
 
-[Monitoring](#monitoring 'What is Monitoring?') is a huge part of making sure services and applications we deploy into the cloud deliver the right performance in order to meet user expectations. Using a combination of logging, tracing and profiling, we can understand the current state and health of our application based on pre-defined criterias and metrics to look at.
+Le [Monitoring](#monitoring "Qu'est-ce que le Monitoring ?") est un élément essentiel pour garantir des performances optimales pour les services et applications que nous déployons dans le Cloud afin de répondre aux attentes de nos utilisateurs. En utilisant une combinaison de logs, de traces et de profiles, nous pouvons comprendre l'état actuel et la santé de notre application en fonction de critères et de mesures prédéfinis à examiner.
 
-However, in modern distributed architectures, like [microservices](#microservice-architecture 'What is a Microservice architecture?'), it is harder to get the big picture and connect the dots. With monitoring, you're only looking for known issues using automated checks. You only have the possibility to react to incidents.
+Cependant, dans des architectures distribuées, tels que des [microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?"), il est difficile d'avoir une vue globale de notre application. Avec le monitoring, il est uniquement possible de détecter des problèmes/seuils d'erreurs préalablement définis. On ne peut que réagir aux incidents qui se produisent.
 
-## Being proactive vs reactive
+## Adopter une posture proactive au lieu de réactive
 
-Observability is the capacity to provide answers to questions you never asked yourself before about an application or service.
+Avec l'Observability, l'objectif est de mettre en place des outils permettant une analyse de services et systèmes proactive, donnant ainsi plus de contexte sur l'état de santé d'un système. Au lieu de monitorer uniquement le taux d'erreurs HTTP renvoyées par votre API, vous mettez en place des outils permettant de connaître l'usage de la mémoire, la latence de votre API etc.
 
-Observability is about being able to introspect services and applications to provide context and thus a better understanding of how good a system is currently doing.
+Il existe 3 niveaux d'Observability :
 
-There are 3 levels of Observability:
+- Au niveau de l'application
+- Au niveau de la machine
+- Au niveau du réseau
 
-- Application level
-- Machine level
-- Network level
+De manière à suivre les bonnes pratiques de l'Observability, vous devez disposer d'une stratégie claire pour accéder aux données qui vous permettre de répondre de manière proactive aux questions que vous vous posez. Une bonne base pour cela repose sur 3 piliers :
 
-In order to follow Observability best practises, you need a clear path to access the data used to answer those questions. A good foundation for that is based on 3 pillars:
+- Logs d'évènements : les [logs](#logging "Qu'est-ce que le Logging ?") sont des métadonnées d'évènements s'ayant produits dans le passé. En utilisant des expressions régulières par exemple, vous pouvez filtrer vos logs pour connaître l'état de santé de vos services. Un défi lié à la collecte de logs est le bruit que ces derniers génèrent. Bien qu'ils soient utiles, ils ne se révèlent pertinents que si efficacement filtrés et indexés dû au volume de données qu'ils peuvent générer chaque jour.
 
-- Event logs: [Logs](#logging 'What is Logging?') are metadata of events that happened in the past. Using regular expressions, you can filter logs and understand how a service behaves. A common challenge with logs is noise. While they are useful, they can be hard to filter and index due to the volume of data you generate.
+- Traces : une [trace](#tracing "Qu'est-ce que le Tracing ?") vous donne une vue bas niveau de l'exécution d'un programme (qu'est-ce qui a déclenché quoi, dans quel ordre, combien de temps a duré chaque étape). Une trace est utile lorsque vous cherchez à identifier quel service est responsable d'une baisse de performance ou d'erreurs dans votre application.
 
-- Traces: A [trace](#tracing 'What is Tracing?') gives you a detailed low-level view of a program's flow (what triggered what in the program, in which order, how long did each step lasts). A trace is useful when you need to identify which service caused application errors or find performance bottlenecks.
+- Metrics : les metrics peuvent être une photo d'un état à un certain moment ou calculé à interval régulier, comme les [profiles](#profiling "Qu'est-ce que le Profiling ?"). Elles représentent des données sous forme de graphs ou de jauges pour donner une image globale d'un système facile à lire.
 
-- Metrics: Metrics can be either a point in time or monitored over intervals, like [profiles](#profiling 'What is Profiling?'). They represent data over intervals in graphs or gauges to give a big picture that is easy to read.
+## Aller plus loin avec l'Observability
 
-## Digging deeper into Observability
-
-- Read how [Netlify’s Infrastructure Team Improved Observability While Increasing Deployment Speed](https://www.netlify.com/blog/2020/05/05/what-netlifys-infrastructure-team-learned-as-it-increased-deploy-speed-by-up-to-2x/)
-- Watch [how Honeycomb improved its observability in the software supply chain](https://www.infoq.com/presentations/honeycomb-build-ssc/)
+- Lire comment [l'équipe infrastructure de Netlify a amélioré son observability tout en augmentant sa vitesse de déploiement](https://www.netlify.com/blog/2020/05/05/what-netlifys-infrastructure-team-learned-as-it-increased-deploy-speed-by-up-to-2x/)
+- Regarder [comment Honeycomb a amélioré son observability dans son processus de développement](https://www.infoq.com/presentations/honeycomb-build-ssc/)

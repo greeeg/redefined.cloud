@@ -7,7 +7,7 @@ keywords: ['observability', 'monitoring']
 relatedTerms: ['monitoring', 'logging', 'tracing', 'profiling']
 ---
 
-[Monitoring](#monitoring 'What is Monitoring?') is a huge part of making sure services and applications we deploy into the cloud deliver the right performance in order to meet user expectations. Using a combination of logging, tracing and profiling, we can understand the current state and health of our application based on pre-defined criterias and metrics to look at.
+[Monitoring](#monitoring 'What is Monitoring?') is a huge part of making sure services and applications we deploy into the cloud deliver the right performance in order to meet user expectations. Using a combination of logging, tracing and profiling, we can understand the current state and health of our application based on predefined criterias and metrics to look at.
 
 However, in modern distributed architectures, like [microservices](#microservice-architecture 'What is a Microservice architecture?'), it is harder to get the big picture and connect the dots. With monitoring, you're only looking for known issues using automated checks. You only have the possibility to react to incidents.
 

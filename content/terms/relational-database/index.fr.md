@@ -1,6 +1,6 @@
 ---
-title: 'What is a Relational database or SQL database?'
-description: 'A Relational database is a way to store data in tables like Microsoft Word or Google Sheet.'
+title: "Qu'est-ce qu'une base de données relationnelle ou SQL ?"
+description: 'Une base de données relationnelle est un moyen de stocker des données sous forme de tableaux comme Microsoft Excel ou Google Sheet.'
 name: 'Relational database'
 shortName: 'SQL DB'
 summary: ''
@@ -8,26 +8,26 @@ keywords: ['relational database', 'sql', 'database']
 relatedTerms: ['in-memory-database', 'non-relational-database']
 ---
 
-A relational database (or SQL database) is a database where data and relationships are represented in tables like Microsoft Excel or Google Sheet.
+Une base de données relationnelle (ou SQL) est une base de données où l'information et les relations sont représentés à l'aide de tableaux tel que dans Microsoft Excel ou Google Sheet.
 
-Each table (relation) is made of columns (attributes) and rows (records). Each structured piece of data stored in a table is a row. All of them have the same attributes.
+Chaque tableau (relation) est constitué de colonnes (attributs) et de lignes (enregistrements). Chaque information structurée est stockée dans une ligne du tableau. Chaque ligne possède la même liste d'attributs.
 
-This type of database is particularly useful when dealing with data that you could represent in Google sheets, like an inventory, a list of products or users.
+Ce type de base de données est particulièrement utile pour des données qui pourraient être représentées sous forme de tableau dans Google Sheet, tel qu'un inventaire, une liste de produits ou encore d'utilisateurs.
 
-With unique identifiers called primary keys, each row in tables can be easily identified and queried. Moreover, we can create relations between different rows from different tables using foreign keys (linking a user to an order for example).
+Avec des identifiants uniques appelées clé primaire, chaque ligne au sein de tableaux sont facilement identifiables et récupérées. De plus, on peut créer des relations entre différentes lignes de différents tableaux en utilisant des clés étrangères (pour lier un utilisateur à une commande par exemple).
 
-## Use cases for relational databases
+## Cas d'usage pour les bases de données relationnelles
 
-- Storing any type of structured data (products, transactions, etc.)
+- Stocker tout type de données structurées (produits, transactions, etc.)
 
-One important aspect of this type of database is data consistency. Each column (attribute) can have constraints to enforce new rows respect the same rules like unicity, required column or data type. Indeed, we don't want two products to have the same name or one of them to not have a price.
+Un aspect important de ce type de base de données est la cohérence des données. Chaque colonne (attribut) peut avoir des contraintes à appliquer sur de nouvelles lignes respectant les mêmes règles comme l'unicité, le fait d'être requis ou le type de données. En effet, nous ne voulons pas que deux produits aient le même nom ou que l'un d'eux n'ait pas de prix.
 
-In order to work with relational databases, we use transactions, which follow ACID principles. Transactions are a way to ask questions or update data in the database. To do so, we use a computer language called SQL (Structured query language).
+Afin de travailler avec des bases de données relationnelles, nous utilisons des transactions, qui suivent les principes ACID. Les transactions sont un moyen de poser des questions ou de mettre à jour des données dans la base de données. Pour ce faire, nous utilisons un langage informatique appelé SQL (langage de requête structuré).
 
-## Examples of Relational databases
+## Exemples de bases de données relationnelles
 
 - [PostgreSQL](https://www.postgresql.org/)
 - [MySQL](https://www.mysql.com/)
 - [MariaDB](https://mariadb.org/)
 
-Using services like AWS RDS or GCP Cloud SQL, it is really easy to set up and maintain this type of database.
+En utilisant des services tels que AWS RDS ou GCP Cloud SQL, il est d'autant plus simple de mettre en place et maintenir ce type de base de données.

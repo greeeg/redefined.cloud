@@ -1,24 +1,24 @@
 ---
-title: 'What is a Webhook?'
-description: 'A Webhook is like a P.O. Box third-party applications can use to notify you when something happens.'
+title: "Qu'est-ce qu'un Webhook ?"
+description: "Un Webhook est comme une boîte postale utilisée par des applications tierces pour vous notifier lorsqu'un évènement se produit"
 name: 'Webhook'
 summary: ''
 keywords: ['webhook']
 relatedTerms: ['message-broker-message-queue', 'pub-sub', 'cron-job']
 ---
 
-Webhook are an automated way for your application or third-party applications to notify you when events happen, like your bank when an online purchase is made with your credit card.
+Les webhooks sont un moyen automatisé pour votre application ou des applications tierces de vous notifier lorsque des évènements se produisent, comme votre banque lorsqu'un achat en ligne est effectué avec votre carte.
 
-Instead of manually checking your balance every hour (which refers to polling), you get updates delivered live, as they happen. This makes webhooks much more efficient for both provider and consumer.
+Au lieu de vérifier manuellement votre solde toutes les heures (ce qui fait référence au polling), vous recevez des mises à jour en direct, au fur et à mesure qu'elles se produisent. Cela rend les webhooks beaucoup plus efficaces pour le fournisseur et le consommateur.
 
-A webhook is made of two things:
+Un webhook est composé de 2 éléments :
 
-- An HTTP endpoint: the address to which the update or request should be sent
-- Data: Information about the update, which can be GET parameters or a POST body request
+- Un endpoint HTTP : l'adresse à laquelle la mise à jour ou la requête doit être envoyée
+- Le payload : Informations à propos de l'évènement, qui peuvent être des paramètres GET ou le body d'une requête POST
 
-Applications like [Twilio](https://www.twilio.com/) or [IFTT](https://ifttt.com/) are primarily based on webhooks to work.
+Des applications telles que [Twilio](https://www.twilio.com/) ou [IFTT](https://ifttt.com/) sont principalement basées sur des webhooks pour fonctionner.
 
-## Benefits of using webhooks
+## Avantages des webhooks
 
-- Easily integrate third-party services
-- Avoid unnecessarily fetching data
+- Intégrer facilement des applications tierces avec son application
+- Éviter d'effectuer inutilement des requêtes régulièrement

@@ -9,7 +9,7 @@ relatedTerms: ['message-broker-message-queue', 'webhook']
 
 The Pub/Sub or Publish/Subscribe messaging pattern is like a stock market: publishers are investors selling stocks at a certain price and subscribers are people looking at ask prices and their evolution throughout time.
 
-It is a form of asynchronous messaging service, which moves messages from producers to consumers.
+It is a form of asynchronous messaging service, which moves messages from publishers to subscribers.
 
 Thus, the Pub/Sub messaging pattern is made of 4 things:
 
