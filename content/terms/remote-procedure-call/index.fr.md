@@ -1,6 +1,6 @@
 ---
-title: 'What is Remote Procedure Call or RPC?'
-description: 'Remote procedure call is like outsourcing a task to someone else and use the result to your own end.'
+title: "Qu'est-ce que le Remote procedure call ou RPC ?"
+description: "Un Remote procedure call revient à sous-traiter une tâche à quelqu'un d'autre et à utiliser le résultat à votre propre fin."
 name: 'Remote procedure call'
 shortName: 'RPC'
 summary: ''
@@ -8,30 +8,30 @@ keywords: ['Remote procedure call', 'rpc', 'communication']
 relatedTerms: ['service-proxy', 'microservice-architecture']
 ---
 
-Remote procedure call, also known as RPC, is like organizing a dinner and calling your bakery for some bread: you're asking for the result (some bread) of a request performed by a remote service (the bakery) for your dinner (application) to work as expected.
+Remote procedure call, aussi appelé RPC, est similaire au fait d'organiser un dîner et de faire appel à une boulangerie pour du pain : vous souhaitez le résultat (du pain) d'une requête réalisée par un élément extérieur (la boulangerie) pour votre dîner (application) pour qu'il se passe comme prévu.
 
-RPC is a transportation protocol used to make distributed services talk and work with each others. In a [microservices-oriented architecture](#microservice-architecture 'What is a Microservice architecture?'), the business logic is divided in independent services. If a service needs another service to perform some action or retrieve some information, it can us RPC to communicate with it.
+RPC est un protocole réseau utilisé pour permettre à des services distribués de disucter et fonctionner ensemble. Dans une [architecture orientée microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?"), la logique est réparti dans différents services autonomes indépendants. Si un service nécessite le résultat d'un autre service pour réaliser une action ou récupérer certaines informations, il peut utiliser RPC pour communiquer avec lui.
 
 ## RPC vs SOAP vs REST vs GraphQL
 
-RPC can be compared to GraphQL, Rest APIs or SOAP which serve the same purpose: making it easy for services to communicate. However, they all have their differences and were created to solve different problems:
+RPC peut être comparé à GraphQL, une API Rest ou encore SOAP qui servent le même but : rendre la communication entre services distribués possible. Cependant, ils possèdent des différences et ont été créés pour répondre à des problématiques différentes :
 
-- RPC: Created in the late 1960s, it was a response to the early distributing computing issues engineers were facing at that time. It allows services to call functions on other servers.
-- SOAP: Designed by Microsoft in 1998, it is a messaging protocol based on XML and most often HTTP requests.
-- REST: Introduced by Roy Fielding in 2000, it is a lightweight alternative to SOAP which defines resources you can interact with using HTTP requests and different methods (GET, POST, etc.).
-- GraphQL: Created internally at Facebook in 2012, it allows clients to ask for exactly what they want using queries based on a schema exposed by the server.
+- RPC : Créé à la fin des années 60, c'était une réponse aux défis d'architectures distribuées que rencontraient des ingénieurs à cette époque. Il permet à des services d'exécuter des fonctions d'autres services à distance.
+- SOAP : Conçu par Microsoft en 1998, c'est un protocole de communication basé sur le XML et dans la plupart des cas des requêtes HTTP.
+- REST : Introduit par Roy Fielding en 2000, c'est une alternative plus légère que SOAP qui définit des ressources avec lesquelles on interagit en utilisant des requêtes HTTP et différents verbes (GET, POST, etc.).
+- GraphQL : Créé par Facebook pour répondre à leurs besoins internes en 2012, il permet à des clients de demander exactement ce dont ils ont besoin à l'aide de requêtes basées sur un schéma exposé par le serveur.
 
-## Benefits of using RPC
+## Avantages du RPC
 
-- Simple interactions
-- Action oriented (calling a remote function)
-- Lightweight payloads
-- High performance
+- Interactions simples
+- Orienté autour d'actions (appel d'une fonction distante)
+- Payload légé
+- Hautes performances
 
-One of the prominent RPC framework is [gRPC](https://grpc.io/). Developed by Google, it supports a lot of programming languages, uses http/2 and has additional features like auth, [tracing](#tracing 'What is Tracing?') and [load balancing](#load-balancer 'What is a Load balancer?').
+L'un des principaux frameworks RPC est [gRPC](https://grpc.io/). Développé par Google, il supporte de nombreux langages de programmation, utilise http/2 et dispose de fonctionnalités telles que l'authentification, le [tracing](#tracing "Qu'est-ce que le Tracing ?") ou encore le [load balancing](#load-balancer "Qu'est-ce qu'un Load balancer ?").
 
-## Digging deeper into RPC
+## Aller plus loin avec RPC
 
-- Watch [Nate Barbettini compare RPC, REST and GraphQL](https://www.youtube.com/watch?v=IvsANO0qZEg)
-- Learn [how to create scalable microservices using gRPC](https://www.bugsnag.com/blog/grpc-and-microservices-architecture) as a communication layer
-- Watch how you can [generate unified APIs with gRPC](https://www.infoq.com/presentations/api-pb-grpc/) and protocol buffers at Lyft
+- Regarder [la comparaison de Nate Barbettini de RPC, REST et GraphQL](https://www.youtube.com/watch?v=IvsANO0qZEg)
+- Comprendre [comment créer des microservices scalables avec gRPC](https://www.bugsnag.com/blog/grpc-and-microservices-architecture) comme protocole de communication
+- Regarder comment vous pouvez [générer des APIs unifiées avec gRPC](https://www.infoq.com/presentations/api-pb-grpc/) et les protocol buffers chez Lyft

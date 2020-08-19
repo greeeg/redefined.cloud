@@ -1,21 +1,21 @@
 ---
-title: 'What is a Serverless function or Lambda function?'
-description: 'A Serverless function is a block of code triggered on incoming requests which executes application logic.'
+title: "Qu'est-ce qu'une fonction Serverless ou fonction Lambda ?"
+description: 'Une fonction Serverless est un bloc de code déclenché lors de requêtes entrantes qui exécute une logique applicative.'
 name: 'Serverless function'
 summary: ''
 keywords: ['serverless', 'serverless function', 'lambda function']
 relatedTerms: ['serverless', 'api-gateway-server-proxy']
 ---
 
-Serverless functions are one of the most developed way of using the [serverless paradigm](#serverless 'What is Serverless?'). They consist of small and autonomous pieces of code that can be scaled up or down depending on incoming requests.
+Les fonctions Serverless sont un des moyens les plus développés pour tirer parti du [paradigme Serverless](#serverless "Qu'est-ce que le Serverless ?"). Elles consistent en de petites entités autonomes de code qui peuvent être montées à l'échelle en fonction du nombre de requêtes/évènements entrants.
 
-Serverless functions can be considered as [microservices](#microservice-architecture 'What is a Microservice architecture?'), as opposed to [monoliths](#monolith-architecture 'What is a Monolith architecture?').
+Les fonctions Serverless peuvent être considérées comme des [microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?"), en opposition aux [monolithes](#monolith-architecture "Qu'est-ce qu'une architecture monolithique ?").
 
-They are triggered by events, which can be:
+Elles sont déclenchées par des évènements qui peuvent être :
 
-- HTTP requests
-- Event (File upload, DB insert, etc.)
+- Des requêtes HTTP
+- Des évènements (mise en ligne d'un fichier, insertion en base de données, etc.)
 
-Serverless functions are particularly effective for heavy processing. Indeed, instead of paying for a large server which only runs at full capacity for five hours a month, you can setup a function which would only run at that time, being more cost-effective.
+Les fonctions Serverless sont particulièrement efficaces pour du traitement lourd ponctuel ou de petites logiques applicatives. En effet, au lieu de payer pour un serveur aux ressources importantes utilisées uniquement quelques heures par mois, vous pouvez mettre en place une fonction qui ne s'exécutera que lorsque nécessaire, limitant ainsi vos coûts par rapport à vos besoins.
 
-Famous serverless function providers are AWS Lambda, GCP Cloud functions or Azure functions.
+Des providers cloud importants disposant de fonctions Serverless sont par exemple AWS Lambda, GCP Cloud functions ou Azure functions.

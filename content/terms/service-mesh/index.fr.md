@@ -1,6 +1,6 @@
 ---
-title: 'What is a Service mesh?'
-description: 'A Service mesh is a tool to standardize service-to-service communication in a secure and application-code decoupled way.'
+title: "Qu'est-ce qu'un Service mesh ?"
+description: 'Un Service mesh est un outil permettant de standardiser la communication de service à service de manière sécurisée et découplée du code applicatif.'
 name: 'Service mesh'
 summary: ''
 keywords: ['service mesh']
@@ -13,39 +13,39 @@ relatedTerms:
   ]
 ---
 
-Let's imagine two groups of friends organizing a birthday party for a friend, Lisa. They all play a role in organizing this party (buying balloons, cooking the cake, bringing candles, etc.).
+Imaginons deux groupes d'amis organisant une fête d'anniversaire pour une amie, Lisa. Ils jouent tous un rôle dans l'organisation de cette fête (acheter des ballons, préparer le gâteau, apporter des bougies, etc.).
 
-The first group of friends is made of people which are very different from each other and like to work in different ways. John texts Melissa for news while Jane prefers to call Martin to prepare their trip to the supermarket, and Bob likes to talk in real life. At any given time, it's really hard for all of them to know what's going on and to know if everything is gonna be ready for the party.
+Le premier groupe d'amis est composé de personnes très différentes les unes des autres qui apprécient travailler de différentes manières. John envoie un texto à Melissa pour des nouvelles tandis que Jane préfère appeler Martin pour préparer leur visite au supermarché, et Bob aime parler de vive voix. À tout moment, il est vraiment difficile pour eux de savoir ce qui se passe et de savoir si tout va être prêt pour la fête.
 
-On the other hand, we have a highly effective and team-spirit group of friends. They all talk using the same messaging app. They set up a group with different channels for different things to do and added an app to all channels to track their progress.
+D'un autre côté, nous avons un groupe d'amis très efficaces et dotés d'un esprit d'équipe. Ils parlent tous en utilisant la même application de messagerie. Ils ont créé un groupe avec différents canaux pour différentes choses à faire et ont ajouté une application à tous les canaux pour suivre leurs progrès.
 
-In this story, the second group of friends is running a [microservice-oriented architecture](#microservice-architecture 'What is Microservice architecture?') using a service mesh. The first one isn't.
+Dans cette histoire, le deuxième groupe d'amis dispose d'une [architecture orientée microservice](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?") qui utilise un service mesh. L'autre non.
 
-## Making microservices talk to each other
+## Faire communiquer efficacement des microservices
 
-A service mesh is basically a tool to help microservices talk to each other in a standardised, secure and application-code decoupled way, including:
+Un Service mesh est tout simplement un outil permettant à plusieurs microservices de discuter entre eux de manière standardisée, sécurisée sans introduire de logique spécifique dans le code, avec pour fonctionnalités principales :
 
-- Security features: TLS, access-control, request limiting
-- Reliability features: retries, timeouts, canary releases
-- Observability features: volumes, latencies, success rates
+- Sécurité : TLS, contrôle d'accès, limitation du nombre de requêtes
+- Fiabilité : retries, timeouts, canary releases
+- Observability : volumes, latences, taux de réussite
 
-This tool is made of two principal parts:
+Cet outil est composé de deux éléments principaux :
 
-- Proxy sidecars next to each service, forming the data plane (each messaging app on each people's phones)
-- Control plane, to access the outside world and monitor all services (the group on the messaging service)
+- Proxy sidecars attachés à chaque service, formant ainsi un data plane (chaque application de messagerie sur chaque téléphone dans notre exemple)
+- Control plane, permettant d'accéder au monde extérieur et de monitorer l'ensemble des services (le groupe de discussion entre les personnes)
 
-One major benefit of using a service mesh is that you enforce security and observability by design. Because all friends of the second group are using the same messaging app and communicate in the same way between each other, it's really easy to track goals and understand what's going on.
+L'un des principaux avantages liés à l'utilisation d'un service mesh est la mise en place, by default, de mesures de sécurité et d'observabilité dès la conception. Parce que tous les amis du deuxième groupe utilisent la même application de messagerie et communiquent de la même manière entre eux, il est très facile de suivre les objectifs et de comprendre ce qui se passe.
 
-With the first group, you would have to have a way of tracking things for each communication type (text, call, IRL). It would be harder for you to make sure this party is a surprise until the day comes, because you would have to check all communication tools used, instead of one.
+Avec le premier groupe, vous devriez avoir un moyen de suivre les choses pour chaque type de communication (texte, appel, IRL). Il serait plus difficile pour vous de vous assurer que cette fête est une surprise jusqu'au jour venu, car vous auriez à vérifier tous les outils de communication utilisés, au lieu d'un seul.
 
-Service mesh is mainly (and maybe only) used in a [containarized services](#containers-and-docker 'What is a Container and Docker?') oriented architecture.
+Les services mesh sont principalement (et peut-être même uniquement) utilisés dans des architecture composées de [services containerisés](#containers-and-docker "Qu'est-ce qu'un container et Docker ?").
 
-## Benefits of using a Service mesh
+## Avantages d'un Service mesh
 
-- Standardize and secure how services communicate between each others
-- Observability and reliability out of the box
+- Standardiser et sécuriser la manière dont plusieurs services communiquent entre eux
+- Bénéficier d'une fiabilité et de principes d'observability sans effort
 
-## Examples of Service mesh
+## Exemples de Service mesh
 
 - [Istio](https://istio.io/)
 - [Consul](https://www.consul.io/)

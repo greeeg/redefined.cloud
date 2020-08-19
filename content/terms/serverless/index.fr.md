@@ -1,6 +1,6 @@
 ---
-title: 'What is Serverless?'
-description: 'Serverless is like renting coworking space instead of renting a building.'
+title: "Qu'est-ce que le Serverless ?"
+description: 'Le Serverless est similaire au fait de louer un bureau dans un espace de co-working au lieu de locaux entiers.'
 name: 'Serverless'
 summary: ''
 keywords: ['serverless']
@@ -12,22 +12,22 @@ relatedTerms:
   ]
 ---
 
-Serverless is like renting coworking space instead of renting a building. In both cases, you're still renting office space (compute power), the only difference is that with a coworking space, you don't have to manage desks, floors, buying new buildings, etc, you just rent as much space as needed depending on how many employees you have.
+Le Serverless est similaire au fait de louer un bureau dans un espace de co-working au lieu de locaux entiers. Dans les deux cas, vous louez un espace de travail (puissance de calcul), la seule différence étant qu'avec un espace de co-working, vous n'avez pas à gérer de bureaux, d'étages, acheter un bâtiment, etc, vous ne faîtes que louer tout l'espace dont vous avez besoin en fonction du nombre de collaborateurs dont vous disposez.
 
-With serverless, you do not interact directly with servers, which are physical computers in a datacenter. Instead, you let your cloud provider manage the resources (computing power) needed to run your application, depending on:
+Avec le Serverless, vous n'interagissez pas directement avec des serveurs, qui sont des machines physiques dans un datacenter. À la place, vous laissez le soin à votre cloud provider de déterminer les ressources (puissance de calcul) dont votre application a besoin, en fonction de :
 
-- Traffic
-- Location
-- Needs
+- Trafic
+- Localisation de vos utilisateurs
+- Besoins (CPU, RAM, etc.)
 
-Serverless can dramatically simplify how you deploy your code to production. Indeed, you do not need anymore to plan for scaling, computing capacity, etc.
+Le Serverless peut grandement simplifier la manière dont vous déployez votre code en production. En effet, vous n'avez plus besoin de prévoir la montée en charge, les capacités serveur, etc.
 
-The only downside with serverless is that you need to make sure your application doesn't depend on some local state on the current server (sessions, cache, etc).
+Le seul point important à prendre en compte avec le Serverless est que votre application ne doit pas dépendre d'un état local qui n'existerait que sur la machine sur lequel le code est exécuté (session, cache, etc.).
 
-Serverless should not be confused with [microservices](#microservice-architecture 'What is a Microservice architecture?'). Both are generally associated but you can run a monolith application in a serverless way.
+Le Serverless ne doit pas être confondu avec les [microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?"). Les deux sont généralement associés mais il est tout à fait possible d'exécuter une application monolithique dans un contexte serverless.
 
-## Benefits of using serverless
+## Avantages du Serverless
 
-- Easy to grow and scale
-- High availability
-- Only pay for servers actually being used (not charged when your serverless code is not running)
+- Montée en charge simple
+- Haute disponibilité
+- Vous ne payez que pour le temps d'exécution de votre code (pas de frais lorsqu'il n'y a pas d'activité)

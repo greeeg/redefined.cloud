@@ -1,6 +1,6 @@
 ---
-title: 'What is Service level objective or SLO?'
-description: 'A Service level objective is a metric used to define a Service level agreement.'
+title: "QU'est-ce qu'un Service level objective ou SLO ?"
+description: 'Un Service level objective est une mesure utilisée pour déterminer un Service level agreement.'
 name: 'Service level objective'
 shortName: 'SLO'
 summary: ''
@@ -8,6 +8,6 @@ keywords: ['service level objective', 'slo']
 relatedTerms: ['service-level-agreement', 'monitoring', 'observability']
 ---
 
-SLO stands for service level objective. These objectives make a huge part of [Service Level Agreements (SLA)](#service-level-agreement 'What is a Service level agreement?') between cloud providers and their customers. They are usually metrics like availability, response time or latency.
+SLO est l'acronyme de service level objective. Ces objectives représentent une grande partie des [Service Level Agreements (SLA)](#service-level-agreement "Qu'est-ce qu'un Service level agreement ?") entre providers cloud et leurs clients. Ils représentent généralement des mesure telles que la disponibilité, le temps de réponse moyen ou la latence.
 
-For example, one SLO of a cloud computing service might be that over a month, 99.9% of object storage PUT requests will complete in less than a second.
+Par exemple, un SLO d'un provider cloud pourrait être d'assurer que chaque mois, 99.9% des requêtes PUT vers son service d'object storage sont traitées en moins d'une seconde.

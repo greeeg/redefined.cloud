@@ -1,6 +1,6 @@
 ---
-title: 'What is Service Registry and Service Discovery?'
-description: 'Service registry is a way to list available services, their instances and locations, like a phone number you would use to locate a pizza truck in a city.'
+title: "Qu'est-ce qu'un Service registry et le Service discovery ?"
+description: 'Le Service registry est un moyen de lister les services disponibles, leurs instances et localisations, tel un numéro de téléphone que vous utiliseriez pour localiser un camion de pizzas qui se déplace en ville.'
 name: 'Service registry/discovery'
 summary: ''
 keywords: ['service registry', 'service discovery']

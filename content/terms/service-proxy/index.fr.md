@@ -1,6 +1,6 @@
 ---
-title: 'What is a Service proxy?'
-description: 'A service proxy is like a gatekeeper between a service and incoming requests.'
+title: "Qu'est-ce qu'un Service proxy ?"
+description: 'Un Service proxy agit comme un agent de contrôle entre un service et les requêtes entrantes.'
 name: 'Service proxy'
 summary: ''
 keywords: ['service proxy', 'microservices']
@@ -12,26 +12,26 @@ relatedTerms:
   ]
 ---
 
-A service proxy is like a gatekeeper between a service and incoming requests. Instead of directly receiving requests from the outside, services receive request from their proxy.
+Un Service proxy agit comme un agent de contrôle entre un service et les requêtes entrantes. Au lieu de recevoir directement les requêtes venant de l'extérieur, les services concernés les reçoivent de leur proxy.
 
-A service proxy acts as an intermediary, with the ability to perform additional tasks for the service like:
+Un Service proxy agit comme un intermédiaire, avec la capacité d'effectuer des tâches additionnelles pour le service telles que :
 
 - Load balancing
-- Security
-- Caching
-- and more.
+- Sécurité
+- Mise en cache
+- et bien plus
 
-In a distributed architecture like [microservices](#microservice-architecture 'What is a Microservice architecture?'), some of the biggest challenges are how services communicate and how to improve observability. Service proxies improve the way services communicate in a controlled and standardized way.
+Dans une architecture distribuée telle q'une composée de [microservices](#microservice-architecture "Qu'est-ce qu'une architecture orientée microservices ?"), certains des défis les plus importants sont liés à la manière dont plusieurs services communiquent entre eux et comment améliorer l'observability de l'ensemble. Les Service proxies améliorent la manière dont les services communiquent entre eux de manière contrôlée et standardisée.
 
-## Benefits of using a Service proxy
+## Avantages d'un Service proxy
 
-- Granularity
-- Traffic management
+- Granularité
+- Gestion du trafic
 - Service discovery
 - Monitoring & Analytics
-- Security
+- Sécurité
 
-## Examples of Service proxy
+## Exemples de Service proxy
 
 - [Envoy Proxy](https://www.envoyproxy.io/)
 - [NGINX](https://www.nginx.com/)

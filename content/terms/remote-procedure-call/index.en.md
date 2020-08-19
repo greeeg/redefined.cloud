@@ -18,7 +18,7 @@ RPC can be compared to GraphQL, Rest APIs or SOAP which serve the same purpose: 
 
 - RPC: Created in the late 1960s, it was a response to the early distributing computing issues engineers were facing at that time. It allows services to call functions on other servers.
 - SOAP: Designed by Microsoft in 1998, it is a messaging protocol based on XML and most often HTTP requests.
-- REST: Introduced by Roy Fielding in 2000, it is a lightweight alternative to SOAP which defines resources you can interact with using HTTP requests and different methods (GET, POST, etc.).
+- REST: Introduced by Roy Fielding in 2000, it is a lightweight alternative to SOAP which defines resources you can interact with using HTTP requests and different verbs (GET, POST, etc.).
 - GraphQL: Created internally at Facebook in 2012, it allows clients to ask for exactly what they want using queries based on a schema exposed by the server.
 
 ## Benefits of using RPC
