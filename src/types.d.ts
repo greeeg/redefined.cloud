@@ -18,6 +18,7 @@ export type TermAttributes = {
 export type TermPage = {
   attributes: TermAttributes;
   content: string;
+  languages: Language[];
 };
 
 export type PostAttributes = {
@@ -30,4 +31,5 @@ export type PostAttributes = {
 export type PostPage = {
   attributes: PostAttributes;
   content: string;
+  languages: Language[];
 };

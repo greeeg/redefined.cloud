@@ -6,7 +6,15 @@
         <priority>1</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr</loc>
+        <priority>1</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/about</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/about</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -14,7 +22,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/list</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/terms-and-privacy</loc>
+        <priority>0.25</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/terms-and-privacy</loc>
         <priority>0.25</priority>
       </url>
       <url>
@@ -22,7 +38,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/api-gateway-server-proxy</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/baremetal-server</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/baremetal-server</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -30,7 +54,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/chaos-engineering</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/cloud-provisioning</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/cloud-provisioning</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -38,7 +70,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/container-orchestration-and-kubernetes</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/container-registry</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/container-registry</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -46,7 +86,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/containers-and-docker</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/content-delivery-network</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/content-delivery-network</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -54,7 +102,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/continuous-delivery</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/continuous-integration</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/continuous-integration</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -62,7 +118,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/cron-job</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/domain-name-system</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/domain-name-system</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -70,7 +134,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/in-memory-database</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/load-balancer</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/load-balancer</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -78,7 +150,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/logging</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/message-broker-message-queue</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/message-broker-message-queue</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -86,7 +166,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/microservice-architecture</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/monitoring</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/monitoring</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -94,7 +182,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/monolith-architecture</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/non-relational-database</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/non-relational-database</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -102,7 +198,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/object-storage</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/observability</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/observability</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -110,7 +214,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/profiling</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/pub-sub</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/pub-sub</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -118,7 +230,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/relational-database</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/remote-procedure-call</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/remote-procedure-call</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -126,7 +246,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/serverless</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/serverless-function</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/serverless-function</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -134,7 +262,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/service-level-agreement</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/service-level-objective</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/service-level-objective</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -142,7 +278,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/service-mesh</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/service-proxy</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/service-proxy</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -150,7 +294,15 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/service-registry-service-discovery</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/tracing</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/tracing</loc>
         <priority>0.75</priority>
       </url>
       <url>
@@ -158,11 +310,23 @@
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/virtual-machine</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/webhook</loc>
         <priority>0.75</priority>
       </url>
       <url>
+        <loc>https://redefined.cloud/fr/webhook</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
         <loc>https://redefined.cloud/en/posts/monitoring-explained-differences-logging-tracing-profiling</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/posts/monitoring-explained-differences-logging-tracing-profiling</loc>
         <priority>0.75</priority>
       </url>
     </urlset>

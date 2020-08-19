@@ -1,8 +1,13 @@
 import React, { FC, createContext, useContext, useMemo } from 'react';
 import { useRouter } from 'next/router';
 
-export type Language = 'en';
+export type Language = 'en' | 'fr';
 export type Phrases = Record<string, string>;
+
+export const languageLabelMapping: Record<Language, string> = {
+  en: 'English',
+  fr: 'Français',
+};
 
 interface I18nProviderProps {
   phrases: Partial<Record<Language, Phrases>>;
@@ -73,4 +78,6 @@ const i18n = (languages: Language[]) => {
   };
 };
 
-export default i18n(['en']);
+export const SUPPORTED_LANGUAGES: Language[] = ['en', 'fr'];
+
+export default i18n(SUPPORTED_LANGUAGES);

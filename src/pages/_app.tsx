@@ -6,6 +6,7 @@ import i18n from '@/utils/i18n';
 import { theme, GlobalStyles } from '@/theme';
 import '@reach/menu-button/styles.css';
 import en from '../../content/locales/en.json';
+import fr from '../../content/locales/fr.json';
 
 import 'focus-visible';
 
@@ -21,6 +22,7 @@ export default class MyApp extends App {
         <I18nProvider
           phrases={{
             en,
+            fr,
           }}
         >
           <Component {...pageProps} />

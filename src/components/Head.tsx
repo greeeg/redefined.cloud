@@ -10,6 +10,7 @@ interface HeadProps {
   canonical?: string;
   ogImage?: string;
   twitterImage?: string;
+  alternate?: Array<{ lang: string; url: string }>;
 }
 
 export const Head: FC<HeadProps> = ({
@@ -17,6 +18,7 @@ export const Head: FC<HeadProps> = ({
   titleTemplate = '%s - Redefined.cloud',
   description,
   canonical,
+  alternate,
   ogImage = '/assets/social-facebook.jpg',
   twitterImage = '/assets/social-twitter.jpg',
 }) => {
@@ -35,6 +37,16 @@ export const Head: FC<HeadProps> = ({
           key="canonical"
         />
       )}
+
+      {alternate &&
+        alternate.map((link) => (
+          <link
+            key={link.lang}
+            rel="alternate"
+            hrefLang={link.lang}
+            href={`${process.env.NEXT_PUBLIC_BASE_URL}${link.url}`}
+          />
+        ))}
 
       <meta itemProp="name" key="itemProp:name" content={renderedTitle} />
       <meta

@@ -14,7 +14,7 @@ Instead of manually checking your balance every hour (which refers to polling), 
 A webhook is made of two things:
 
 - An HTTP endpoint: the address to which the update or request should be sent
-- Data: Information about the update, which can be GET parameters or a POST body request
+- A payload: Information about the update, which can be GET parameters or a POST body request
 
 Applications like [Twilio](https://www.twilio.com/) or [IFTT](https://ifttt.com/) are primarily based on webhooks to work.
 

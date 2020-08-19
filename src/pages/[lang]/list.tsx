@@ -4,18 +4,22 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Layout } from '@/components/Layout';
-import i18n, { Language } from '@/utils/i18n';
+import i18n, { Language, SUPPORTED_LANGUAGES } from '@/utils/i18n';
 import { getTerms } from '@/utils/terms';
 import { Head } from '@/components/Head';
 import { Box, Heading, Stack, Text } from '@/components/primitives';
 import { TermAttributes } from '@/types';
 
-interface ListProps {
+interface ListPageProps {
+  lang: Language;
+  alternate: Language[];
   terms: TermAttributes[];
 }
 
 const TermItem = styled(Box)`
   a {
+    display: block;
+
     &:hover {
       cursor: pointer;
 
@@ -26,8 +30,7 @@ const TermItem = styled(Box)`
   }
 `;
 
-const List: NextPage<ListProps> = ({ terms }) => {
-  const { lang } = i18n.useI18n();
+const List: NextPage<ListPageProps> = ({ lang, alternate, terms }) => {
   const t = i18n.useT();
 
   return (
@@ -36,6 +39,10 @@ const List: NextPage<ListProps> = ({ terms }) => {
         title={t('list:head:title')}
         description={t('list:head:description')}
         canonical={`/${lang}/list`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}/list`,
+        }))}
       />
 
       <Box
@@ -63,43 +70,48 @@ const List: NextPage<ListProps> = ({ terms }) => {
             as="ul"
             spacing={['spacing200', 'spacing400', 'spacing600']}
           >
-            {terms.map((term, index) => {
-              return (
-                <TermItem as="li" key={term.slug}>
-                  <Link href="/[lang]/[term]" as={`/${lang}/${term.slug}`}>
-                    <a title={term.title}>
-                      <Stack direction="column" spacing="spacing100">
-                        <Stack direction="column" spacing="spacing60">
-                          <Heading
-                            as="h3"
-                            fontSize={['size200', 'size300', 'size400']}
-                            maxWidth={630}
+            {terms
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((term, index) => {
+                return (
+                  <TermItem as="li" key={term.slug}>
+                    <Link href="/[lang]/[term]" as={`/${lang}/${term.slug}`}>
+                      <a title={term.title}>
+                        <Stack direction="column" spacing="spacing100">
+                          <Stack direction="column" spacing="spacing60">
+                            <Heading
+                              as="h3"
+                              fontSize={['size200', 'size300', 'size400']}
+                              maxWidth={630}
+                            >
+                              {term.name}
+                            </Heading>
+                          </Stack>
+
+                          <Text
+                            fontSize={['size100', 'size200']}
+                            maxWidth={530}
                           >
-                            {term.name}
-                          </Heading>
+                            {term.description}
+                          </Text>
+
+                          {index !== terms.length - 1 && (
+                            <Box
+                              paddingTop={[
+                                'spacing60',
+                                'spacing200',
+                                'spacing300',
+                              ]}
+                              borderBottom="1px solid"
+                              borderColor="gray300"
+                            />
+                          )}
                         </Stack>
-
-                        <Text fontSize={['size100', 'size200']} maxWidth={530}>
-                          {term.description}
-                        </Text>
-
-                        {index !== terms.length - 1 && (
-                          <Box
-                            paddingTop={[
-                              'spacing60',
-                              'spacing200',
-                              'spacing300',
-                            ]}
-                            borderBottom="1px solid"
-                            borderColor="gray300"
-                          />
-                        )}
-                      </Stack>
-                    </a>
-                  </Link>
-                </TermItem>
-              );
-            })}
+                      </a>
+                    </Link>
+                  </TermItem>
+                );
+              })}
           </Stack>
         </Box>
       </Box>
@@ -112,16 +124,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: i18n.getI18nStaticPaths([
       {
         en: {},
+        fr: {},
       },
     ]),
     fallback: false,
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const terms = getTerms(params.lang as Language);
+export const getStaticProps: GetStaticProps<
+  unknown,
+  { lang: Language }
+> = async ({ params }) => {
+  const terms = getTerms(params.lang);
+
   return {
-    props: { ...params, terms },
+    props: {
+      terms,
+      lang: params.lang,
+      alternate: SUPPORTED_LANGUAGES.filter((lang) => lang !== params.lang),
+    },
   };
 };
 

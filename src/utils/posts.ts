@@ -91,21 +91,29 @@ export const getPostPage = ({
   post: string;
 }): PostPage | null => {
   const fileName = `index.${lang}.md`;
-  const filePath = path.resolve(
+  const postsDirectory = path.resolve(
     __filename,
     '..',
     '..',
     'content',
     'posts',
-    post,
-    fileName
+    post
   );
 
   try {
-    const data = readFileSync(path.join('.', filePath), 'utf8');
+    const languages = [];
+    readdirSync(path.join('.', postsDirectory)).forEach((file) => {
+      const regex = /index.([a-z-]+).md/g;
+      const [_, lang] = regex.exec(file) ?? ['', ''];
+      languages.push(lang);
+    });
+
+    const data = readFileSync(path.join('.', postsDirectory, fileName), 'utf8');
     const { content, data: attributes } = matter(data);
+
     return {
       content,
+      languages,
       attributes: {
         ...attributes,
         slug: post,

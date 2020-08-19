@@ -12,14 +12,14 @@ From this starting point, we should be able to agree that monitoring is importan
 
 - Issues will arise, even with the best applications built by the best engineers
 - With distributed systems come distributed failures, which can be devastating when not prepared for and no way to tell where they come from
-- It contributes to transparancy and accountability
+- It contributes to transparency and accountability
 - It reveals mistakes early and offers paths for learning and improvements
 
 With all that said, where should we start and what are the differences between Logging, Tracing and Profiling which are essential parts of how we monitor and create observability into systems?
 
 ## Logging: taking notes of things happening into a system
 
-Let's start by the most straightforward way of understanding how a system behaves : logs.
+Let's start by the most straightforward way of understanding how a system behaves: logs.
 
 A log is a record of events that happened over time: a screenshot of something with an associated timestamp.
 
@@ -29,21 +29,21 @@ A list of logs displayed in Datadog
 
 A flight manifest is a good example of that principle: we log all passengers and crew members before departing so we know who is in all flying aircrafts at any given time.
 
-In the context of cloud applications, logging can be used to save information about requests (duration, status code, userId), database queries, load balancer usage and more. It gives you precious details when bugs arise to determine the root cause of an outage or performance issue.
+In the context of cloud applications, [logging](#logging 'What is Logging?') can be used to save information about requests (duration, status code, userId), database queries, load balancer usage and more. It gives you precious details when bugs arise to determine the root cause of an outage or performance issue.
 
 While logging everything is tempting, this strategy can be really expensive and ineffective. You need to find the right balance between logging everything and nothing to gain enough context for it to be useful.
 
 Logging consists of multiple steps:
 
-- Collecting & Ingesting: When you generate logs in different services, you need a central place where to send them.
-- Processing: Ingested logs are enriched with metadata & attributes for future use.
-- Indexing: Logs are segmented into groups to generate metrics, patterns and dashboards.
+- Collecting & Ingesting: when you generate logs in different services, you need a central place where to send them
+- Processing: ingested logs are enriched with metadata & attributes for future use
+- Indexing: logs are segmented into groups to generate metrics, patterns and dashboards
 
 With tools like the [ELK stack](https://www.elastic.co/what-is/elk-stack), [Datadog](https://docs.datadoghq.com/logs/) or [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), you can generate powerful insights from huge amounts of logs coming from hundreds of different services.
 
 ### Digging deeper into Logging
 
-- Learn more about [the Elastic stack](https://logz.io/learn/complete-guide-elk-stack/#intro) to collect, aggregate & analyzie logs using Elasticsearch, Logstash and Kibana
+- Learn more about [the Elastic stack](https://logz.io/learn/complete-guide-elk-stack/#intro) to collect, aggregate & analyze logs using Elasticsearch, Logstash and Kibana
 - See how AWS logging solution, [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_architecture.html), works
 - Read how you can use services like [Datadog](https://docs.datadoghq.com/logs/) to collect logs and use them to monitor your application
 
@@ -64,8 +64,8 @@ It helps discover performance bottlenecks quickly and find the cause of failures
 
 The result of Tracing can be visualized in two ways:
 
-- Traces: It looks like a flame graph with spans and their associated metadata
-- Service maps: It looks like a cloud of nodes and links between them to visualize the flow of requests
+- Traces: it looks like a flame graph with spans and their associated metadata
+- Service maps: it looks like a cloud of nodes and links between them to visualize the flow of requests
 
 ![A distributed trace using the ELK stack](/monitoring-explained/distributed-tracing.png)
 
@@ -73,7 +73,7 @@ A distributed trace using the ELK stack
 
 With tools like [Open Tracing](https://opentracing.io/), [AWS X-Ray](https://aws.amazon.com/xray/) or [Zipkin](https://zipkin.io/), you can create traces and service maps to provide richer and more relevant context when troubleshooting issues.
 
-### Digging deeper into Tracing:
+### Digging deeper into Tracing
 
 - Learn [how Uber uses distributed tracing](https://www.youtube.com/watch?v=EW9GjQNcyzI) to conquer microservices complexity
 - Watch [how Lyft integrated and now uses distributed tracing](https://www.youtube.com/watch?v=URCLeycMrhU)

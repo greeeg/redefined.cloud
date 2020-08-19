@@ -8,7 +8,7 @@ import { Layout } from '@/components/Layout';
 import { Markdown } from '@/components/Markdown';
 import { Box, Stack, Heading } from '@/components/primitives';
 import { Head } from '@/components/Head';
-import i18n from '@/utils/i18n';
+import i18n, { Language } from '@/utils/i18n';
 import {
   getFacebookShareLink,
   getTwitterShareLink,
@@ -34,8 +34,13 @@ const ShareLink = styled.a`
   }
 `;
 
-const Post: NextPage<{ content: PostPage }> = ({ content }) => {
-  const { lang } = i18n.useI18n();
+interface PostPageProps {
+  lang: Language;
+  alternate: Language[];
+  content: PostPage;
+}
+
+const Post: NextPage<PostPageProps> = ({ lang, alternate, content }) => {
   const t = i18n.useT();
 
   return (
@@ -44,6 +49,10 @@ const Post: NextPage<{ content: PostPage }> = ({ content }) => {
         title={content.attributes.title}
         description={content.attributes.description}
         canonical={`/${lang}/posts/${content.attributes.slug}`}
+        alternate={alternate.map((lang) => ({
+          lang,
+          url: `/${lang}/posts/${content.attributes.slug}`,
+        }))}
       />
 
       <Box
@@ -181,13 +190,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<
-  any,
-  { lang: string; post: string }
+  unknown,
+  { lang: Language; post: string }
 > = async (context) => {
   const {
     params: { lang, post },
   } = context;
-  return { props: { content: getPostPage({ lang, post }) } };
+  const postPage = getPostPage({ lang, post });
+  return {
+    props: {
+      lang,
+      content: postPage,
+      alternate: postPage.languages.filter((l) => l !== lang),
+    },
+  };
 };
 
 export default Post;
