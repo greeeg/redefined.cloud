@@ -26,6 +26,7 @@ export type PostAttributes = {
   title: string;
   description: string;
   tag: string;
+  date: string;
 };
 
 export type PostPage = {

@@ -2,6 +2,7 @@
 title: 'Monitoring explained: what is the difference between Logging, Tracing and Profiling?'
 description: 'Using the right tools for the right job in order to gain visibility into systems and services.'
 tag: 'Monitoring'
+date: '2020-06-08'
 ---
 
 While organizations and engineers are shifting to a new paradigm which changes the way we build and operate applications, the need of effective [monitoring](#monitoring 'What is monitoring?') and [observability](#observability 'What is observability?') is even more important to meet reliability objectives and user satisfaction.
@@ -23,7 +24,7 @@ Let's start by the most straightforward way of understanding how a system behave
 
 A log is a record of events that happened over time: a screenshot of something with an associated timestamp.
 
-![A list of logs displayed in Datadog](/monitoring-explained/datadog-logs.jpg)
+![A list of logs displayed in Datadog](/monitoring-explained-differences-logging-tracing-profiling/datadog-logs.jpg)
 
 A list of logs displayed in Datadog
 
@@ -67,7 +68,7 @@ The result of Tracing can be visualized in two ways:
 - Traces: it looks like a flame graph with spans and their associated metadata
 - Service maps: it looks like a cloud of nodes and links between them to visualize the flow of requests
 
-![A distributed trace using the ELK stack](/monitoring-explained/distributed-tracing.png)
+![A distributed trace using the ELK stack](/monitoring-explained-differences-logging-tracing-profiling/distributed-tracing.png)
 
 A distributed trace using the ELK stack
 
@@ -86,7 +87,7 @@ Profiling and metrics are the last piece of the monitoring puzzle. Together, the
 
 Software profiling helps you create profiles just like profilers in the police. But instead of catching bad guys, you want to catch bad performances.
 
-![Metrics displayed in Grafana using Prometheus](/monitoring-explained/metrics-and-profiling.png)
+![Metrics displayed in Grafana using Prometheus](/monitoring-explained-differences-logging-tracing-profiling/metrics-and-profiling.png)
 
 Metrics displayed in Grafana using Prometheus
 

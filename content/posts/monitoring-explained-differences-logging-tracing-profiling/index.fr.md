@@ -2,6 +2,7 @@
 title: 'Monitoring expliqué : quelle est la différence entre Logging, Tracing et Profiling?'
 description: 'Connaitre les outils à notre disposition afin de gagner en visiblité dans un système Cloud et nos différents services.'
 tag: 'Monitoring'
+date: '2020-06-08'
 ---
 
 Alors que beaucoup d'organisations et d'ingénieurs évoluent vers un nouveau paradigme qui change la façon dont nous concevons et exploitons des applications Cloud, le besoin d'un [monitoring](#monitoring "Qu'est-ce que le Monitoring Cloud ?") et d'une [observability](#observability "Qu'est-ce que l'observability ?") efficaces est encore plus important pour atteindre des objectifs de fiabilité et de satisfaction utilisateurs.
@@ -22,7 +23,7 @@ Commençons par la façon la plus simple de comprendre le comportement d'un syst
 
 Un log est un enregistrement d'événements se produisant au fil du temps : une capture d'écran de quelque chose associée à une date.
 
-![Une liste de logs affichés dans Datadog](/monitoring-explained/datadog-logs.jpg)
+![Une liste de logs affichés dans Datadog](/monitoring-explained-differences-logging-tracing-profiling/datadog-logs.jpg)
 
 Une liste de logs affichés dans Datadog
 
@@ -66,7 +67,7 @@ Le résultat produit par le Tracing peut être visualisé de deux manières :
 - Traces : cela ressemble à un flame graph avec des bandes et leurs métadonnées associées
 - Service maps : cela ressemble à un nuage de noeuds avec des liens symbolisant les flux de requêtes
 
-![Exemple d'une trace distribuée avec la ELK stack](/monitoring-explained/distributed-tracing.png)
+![Exemple d'une trace distribuée avec la ELK stack](/monitoring-explained-differences-logging-tracing-profiling/distributed-tracing.png)
 
 Exemple d'une trace distribuée avec la ELK stack
 
@@ -85,7 +86,7 @@ Le Profiling et les metrics sont les dernières pièces du puzzle du Monitoring.
 
 Le Profiling logiciel permet de créer des profils tout comme les profileurs dans la police. Au lieu de chasser des malfrats, il permet de mettre la main sur de mauvaises performances.
 
-![Des metrics affichée dans Grafana à l'aide de Prometheus](/monitoring-explained/metrics-and-profiling.png)
+![Des metrics affichée dans Grafana à l'aide de Prometheus](/monitoring-explained-differences-logging-tracing-profiling/metrics-and-profiling.png)
 
 Des metrics affichée dans Grafana à l'aide de Prometheus
 
