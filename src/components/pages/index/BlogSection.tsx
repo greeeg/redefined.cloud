@@ -48,48 +48,57 @@ export const BlogSection: FC<BlogSectionProps> = ({ posts }) => {
             </Box>
 
             <Stack direction="column" as="ul" spacing="spacing600">
-              {posts.map((post, index) => (
-                <Post as="li" key={index}>
-                  <Link
-                    href="/[lang]/posts/[post]"
-                    as={`/${lang}/posts/${post.slug}`}
-                  >
-                    <a title={post.title}>
-                      <Stack direction="column" spacing="spacing100">
-                        <Stack direction="column" spacing="spacing60">
-                          <Heading
-                            as="p"
-                            fontSize={['size80', 'size100']}
-                            color="yellow200"
+              {posts
+                .sort(
+                  (firstPost, secondPost) =>
+                    new Date(secondPost.date).getTime() -
+                    new Date(firstPost.date).getTime()
+                )
+                .map((post, index) => (
+                  <Post as="li" key={index}>
+                    <Link
+                      href="/[lang]/posts/[post]"
+                      as={`/${lang}/posts/${post.slug}`}
+                    >
+                      <a title={post.title}>
+                        <Stack direction="column" spacing="spacing100">
+                          <Stack direction="column" spacing="spacing60">
+                            <Heading
+                              as="p"
+                              fontSize={['size80', 'size100']}
+                              color="yellow200"
+                            >
+                              {post.tag}
+                            </Heading>
+                            <Heading
+                              as="h3"
+                              fontSize={['size200', 'size300', 'size400']}
+                              lineHeight={['lineHeight100', 'lineHeight80']}
+                              maxWidth={630}
+                            >
+                              {post.title}
+                            </Heading>
+                          </Stack>
+
+                          <Text
+                            fontSize={['size100', 'size200']}
+                            maxWidth={590}
                           >
-                            {post.tag}
-                          </Heading>
-                          <Heading
-                            as="h3"
-                            fontSize={['size200', 'size300', 'size400']}
-                            lineHeight={['lineHeight100', 'lineHeight80']}
-                            maxWidth={630}
-                          >
-                            {post.title}
-                          </Heading>
+                            {post.description}
+                          </Text>
+
+                          {index !== posts.length - 1 && (
+                            <Box
+                              paddingTop="spacing300"
+                              borderBottom="1px solid"
+                              borderColor="gray300"
+                            />
+                          )}
                         </Stack>
-
-                        <Text fontSize={['size100', 'size200']} maxWidth={570}>
-                          {post.description}
-                        </Text>
-
-                        {index !== posts.length - 1 && (
-                          <Box
-                            paddingTop="spacing300"
-                            borderBottom="1px solid"
-                            borderColor="gray300"
-                          />
-                        )}
-                      </Stack>
-                    </a>
-                  </Link>
-                </Post>
-              ))}
+                      </a>
+                    </Link>
+                  </Post>
+                ))}
             </Stack>
           </Stack>
         </Box>
