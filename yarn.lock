@@ -1146,20 +1146,12 @@
     tabbable "^4.0.0"
     tslib "^2.0.0"
 
-"@reach/portal@0.11.0":
+"@reach/portal@0.11.0", "@reach/portal@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.11.0.tgz#efb664144bba5fa94de3ffecc0a2d84317321df8"
   integrity sha512-eCZAIeD/Te29x6xeoGR8bbjlWH2cDMMC9fFH/z/ai+x2LwvHEPdyCfsklivO8Rgwup2u6ziBUtlHFEZxETWjnA==
   dependencies:
     "@reach/utils" "0.11.0"
-    tslib "^2.0.0"
-
-"@reach/portal@^0.10.5":
-  version "0.10.5"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.10.5.tgz#532ce8472fc99d6c556520f6c8d53333d89e49a4"
-  integrity sha512-K5K8gW99yqDPDCWQjEfSNZAbGOQWSx5AN2lpuR1gDVoz4xyWpTJ0k0LbetYJTDVvLP/InEcR7AU42JaDYDCXQw==
-  dependencies:
-    "@reach/utils" "0.10.5"
     tslib "^2.0.0"
 
 "@reach/rect@0.11.0":
@@ -1171,15 +1163,6 @@
     "@reach/utils" "0.11.0"
     prop-types "^15.7.2"
     tslib "^2.0.0"
-
-"@reach/utils@0.10.5":
-  version "0.10.5"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.10.5.tgz#fbac944d29565f6dd7abd0e1b13950e99b1e470b"
-  integrity sha512-5E/xxQnUbmpI/LrufBAOXjunl96DnqX6B4zC2MO2KH/dRzLug5gM5VuOwV26egsp0jvsSPxojwciOhS43px3qw==
-  dependencies:
-    "@types/warning" "^3.0.0"
-    tslib "^2.0.0"
-    warning "^4.0.3"
 
 "@reach/utils@0.11.0":
   version "0.11.0"
