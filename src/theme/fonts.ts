@@ -6,6 +6,8 @@ import InterSemiBoldWoff from '@/assets/fonts/Inter-SemiBold.woff';
 import InterSemiBoldWoff2 from '@/assets/fonts/Inter-SemiBold.woff2';
 import ElenaBasicRegularWoff from '@/assets/fonts/ElenaBasic-Regular.woff';
 import ElenaBasicRegularWoff2 from '@/assets/fonts/ElenaBasic-Regular.woff2';
+import ElenaBasicBoldWoff from '@/assets/fonts/ElenaBasic-Bold.woff';
+import ElenaBasicBoldWoff2 from '@/assets/fonts/ElenaBasic-Bold.woff2';
 
 export const fonts = css`
   @font-face {
@@ -30,7 +32,16 @@ export const fonts = css`
     font-family: 'Elena Basic';
     src: url(${ElenaBasicRegularWoff2}) format('woff2'),
       url(${ElenaBasicRegularWoff}) format('woff');
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Elena Basic';
+    src: url(${ElenaBasicBoldWoff2}) format('woff2'),
+      url(${ElenaBasicBoldWoff}) format('woff');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
   }

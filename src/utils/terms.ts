@@ -115,21 +115,29 @@ export const getTermPage = ({
   term: string;
 }): TermPage | null => {
   const fileName = `index.${lang}.md`;
-  const filePath = path.resolve(
+  const termsDirectory = path.resolve(
     __filename,
     '..',
     '..',
     'content',
     'terms',
-    term,
-    fileName
+    term
   );
 
   try {
-    const data = readFileSync(path.join('.', filePath), 'utf8');
+    const languages = [];
+    readdirSync(path.join('.', termsDirectory)).forEach((file) => {
+      const regex = /index.([a-z-]+).md/g;
+      const [_, lang] = regex.exec(file) ?? ['', ''];
+      languages.push(lang);
+    });
+
+    const data = readFileSync(path.join('.', termsDirectory, fileName), 'utf8');
     const { content, data: attributes } = matter(data);
+
     return {
       content,
+      languages,
       attributes: {
         ...attributes,
         slug: term,

@@ -8,6 +8,8 @@ import {
   SpaceProps,
   fontSize,
   FontSizeProps,
+  fontWeight,
+  FontWeightProps,
   fontFamily,
   FontFamilyProps,
   maxWidth,
@@ -23,12 +25,13 @@ import { Theme } from '@/theme';
 interface TextProps
   extends ColorProps<Theme>,
     FontSizeProps<Theme>,
+    FontWeightProps<Theme>,
     FontFamilyProps<Theme>,
     SpaceProps<Theme>,
     TextAlignProps<Theme>,
     FlexboxProps<Theme>,
     MaxWidthProps<Theme> {
-  as?: 'p' | 'span' | 'li';
+  as?: 'p' | 'span' | 'li' | 'strong';
   className?: string;
   id?: string;
 }
@@ -57,5 +60,14 @@ export const Text = styled(RawText)<TextProps>`
   line-height: ${(p) => p.theme.lineHeights.lineHeight200};
   color: ${(p) => p.theme.colors.gray800};
 
-  ${compose(fontSize, fontFamily, color, space, maxWidth, textAlign, flexbox)}
+  ${compose(
+    fontSize,
+    fontWeight,
+    fontFamily,
+    color,
+    space,
+    maxWidth,
+    textAlign,
+    flexbox
+  )}
 `;

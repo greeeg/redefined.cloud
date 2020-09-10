@@ -1,6 +1,6 @@
 ---
 title: 'What is a Relational database or SQL database?'
-description: 'A Relational database is a way to store data in tables like Microsoft Word or Google Sheet.'
+description: 'A Relational database is a way to store data in tables like Microsoft Excel or Google Sheet.'
 name: 'Relational database'
 shortName: 'SQL DB'
 summary: ''

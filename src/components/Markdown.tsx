@@ -38,6 +38,8 @@ const Container = styled.div`
     `)}
 
     & + p {
+      max-width: 500px;
+      margin: 0 auto;
       font-size: ${(p) => p.theme.fontSizes.size80}px;
       padding-top: ${(p) => p.theme.space.spacing40}px;
       text-align: center;
@@ -65,7 +67,7 @@ const H2: FC = ({ children }) => (
 
 const H3: FC = ({ children }) => (
   <Heading
-    as="h2"
+    as="h3"
     fontSize={['size100', 'size200']}
     lineHeight="lineHeight100"
     paddingTop={['spacing300', 'spacing500']}
@@ -84,6 +86,19 @@ const Paragraph: FC = ({ children }) => {
       color="gray900"
       paddingTop={['spacing200', 'spacing300']}
       data-paragraph-type={childrenContainImages ? 'image' : 'text'}
+    >
+      {children}
+    </Text>
+  );
+};
+
+const Strong: FC = ({ children }) => {
+  return (
+    <Text
+      as="strong"
+      fontSize={['size100', 'size200']}
+      color="gray900"
+      fontWeight="size100"
     >
       {children}
     </Text>
@@ -112,6 +127,21 @@ const Link: FC<{ href: string; title?: string }> = ({
 }) => {
   const { lang } = i18n.useI18n();
 
+  // Post page
+  if (href.startsWith('##')) {
+    return (
+      <NextLink
+        href="/[lang]/posts/[post]"
+        as={`/${lang}/posts/${href.substr(2)}`}
+      >
+        <RawLink title={title} href={`/${lang}/${href.substr(2)}`}>
+          {children}
+        </RawLink>
+      </NextLink>
+    );
+  }
+
+  // Term page
   if (href.startsWith('#')) {
     return (
       <NextLink href="/[lang]/[term]" as={`/${lang}/${href.substr(1)}`}>
@@ -193,6 +223,7 @@ export const Markdown: FC<MarkdownProps> = ({ content }) => {
           .use(remark2react, {
             remarkReactComponents: {
               p: Paragraph,
+              strong: Strong,
               h2: H2,
               h3: H3,
               a: Link,

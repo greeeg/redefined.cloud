@@ -17,7 +17,7 @@ An API gateway is like a front desk employee. It is responsible for receiving al
 
 ## The single entrypoint for your application
 
-While some applications in [monolith architectures](#monolith-architecture 'What is a monolith architecture?') for example are self-contained, most of them are decoupled in multiple parts, also known as services.
+While some applications in [monolithic architectures](#monolith-architecture 'What is a monolithic architecture?') for example are self-contained, most of them are decoupled in multiple parts, also known as services.
 
 In a [microservice architecture](#microservice-architecture 'What is a microservice architecture?'), your overall application can be made of dozens of services, handled by different teams with different practices and paces. Some of them might not even be available through standard HTTP calls.
 

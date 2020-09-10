@@ -11,7 +11,7 @@ relatedTerms:
 
 A container is like a box containing everything needed to run an application in the cloud: from code, dependencies to system tools and settings.
 
-Like shipping containers (in the transportation field), developers don't need to think about on which ship (server, cloud infrastructure) the container is gonna be executed: because it is self-contained.
+Like shipping containers (in the transportation field), engineers don't need to think about on which ship (server, cloud infrastructure) the container is gonna be executed: because it is self-contained.
 
 It comes with all the pieces needed for it to work. They are boxes with a standard shape, size, and locking mechanism used to ship goods around the world. Any shipping container can be moved around by the same cranes, ships, trains, and trucks because these only interact with the box itself, regardless of its contents.
 

@@ -14,7 +14,7 @@ Virtual machines are guest virtual computer systems running on a physical host: 
 
 They can be used to deploy multiple, isolated services on a single platform. This way, instead of paying for many small boxes that you have to set up manually, you can have one big box on top of which multiple services of your application run.
 
-To work, the physical host computer runs a hypervisor which is responsible for slicing the cake in multiple parts for all virtual machines running on it (cpu, ram, ssd, etc.)
+To work, the physical host computer runs a hypervisor which is responsible for slicing the cake in multiple parts for all virtual machines running on it (CPU, RAM, SSD, etc.)
 
 ## Benefits of using virtual machines
 

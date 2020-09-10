@@ -24,7 +24,7 @@ Content delivery networks are made possible thanks to 3 different parts:
 
 - Origin Servers which contain content the source of data to distribute
 - Servers across the world which cache and distribute that content and sync with the first ones
-- A mechanism to always route users to the nearest server.
+- A mechanism to always route users to the nearest server
 
 By using CDNs, you're reducing the time to access your assets for your users, reducing the load on your main server which doesn't have to server static assets anymore.
 

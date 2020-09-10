@@ -88,7 +88,15 @@ const generateSitemap = () => {
       priority: 1.0,
     },
     {
+      path: '/fr',
+      priority: 1.0,
+    },
+    {
       path: '/en/about',
+      priority: 0.75,
+    },
+    {
+      path: '/fr/about',
       priority: 0.75,
     },
     {
@@ -96,7 +104,15 @@ const generateSitemap = () => {
       priority: 0.75,
     },
     {
+      path: '/fr/list',
+      priority: 0.75,
+    },
+    {
       path: '/en/terms-and-privacy',
+      priority: 0.25,
+    },
+    {
+      path: '/fr/terms-and-privacy',
       priority: 0.25,
     },
     ...getTermsPaths(),

@@ -16,6 +16,6 @@ They are triggered by events, which can be:
 - HTTP requests
 - Event (File upload, DB insert, etc.)
 
-Serverless functions are particularly effective for heavy processing. Indeed, instead of paying for a large server which only runs at full capacity for five hours a month, you can setup a function which would only run at that time, being more cost-effective.
+Serverless functions are particularly effective for heavy processing or lightweight services. Indeed, instead of paying for a large server which only runs at full capacity for five hours a month, you can setup a function which would only run at that time, being more cost-effective.
 
 Famous serverless function providers are AWS Lambda, GCP Cloud functions or Azure functions.
