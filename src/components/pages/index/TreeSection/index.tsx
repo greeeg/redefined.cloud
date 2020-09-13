@@ -1,10 +1,10 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 
+import trees from '../../../../../content/trees.json';
 import i18n from '@/utils/i18n';
 import { Heading, Box, Stack } from '@/components/primitives';
 import { Tree } from '@/components/Tree';
-import threes from './trees.json';
 import { Select } from './Select';
 
 const TranslatedBox = styled(Box)`
@@ -14,23 +14,8 @@ const TranslatedBox = styled(Box)`
 `;
 
 export const TreeSection: FC = () => {
-  const options = [
-    {
-      label: 'Containarized architecture',
-      value: 'containarized',
-    },
-    {
-      label: 'Serverless architecture',
-      value: 'serverless',
-    },
-    {
-      label: 'Observability',
-      value: 'observability',
-    },
-  ];
-
   const t = i18n.useT();
-  const [selectedTree, setSelectedTree] = useState(options[0].value);
+  const [selectedTree, setSelectedTree] = useState(trees[0].tree);
   const treeRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -64,9 +49,12 @@ export const TreeSection: FC = () => {
                 </Heading>
 
                 <Select
-                  options={options}
-                  onSelect={(value) => {
-                    setSelectedTree(value);
+                  options={trees.map(({ label, value }) => ({
+                    label,
+                    value,
+                  }))}
+                  onSelect={(selectedIndex) => {
+                    setSelectedTree(trees[selectedIndex].tree);
                   }}
                 />
               </Stack>
@@ -84,7 +72,7 @@ export const TreeSection: FC = () => {
               overflowX="scroll"
             >
               <div ref={treeRef} style={{ display: 'inline-block' }}>
-                <Tree tree={threes[selectedTree]} />
+                <Tree tree={selectedTree} />
               </div>
             </Box>
           </Stack>

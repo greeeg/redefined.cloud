@@ -16,7 +16,7 @@ type Option = {
 
 interface SelectProps {
   options: Option[];
-  onSelect: (value: string) => void;
+  onSelect: (value: number) => void;
   className?: string;
 }
 
@@ -88,7 +88,7 @@ export const Select: FC<SelectProps> = ({ className, options, onSelect }) => {
 
   const onSelectValue = (index: number) => {
     setSelectedOption(options[index]);
-    onSelect(options[index].value);
+    onSelect(index);
   };
 
   return (

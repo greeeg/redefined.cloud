@@ -18,7 +18,7 @@ If your language is not translated yet, you will need to follow these steps:
 
 Before adding any new term, start a discussion by opening an issue.
 
-Then, create a PR and add a folder for your newly created term with a `index.en.md` Markdown file. You can add it to existing trees displayed on the homepage by updating the `src/components/pages/index/TreeSection/trees.json` file.
+Then, create a PR and add a folder for your newly created term with a `index.en.md` Markdown file. You can add it to existing trees displayed on the homepage by updating the `content/trees.json` file.
 
 ### Fixing bugs or improving the overall website
 
