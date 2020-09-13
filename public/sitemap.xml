@@ -82,14 +82,6 @@
         <priority>0.75</priority>
       </url>
       <url>
-        <loc>https://redefined.cloud/en/infrastructure-as-code</loc>
-        <priority>0.75</priority>
-      </url>
-      <url>
-        <loc>https://redefined.cloud/fr/infrastructure-as-code</loc>
-        <priority>0.75</priority>
-      </url>
-      <url>
         <loc>https://redefined.cloud/en/containers-and-docker</loc>
         <priority>0.75</priority>
       </url>
@@ -143,6 +135,14 @@
       </url>
       <url>
         <loc>https://redefined.cloud/fr/in-memory-database</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/en/infrastructure-as-code</loc>
+        <priority>0.75</priority>
+      </url>
+      <url>
+        <loc>https://redefined.cloud/fr/infrastructure-as-code</loc>
         <priority>0.75</priority>
       </url>
       <url>
