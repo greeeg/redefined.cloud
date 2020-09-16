@@ -26,7 +26,7 @@
     "remark-parse": "^8.0.3",
     "remark-react": "^7.0.1",
     "styled-components": "^5.1.1",
-    "styled-reset": "^4.2.2",
+    "styled-reset": "^4.2.3",
     "styled-system": "^5.1.5",
     "unified": "^9.2.0"
   },
