@@ -22,7 +22,7 @@
     "jsonp": "^0.2.1",
     "next": "^9.5.5",
     "react": "^16.14.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "remark-parse": "^9.0.0",
     "remark-react": "^8.0.0",
     "styled-components": "^5.2.0",
