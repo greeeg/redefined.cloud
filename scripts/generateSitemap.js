@@ -26,7 +26,7 @@ const getTermsPaths = () => {
 
           pages.push({
             path: `/${lang}/${directory.name}`,
-            priority: 0.75,
+            priority: 0.7,
           });
         }
       );
@@ -58,7 +58,7 @@ const getPostsPaths = () => {
 
           pages.push({
             path: `/${lang}/posts/${directory.name}`,
-            priority: 0.75,
+            priority: 0.7,
           });
         }
       );
@@ -93,27 +93,27 @@ const generateSitemap = () => {
     },
     {
       path: '/en/about',
-      priority: 0.75,
+      priority: 0.7,
     },
     {
       path: '/fr/about',
-      priority: 0.75,
+      priority: 0.7,
     },
     {
       path: '/en/list',
-      priority: 0.75,
+      priority: 0.7,
     },
     {
       path: '/fr/list',
-      priority: 0.75,
+      priority: 0.7,
     },
     {
       path: '/en/terms-and-privacy',
-      priority: 0.25,
+      priority: 0.2,
     },
     {
       path: '/fr/terms-and-privacy',
-      priority: 0.25,
+      priority: 0.2,
     },
     ...getTermsPaths(),
     ...getPostsPaths(),
