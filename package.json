@@ -14,7 +14,7 @@
     "scripts:sitemap": "node ./scripts/generateSitemap.js"
   },
   "dependencies": {
-    "@reach/menu-button": "0.12.1",
+    "@reach/menu-button": "0.13.2",
     "@reach/portal": "0.12.1",
     "dotenv": "8.2.0",
     "focus-visible": "5.2.0",
