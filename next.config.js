@@ -27,4 +27,15 @@ module.exports = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source:
+          '/en/posts/monitoring-explained-differences-logging-tracing-profiling',
+        destination:
+          'https://greeeg.com/differences-between-logging-tracing-profiling',
+        permanent: true,
+      },
+    ];
+  },
 };
