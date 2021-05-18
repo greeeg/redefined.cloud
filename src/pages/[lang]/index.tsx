@@ -33,7 +33,8 @@ const Index: NextPage<IndexPageProps> = ({ lang, alternate, posts }) => {
 
       <HeroSection />
       <TreeSection />
-      <BlogSection posts={posts} />
+
+      {posts.length > 0 && <BlogSection posts={posts} />}
     </Layout>
   );
 };

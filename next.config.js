@@ -36,6 +36,13 @@ module.exports = {
           'https://greeeg.com/differences-between-logging-tracing-profiling',
         permanent: true,
       },
+      {
+        source:
+          '/en/posts/distributed-architecture-microservices-communication',
+        destination:
+          'https://greeeg.com/microservices-patterns-synchronous-vs-asynchronous',
+        permanent: true,
+      },
     ];
   },
 };
