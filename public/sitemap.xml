@@ -329,8 +329,4 @@
         <loc>https://redefined.cloud/fr/webhook</loc>
         <priority>0.7</priority>
       </url>
-      <url>
-        <loc>https://redefined.cloud/en/posts/distributed-architecture-microservices-communication</loc>
-        <priority>0.7</priority>
-      </url>
     </urlset>
